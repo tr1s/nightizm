@@ -1,0 +1,52 @@
+/* Writings styles
+========================================================================== */
+
+@import '../styles/abstracts/mixins.scss';
+
+.writings {
+  h2 {
+    font-size: 5.8rem;
+    line-height: 1.2;
+    color: var(--grey-light);
+  }
+}
+
+.posts {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  @include respond-to('tablet-large') {
+    max-width: 520px;
+  }
+  time {
+    color: var(--red);
+    // text-transform: uppercase;
+    font-size: 1.4rem;
+    padding-bottom: 2rem;
+    @include respond-to('tablet-large') {
+      font-size: 1.2rem;
+    }
+  }
+  h2.postTitle {
+    @include respond-to('tablet-large') {
+      font-size: 2.3rem;
+    }
+  }
+  p.postDescription {
+    color: var(--grey);
+    font-size: 1.9rem;
+    line-height: 2.9rem;
+    margin-top: 2rem;
+    @include respond-to('tablet-large') {
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+      margin-top: 0.5rem;
+    }
+  }
+}
+.post {
+  margin-bottom: 10rem;
+  @include respond-to('tablet-large') {
+    margin-bottom: 4rem;
+  }
+}

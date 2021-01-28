@@ -1,0 +1,36 @@
+/* Header styles
+========================================================================== */
+
+@import '../styles/abstracts/mixins.scss';
+
+.header {
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  padding: 6rem 0 0 0;
+  ul {
+    display: flex;
+    @include respond-to('mobile-large') {
+      text-align: center;
+      flex-direction: column;
+    }
+  }
+  li:not(:last-child) {
+    margin-right: 3rem;
+    @include respond-to('mobile-large') {
+      margin-right: 0;
+    }
+  }
+  a.navLink {
+    color: var(--grey);
+    font-family: var(--font-mono);
+    font-size: 1.6rem;
+    &:hover,
+    &:focus {
+      color: var(--accent);
+    }
+  }
+}

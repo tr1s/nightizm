@@ -1,0 +1,66 @@
+/* Blog Template styles
+========================================================================== */
+
+@import '../../styles/abstracts/mixins.scss';
+
+.article {
+  font-family: var(--font-body);
+  display: flex;
+  flex-direction: column;
+  h1 {
+    font-size: 9.5rem;
+    color: var(--black-soft);
+    text-align: center;
+    padding: 8rem 0;
+    padding-bottom: 2rem;
+    width: 100%;
+    margin: 0 auto;
+    grid-column: 1 / 4;
+    @include respond-to('tablet-large') {
+      font-size: 5.8rem;
+    }
+  }
+  time {
+    text-align: center;
+    margin-bottom: 11rem;
+    font-family: var(--font-mono);
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-columns:
+    1fr
+    min(69ch, 100%)
+    1fr;
+
+  h2 {
+    font-size: 5.8rem;
+    margin-left: -4rem;
+    @include respond-to('tablet') {
+      margin-left: 0;
+    }
+  }
+  p,
+  a,
+  li {
+    font-size: 1.9rem;
+    line-height: 2.9rem;
+    letter-spacing: 0.06rem;
+    color: var(--grey);
+  }
+
+  a {
+    color: var(--accent);
+    font-weight: bolder;
+    font-size: 1.8rem;
+  }
+
+  strong {
+    color: var(--grey-light);
+  }
+}
+.content > * {
+  grid-column: 2;
+  margin-bottom: 3rem;
+}
