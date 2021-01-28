@@ -5,12 +5,15 @@
 
 .header {
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .nav {
   display: flex;
   justify-content: center;
-  padding: 6rem 0 0 0;
+  padding: 6rem 0 3.7rem 0;
   ul {
     display: flex;
     @include respond-to('mobile-large') {
@@ -33,4 +36,8 @@
       color: var(--accent);
     }
   }
+}
+
+.logo {
+  margin-bottom: -1rem;
 }

@@ -39,7 +39,13 @@ export default function Discography() {
               />
 
               <div className={discogStyles.buttonWrapper}>
-                <Button type="hrefOpenNew" text="Stream or Download" href={album.link} />
+                <Button
+                  type="hrefOpenNew"
+                  text="Stream or Download"
+                  href={album.link}
+                  className={discogStyles.first}
+                />
+                <Button type="hrefOpenNew" text="Download Full Discography" href={album.link} />
               </div>
             </div>
           );

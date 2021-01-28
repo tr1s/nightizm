@@ -6,13 +6,14 @@
   font-family: 'Amarante';
   font-style: normal;
   font-weight: 100;
-  src: url('../assets/fonts/amarante-v8-latin-regular.eot');
+  font-display: swap;
+  src: url('/fonts/amarante-v8-latin-regular.eot');
   src: local('Amarante'),
-    url('../assets/fonts/amarante-v8-latin-regular.eot?#iefix') format('embedded-opentype'),
-    url('../assets/fonts/amarante-v8-latin-regular.woff2') format('woff2'),
-    url('../assets/fonts/amarante-v8-latin-regular.woff') format('woff'),
-    url('../assets/fonts/amarante-v8-latin-regular.ttf') format('truetype'),
-    url('../assets/fonts/amarante-v8-latin-regular.svg#Amarante') format('svg');
+    url('/fonts/amarante-v8-latin-regular.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/amarante-v8-latin-regular.woff2') format('woff2'),
+    url('/fonts/amarante-v8-latin-regular.woff') format('woff'),
+    url('/fonts/amarante-v8-latin-regular.ttf') format('truetype'),
+    url('/fonts/amarante-v8-latin-regular.svg#Amarante') format('svg');
 }
 
 /* magda-clean-mono - latin */
@@ -20,13 +21,13 @@
   font-family: 'MagdaCleanMono';
   font-style: normal;
   font-weight: 100;
-  font-display: optional;
-  src: url('../assets/fonts/MagdaCleanMono-Regular.eot');
+  font-display: swap;
+  src: url('/fonts/MagdaCleanMono-Regular.eot');
   src: local('MagdaCleanMono'),
-    url('../assets/fonts/MagdaCleanMono-Regular.eot#iefix') format('embedded-opentype'),
-    url('../assets/fonts/MagdaCleanMono-Regular.woff') format('woff'),
-    url('../assets/fonts/MagdaCleanMono-Regular.ttf') format('truetype'),
-    url('../assets/fonts/MagdaCleanMono-Regular.svg#MagdaCleanMono') format('svg');
+    url('/fonts/MagdaCleanMono-Regular.eot#iefix') format('embedded-opentype'),
+    url('/fonts/MagdaCleanMono-Regular.woff') format('woff'),
+    url('/fonts/MagdaCleanMono-Regular.ttf') format('truetype'),
+    url('/fonts/MagdaCleanMono-Regular.svg#MagdaCleanMono') format('svg');
 }
 
 /* pt-serif-regular - latin */
@@ -34,72 +35,34 @@
   font-family: 'PT Serif';
   font-style: normal;
   font-weight: 400;
-  font-display: optional;
-  src: local(''), url('../assets/fonts/pt-serif-v12-latin-regular.woff2') format('woff2'),
-    url('../assets/fonts/pt-serif-v12-latin-regular.woff') format('woff');
+  font-display: swap;
+  src: local(''), url('/fonts/pt-serif-v12-latin-regular.woff2') format('woff2'),
+    url('/fonts/pt-serif-v12-latin-regular.woff') format('woff');
 }
 /* pt-serif-700 - latin */
 @font-face {
   font-family: 'PT Serif';
   font-style: normal;
   font-weight: 700;
-  font-display: optional;
-  src: local(''), url('../assets/fonts/pt-serif-v12-latin-700.woff2') format('woff2'),
-    url('../assets/fonts/pt-serif-v12-latin-700.woff') format('woff');
+  font-display: swap;
+  src: local(''), url('/fonts/pt-serif-v12-latin-700.woff2') format('woff2'),
+    url('/fonts/pt-serif-v12-latin-700.woff') format('woff');
 }
 /* pt-serif-italic - latin */
 @font-face {
   font-family: 'PT Serif';
   font-style: italic;
   font-weight: 400;
-  font-display: optional;
-  src: local(''), url('../assets/fonts/pt-serif-v12-latin-italic.woff2') format('woff2'),
-    url('../assets/fonts/pt-serif-v12-latin-italic.woff') format('woff');
+  font-display: swap;
+  src: local(''), url('/fonts/pt-serif-v12-latin-italic.woff2') format('woff2'),
+    url('/fonts/pt-serif-v12-latin-italic.woff') format('woff');
 }
 /* pt-serif-700italic - latin */
 @font-face {
   font-family: 'PT Serif';
   font-style: italic;
   font-weight: 700;
-  font-display: optional;
-  src: local(''), url('../assets/fonts/pt-serif-v12-latin-700italic.woff2') format('woff2'),
-    url('../assets/fonts/pt-serif-v12-latin-700italic.woff') format('woff');
-}
-
-/* Global typography styles
-========================================================================== */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  font-family: var(--font-heading);
-}
-
-h1 {
-  font-size: clamp(5.8rem, 17.1rem, 11vw);
-  font-weight: 100;
-}
-h2 {
-  font-size: 5.8rem;
-  font-weight: 100;
-}
-h3 {
-  font-size: 3.6rem;
-  font-weight: 100;
-}
-h4 {
-  // font-size: 17.1rem;
-  font-weight: 100;
-}
-h5 {
-  // font-size: 17.1rem;
-  font-weight: 100;
-}
-h6 {
-  // font-size: 17.1rem;
-  font-weight: 100;
+  font-display: swap;
+  src: local(''), url('/fonts/pt-serif-v12-latin-700italic.woff2') format('woff2'),
+    url('/fonts/pt-serif-v12-latin-700italic.woff') format('woff');
 }

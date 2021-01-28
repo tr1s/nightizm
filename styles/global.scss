@@ -1,3 +1,8 @@
+/* Imports
+========================================================================== */
+
+@import './abstracts/mixins.scss';
+
 /* Root Variables
 ========================================================================== */
 
@@ -12,7 +17,7 @@
   --primary: #b3ac9d;
   --secondary: red;
   --accent: #e81b53;
-  --accent: #fecdff;
+  // --accent: #fecdff;
 
   --black: #181818;
   --black-soft: #3e4041;
@@ -28,6 +33,7 @@
 
 /* Global styles
 ========================================================================== */
+
 *,
 *:before,
 *:after {
@@ -47,50 +53,39 @@ body {
 }
 
 html {
-  box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px, 3.5rem = 35px;
+  box-sizing: border-box;
 }
 
 body {
+  color: var(--white);
   background: var(--black-true);
+  font-size: 1.6rem;
   font-family: var(--font-body);
   font-family: var(--font-mono);
-  font-size: 1.6rem;
-  color: var(--white);
-}
-
-body::-webkit-scrollbar {
-  width: 0.7rem;
-  width: 1rem;
-}
-
-body::-webkit-scrollbar-track {
-  border-left: 1px solid rgba(0, 0, 0, 0.3);
-  background: rgba(254, 249, 247, 1);
-  background: var(--black-soft);
-}
-
-body::-webkit-scrollbar-thumb {
-  background: rgba(34, 34, 34, 1);
-  background: var(--accent);
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  &::-webkit-scrollbar {
+    width: 0.7rem;
+    width: 1rem;
+  }
+  &::-webkit-scrollbar-track {
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    background: rgba(254, 249, 247, 1);
+    background: var(--black-soft);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(34, 34, 34, 1);
+    background: var(--accent);
+  }
 }
 
 main {
   flex: 1 0 auto;
 }
 
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  content: '';
-  clear: both;
-  height: 0;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .inner-wrapper {
@@ -110,13 +105,8 @@ main {
   }
 }
 
-.show {
-  display: block;
-}
-
-.show-flex {
-  display: flex;
-}
+/* Global typography styles
+========================================================================== */
 
 h1,
 h2,
@@ -126,6 +116,34 @@ h5,
 h6 {
   margin: 0;
   font-family: var(--font-heading);
+}
+
+h1 {
+  font-size: clamp(5.8rem, 17.1rem, 11vw);
+  font-weight: 100;
+  @include respond-to('awkward') {
+    font-size: 4rem;
+  }
+}
+h2 {
+  font-size: 5.8rem;
+  font-weight: 100;
+}
+h3 {
+  font-size: 3.6rem;
+  font-weight: 100;
+}
+h4 {
+  // font-size: 17.1rem;
+  font-weight: 100;
+}
+h5 {
+  // font-size: 17.1rem;
+  font-weight: 100;
+}
+h6 {
+  // font-size: 17.1rem;
+  font-weight: 100;
 }
 
 .title-container {

@@ -9,21 +9,25 @@
   flex-direction: column;
   h1 {
     font-size: 9.5rem;
-    color: var(--black-soft);
+    font-size: clamp(5.8rem, 9.5rem, 7vw);
     text-align: center;
-    padding: 8rem 0;
+    color: var(--black-soft);
+    padding: 8rem 5%;
     padding-bottom: 2rem;
     width: 100%;
     margin: 0 auto;
     grid-column: 1 / 4;
-    @include respond-to('tablet-large') {
-      font-size: 5.8rem;
+    @include respond-to('mobile-large') {
+      font-size: 4rem;
     }
   }
   time {
     text-align: center;
-    margin-bottom: 11rem;
     font-family: var(--font-mono);
+    line-height: 1.6;
+  }
+  time:last-of-type {
+    margin-bottom: 11rem;
   }
 }
 

@@ -1,6 +1,7 @@
 import Layout from '../../components/layout';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
+import Date from '../../components/date';
 
 import styles from './styles.module.scss';
 
@@ -29,9 +30,7 @@ export default function Post({ postData }) {
       </Head>
       <article className={styles.article}>
         <h1>{postData.title}</h1>
-        <time>
-          <Date dateString={postData.date} />
-        </time>
+        <Date dateString={postData.date} />
         <div
           className={`inner-wrapper ${styles.content}`}
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}

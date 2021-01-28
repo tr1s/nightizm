@@ -19,7 +19,11 @@
     text-align: center;
     padding: 7.5rem 0;
     text-transform: uppercase;
+    @include respond-to('tablet-large') {
+      padding: 6rem 0 6rem 0;
+    }
   }
+
   .artworkLink {
     margin-bottom: 3.5rem;
   }
@@ -82,6 +86,7 @@
       transform: translateY(-50%);
     }
   }
+
   .description {
     max-width: 464px;
     text-align: center;
@@ -94,7 +99,19 @@
       color: var(--grey-light);
     }
   }
+
   .buttonWrapper {
     margin-bottom: 5.3rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    a:first-of-type {
+      margin-bottom: 4rem;
+      align-self: center;
+    }
+    a:last-of-type {
+      background: #1b9cbd;
+      background: var(--accent);
+    }
   }
 }

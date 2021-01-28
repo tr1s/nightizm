@@ -44,22 +44,12 @@
     }
   }
 }
-//? Example usage
-/* @include respond-to('mobile') {} */
 
-/* CENTERING */
+/* Centering
+========================================================================== */
 @mixin centered {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-//? Example usage
-/*
-.parent {
-position: relative;
-}
-.child {
-@include centered;
-}
-*/
