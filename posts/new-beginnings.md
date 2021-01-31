@@ -1,8 +1,8 @@
 ---
 title: New Beginnings in a Time of Uncertainty
-date: '2015-05-28T22:40:32.169Z'
+date: '2020-05-28T22:40:32.169Z'
 tags: [test, personal]
-excerpt: I’ve been making music under Nightizm since 2013... I’m now coming back from a hiatus that started in 2017...
+excerpt: Returning from a 3 year hiatus to explore the world of sound again. What will come of this only time will tell... ⏳
 published: false
 ---
 

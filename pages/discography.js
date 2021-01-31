@@ -11,7 +11,7 @@ export default function Discography() {
       <div className={discogStyles.discography}>
         {albums.map((album) => {
           return (
-            <div className={discogStyles.album}>
+            <div className={discogStyles.album} key={album.order}>
               <h1
                 className={discogStyles.title}
                 dangerouslySetInnerHTML={{ __html: album.title }}
@@ -45,7 +45,11 @@ export default function Discography() {
                   href={album.link}
                   className={discogStyles.first}
                 />
-                <Button type="hrefOpenNew" text="Download Full Discography" href={album.link} />
+                <Button
+                  type="hrefOpenNew"
+                  text="Download Full Discography"
+                  href="https://nightizm.bandcamp.com/vip-membership"
+                />
               </div>
             </div>
           );

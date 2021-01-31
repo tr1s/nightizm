@@ -146,22 +146,38 @@ h6 {
   font-weight: 100;
 }
 
-.title-container {
+div.double-header {
   padding: 8rem 0;
-}
-h1.title {
-  color: #252525;
-  margin-bottom: -10.5rem;
-  text-align: center;
-}
-h1.subtitle {
-  margin-bottom: 2rem;
-  font-size: 17.3rem;
-  font-size: clamp(5.8rem, 17.3rem, 11vw);
-  color: var(--black-true);
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: var(--white-true);
-  text-align: center;
+  h1.title {
+    color: #252525;
+    margin-bottom: -10.5rem;
+    text-align: center;
+    @include respond-to('desktop-13') {
+      margin-bottom: -8rem;
+    }
+    @include respond-to('tablet-large') {
+      margin-bottom: -6rem;
+    }
+    @include respond-to('tablet') {
+      font-size: 5.8rem;
+      margin-bottom: 0rem;
+    }
+  }
+  h1.subtitle {
+    margin-bottom: 2rem;
+    font-size: 17.3rem;
+    font-size: clamp(5.8rem, 17.3rem, 11vw);
+    color: var(--black-true);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--white-true);
+    text-align: center;
+    @include respond-to('tablet') {
+      display: none;
+    }
+  }
+  @include respond-to('awkward') {
+    font-size: 4rem;
+  }
 }
 
 p,

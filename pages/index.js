@@ -17,10 +17,11 @@ export default function Home() {
   return (
     <Layout>
       <section className={styles.main}>
-        <div className="title-container">
+        <div className="double-header">
           <h1 className="title">SEIZE the NIGHT</h1>
           <h1 className="subtitle">NIGHTIZM</h1>
         </div>
+        <h3>Expanding on ideas.</h3>
       </section>
     </Layout>
   );

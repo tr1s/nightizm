@@ -37,8 +37,13 @@
     line-height: 2.9rem;
     margin-top: 2rem;
     @include respond-to('tablet-large') {
-      font-size: 1.6rem;
-      line-height: 2.6rem;
+      font-size: 1.4rem;
+      line-height: 2.4rem;
+      margin-top: 0.5rem;
+    }
+    @include respond-to('tablet') {
+      font-size: 1.4rem;
+      line-height: 2.4rem;
       margin-top: 0.5rem;
     }
   }
@@ -47,6 +52,9 @@
   margin-bottom: 10rem;
   @include respond-to('tablet-large') {
     margin-bottom: 4rem;
+  }
+  @include respond-to('tablet') {
+    text-align: center;
   }
 }
 .post:hover h2,

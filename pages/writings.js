@@ -9,7 +9,7 @@ export default function Blog({ allPostsData }) {
   return (
     <Layout>
       <section className={`inner-wrapper ${blogStyles.writings}`}>
-        <div className="title-container">
+        <div className="double-header">
           <h1 className="title">WRITINGS</h1>
           <h1 className="subtitle">ON THE WALL</h1>
         </div>
@@ -20,7 +20,7 @@ export default function Blog({ allPostsData }) {
               <Link href="/posts/[id]" as={`/posts/${id}`}>
                 <a className={blogStyles.postLink}>
                   <small>
-                    <Date dateString={date} />
+                    <Date dateString={date} blogList />
                   </small>
                   <h2 className={blogStyles.postTitle}>{title}</h2>
                   <p className={blogStyles.postDescription}>{excerpt}</p>
