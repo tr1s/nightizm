@@ -85,6 +85,16 @@
   strong {
     color: var(--grey-light);
   }
+
+  blockquote {
+    position: relative;
+    font-style: italic;
+    &::before {
+      content: url('/quote-white.svg');
+      position: absolute;
+      left: -4rem;
+    }
+  }
 }
 .content > * {
   grid-column: 2;

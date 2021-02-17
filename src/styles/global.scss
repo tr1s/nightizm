@@ -91,16 +91,13 @@ main {
 .inner-wrapper {
   max-width: 1400px;
   margin: 0 auto;
-  // desktop-15 mixin
-  @media (max-width: 1440px) {
+  @include respond-to('desktop-15') {
     padding: 0 5%;
   }
-  // tablet-large mixin
-  @media (max-width: 1024px) {
+  @include respond-to('tablet-large') {
     padding: 0 5%;
   }
-  // mobile-large mixin
-  @media (max-width: 414px) {
+  @include respond-to('mobile-large') {
     padding: 0 5%;
   }
 }

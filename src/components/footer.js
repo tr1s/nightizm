@@ -2,15 +2,15 @@ import { useState } from 'react';
 
 import styles from './footer.module.scss';
 
-export default function Footer(props) {
-  const [menu, setMenu] = useState(false);
-  console.log(menu);
+export default function Footer({ menu, setMenu }) {
   return (
-    <footer className={styles.footer}>
-      <button onClick={() => setMenu(!menu)}>
-        <img src="/menu.svg" alt="" />
-      </button>
-    </footer>
+    <>
+      <footer className={styles.footer}>
+        <button onClick={() => setMenu(!menu)}>
+          <img src="/menu.svg" alt="" />
+        </button>
+      </footer>
+    </>
   );
 }
 {

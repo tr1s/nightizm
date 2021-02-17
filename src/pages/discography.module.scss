@@ -20,7 +20,12 @@
     padding: 7.5rem 0;
     text-transform: uppercase;
     @include respond-to('tablet-large') {
-      padding: 6rem 0 6rem 0;
+      padding: 6rem 0;
+    }
+    @include respond-to('tablet') {
+      font-size: 5.8rem;
+      padding: 8rem 0;
+      margin-bottom: 0rem;
     }
   }
 

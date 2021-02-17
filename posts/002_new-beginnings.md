@@ -8,29 +8,13 @@ published: false
 
 ## Hi (h2)
 
-### Hallo (h3)
+I know it's been a while...
 
-#### Prerequisites (h4)
+Talking points:
 
-##### Musings (h5)
-
-###### This is like a really tiny title: (h6)
-
-- This however showed weasel
-- Well uncritical so misled
-  - this is very interesting
-  - this is very wow
-- Goodness much until that fluid owl
-
-Far far away, [behind the word mountains](https://google.ca), far from the countries Vokalia and
-Consonantia, there `live the` blind texts. Separated they live in Bookmarksgrove
-right at the coast of the Semantics, a large language ocean. A small river named
-Duden flows by their place and supplies it with the necessary regelialia.
-
-The Big Oxmox advised her not to do so, because there were thousands of bad
-Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
-didn’t listen. She packed her seven versalia, put her initial into the belt and
-made herself on the way.
+* Where I've been
+* Learning to not focus on results w/ my music, just get back to having fun again (hygge page 194)
+* A separate post about learning how to code?
 
 ## The quick brown fox jumps over the lazy dog? Nice...
 

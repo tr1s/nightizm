@@ -1,0 +1,33 @@
+@import '../styles/abstracts/mixins.scss';
+
+.footer {
+  padding: 4rem;
+  position: fixed;
+  @include respond-to('tablet') {
+    backdrop-filter: blur(6px);
+    border-top: 2px solid var(--grey);
+    border-right: 2px solid var(--grey);
+    border-top-right-radius: var(--border-radius);
+    padding: 1rem;
+    bottom: 0;
+    left: 0;
+  }
+  button {
+    border: none;
+    background: transparent;
+    padding: 7px;
+    cursor: pointer;
+    @include respond-to('tablet') {
+      img {
+        width: 30px;
+      }
+    }
+  }
+  a {
+    color: #d0e8f3;
+    font-weight: 600;
+    span {
+      color: var(--red);
+    }
+  }
+}

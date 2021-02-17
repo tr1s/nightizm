@@ -6,6 +6,8 @@ import Date from '../components/date';
 import blogStyles from './writings.module.scss';
 
 export default function Blog({ allPostsData }) {
+  const publishedPosts = allPostsData.filter((post) => post.published === true);
+
   return (
     <Layout>
       <section className={`inner-wrapper ${blogStyles.writings}`}>
