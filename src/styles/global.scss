@@ -55,7 +55,8 @@
 }
 
 html,
-body {
+body,
+#__next {
   height: 100%;
 }
 
@@ -85,16 +86,10 @@ body {
   }
 }
 
-main {
-  //! flex: 1 0 auto;
-  //! Learn how this achieves the same results as below.
-  flex: 1 0 auto;
-}
-
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 .inner-wrapper {
