@@ -12,7 +12,7 @@ export default function Layout({ children }) {
 
   return (
     <div className="wrapper">
-      <Header />
+      <Header menu={menu} setMenu={setMenu} />
       <main>{children}</main>
       <Footer menu={menu} setMenu={setMenu} />
       {menu && <Menu menu={menu} setMenu={setMenu} />}

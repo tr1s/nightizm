@@ -7,7 +7,7 @@
   h2 {
     font-size: 5.8rem;
     line-height: 1.2;
-    color: var(--grey-light);
+    color: var(--grey-400);
   }
 }
 
@@ -32,7 +32,7 @@
     }
   }
   p.postDescription {
-    color: var(--grey);
+    color: var(--grey-300);
     font-size: 1.9rem;
     line-height: 2.9rem;
     margin-top: 2rem;
@@ -63,5 +63,5 @@
 }
 .post:hover p,
 .post:focus p {
-  color: var(--grey-light);
+  color: var(--grey-400);
 }

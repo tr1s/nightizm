@@ -1,9 +1,17 @@
+/* Imports
+========================================================================== */
+
 @import '../styles/abstracts/mixins.scss';
+
+/* Footer styles
+========================================================================== */
 
 .footer {
   padding: 4rem;
-  position: fixed;
-  @include respond-to('tablet') {
+  // display: none;
+  margin-top: auto;
+  @include respond-to('tablet-large') {
+    display: block;
     backdrop-filter: blur(6px);
     border-top: 2px solid var(--grey);
     border-right: 2px solid var(--grey);

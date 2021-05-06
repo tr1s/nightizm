@@ -1,19 +1,38 @@
-/* Header styles
+/* Imports
 ========================================================================== */
 
 @import '../styles/abstracts/mixins.scss';
 
+/* Header styles
+========================================================================== */
+
 .header {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  // margin: 0 auto;
+  background: var(--black-200);
 }
 
 .nav {
   display: flex;
   justify-content: center;
-  padding: 6rem 0 3.7rem 0;
+  padding: 3rem 0;
+  position: relative;
+  button {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: var(--grey-400);
+    padding: 0.7rem 1.2rem;
+    background: var(--black-soft);
+    border-radius: var(--border-radius);
+    border: none;
+    font-weight: bold;
+    &:hover {
+      color: var(--grey-400);
+    }
+  }
   ul {
     display: flex;
     @include respond-to('mobile-large') {
@@ -28,16 +47,17 @@
     }
   }
   a.navLink {
-    color: var(--grey);
+    color: var(--grey-300);
     font-family: var(--font-mono);
     font-size: 1.6rem;
     &:hover,
     &:focus {
-      color: var(--grey-light);
+      color: var(--grey-400);
     }
   }
 }
 
 .logo {
+  text-align: center;
   margin-bottom: -1rem;
 }
