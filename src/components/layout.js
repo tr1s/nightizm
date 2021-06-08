@@ -1,14 +1,11 @@
 import { useState } from 'react';
 
-import Header from '../components/header';
-import Footer from '../components/footer';
-import Menu from '../components/menu';
-
-import styles from './layout.module.scss';
+import Header from './header/header';
+import Footer from './footer/footer';
+import Menu from './menu/menu';
 
 export default function Layout({ children }) {
   const [menu, setMenu] = useState(false);
-  console.log(menu);
 
   return (
     <div className="wrapper">

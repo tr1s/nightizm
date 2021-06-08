@@ -1,17 +1,13 @@
-/* Imports
-========================================================================== */
-
-@import '../styles/abstracts/mixins.scss';
-
 /* Header styles
 ========================================================================== */
 
-.header {
-  // margin: 0 auto;
-  background: var(--black-200);
-}
+import styled from 'styled-components';
 
-.nav {
+export const Wrapper = styled.header`
+  background: var(--black-200);
+`;
+
+export const Nav = styled.nav`
   display: flex;
   justify-content: center;
   padding: 3rem 0;
@@ -35,29 +31,30 @@
   }
   ul {
     display: flex;
-    @include respond-to('mobile-large') {
+    @media screen and (${(props) => props.theme.mobileLarge}) {
       text-align: center;
       flex-direction: column;
     }
   }
   li:not(:last-child) {
     margin-right: 3rem;
-    @include respond-to('mobile-large') {
+    @media screen and (${(props) => props.theme.mobileLarge}) {
       margin-right: 0;
     }
   }
-  a.navLink {
-    color: var(--grey-300);
-    font-family: var(--font-mono);
-    font-size: 1.6rem;
-    &:hover,
-    &:focus {
-      color: var(--grey-400);
-    }
-  }
-}
+`;
 
-.logo {
+export const NavLink = styled.a`
+  color: var(--grey-300);
+  font-family: var(--font-mono);
+  font-size: 1.6rem;
+  &:hover,
+  &:focus {
+    color: var(--grey-400);
+  }
+`;
+
+export const Logo = styled.figure`
   text-align: center;
   margin-bottom: -1rem;
-}
+`;

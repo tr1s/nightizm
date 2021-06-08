@@ -1,60 +1,54 @@
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import Image from 'next/image';
 import { albums } from '../data/music';
-import Button from '../components/button';
+import Button from '../components/Button/button';
 
-import discogStyles from './discography.module.scss';
+import {
+  Wrapper,
+  Album,
+  Title,
+  ArtworkLink,
+  Artwork,
+  StripesLeft,
+  StripesRight,
+  Description,
+  ButtonWrapper,
+} from './styles/discography-styled.js';
 
 export default function Discography() {
   return (
     <Layout>
-      <div className={discogStyles.discography}>
+      <Wrapper>
         {albums.map((album) => {
           return (
-            <div className={discogStyles.album} key={album.order}>
-              <h1
-                className={discogStyles.title}
-                dangerouslySetInnerHTML={{ __html: album.title }}
-              />
+            <Album key={album.order}>
+              <Title dangerouslySetInnerHTML={{ __html: album.title }} />
 
               {/* ARTWORK */}
-              <a
-                className={discogStyles.artworkLink}
-                href={album.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <figure className={discogStyles.artwork}>
+              <ArtworkLink href={album.link} target="_blank" rel="noopener noreferrer">
+                <Artwork>
                   <Image src={album.artwork} alt="Album artwork." width={464} height={464} />
 
                   {/* STRIPES */}
-                  <div className={discogStyles.stripesLeft}></div>
-                  <div className={discogStyles.stripesRight}></div>
-                </figure>
-              </a>
+                  <StripesLeft></StripesLeft>
+                  <StripesRight></StripesRight>
+                </Artwork>
+              </ArtworkLink>
 
-              <div
-                className={discogStyles.description}
-                dangerouslySetInnerHTML={{ __html: album.description }}
-              />
+              <Description dangerouslySetInnerHTML={{ __html: album.description }} />
 
-              <div className={discogStyles.buttonWrapper}>
-                <Button
-                  type="hrefOpenNew"
-                  text="Stream or Download"
-                  href={album.link}
-                  className={discogStyles.first}
-                />
+              <ButtonWrapper>
+                <Button type="hrefOpenNew" text="Stream or Download" href={album.link} />
                 <Button
                   type="hrefOpenNew"
                   text="Download Full Discography"
                   href="https://nightizm.bandcamp.com/vip-membership"
                 />
-              </div>
-            </div>
+              </ButtonWrapper>
+            </Album>
           );
         })}
-      </div>
+      </Wrapper>
     </Layout>
   );
 }

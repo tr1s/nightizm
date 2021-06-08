@@ -1,9 +1,6 @@
-/* Blog Template styles
-========================================================================== */
+import styled from 'styled-components';
 
-@import '../../styles/abstracts/mixins.scss';
-
-.article {
+export const Article = styled.article`
   font-family: var(--font-body);
   display: flex;
   flex-direction: column;
@@ -17,7 +14,7 @@
     width: 100%;
     margin: 0 auto;
     grid-column: 1 / 4;
-    @include respond-to('mobile-large') {
+    @media screen and (${(props) => props.theme.mobileLarge}) {
       font-size: 4rem;
     }
   }
@@ -29,15 +26,20 @@
   time:last-of-type {
     margin-bottom: 8rem;
   }
-}
+`;
 
-.content {
+export const Content = styled.div`
   display: grid;
   grid-template-columns:
     1fr
     min(69ch, 100%)
     1fr;
   margin-bottom: 10rem;
+
+  & > * {
+    grid-column: 2;
+    margin-bottom: 3rem;
+  }
 
   h1,
   h2,
@@ -54,7 +56,7 @@
   h2 {
     font-size: 5.8rem;
     margin-left: -4rem;
-    @include respond-to('tablet') {
+    @media screen and (${(props) => props.theme.tablet}) {
       margin-left: 0;
     }
   }
@@ -95,8 +97,4 @@
       left: -4rem;
     }
   }
-}
-.content > * {
-  grid-column: 2;
-  margin-bottom: 3rem;
-}
+`;

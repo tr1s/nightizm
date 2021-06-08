@@ -1,37 +1,37 @@
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
-import Date from '../components/date';
+import Date from '../components/Date';
 
-import blogStyles from './writings.module.scss';
+import { Wrapper, Posts, PostTitle, PostDescription, Post } from './styles/writings-styled';
 
 export default function Blog({ allPostsData }) {
   const publishedPosts = allPostsData.filter((post) => post.published === true);
 
   return (
     <Layout>
-      <section className={`inner-wrapper ${blogStyles.writings}`}>
+      <Wrapper className="inner-wrapper">
         <div className="double-header">
           <h1 className="title">WRITINGS</h1>
           <h1 className="subtitle">ON THE WALL</h1>
         </div>
 
-        <ul className={blogStyles.posts}>
+        <Posts>
           {allPostsData.map(({ id, date, title, excerpt }) => (
-            <li className={blogStyles.post} key={id}>
+            <Post key={id}>
               <Link href="/posts/[id]" as={`/posts/${id}`}>
-                <a className={blogStyles.postLink}>
+                <a>
                   <small>
                     <Date dateString={date} blogList />
                   </small>
-                  <h2 className={blogStyles.postTitle}>{title}</h2>
-                  <p className={blogStyles.postDescription}>{excerpt}</p>
+                  <PostTitle>{title}</PostTitle>
+                  <PostDescription>{excerpt}</PostDescription>
                 </a>
               </Link>
-            </li>
+            </Post>
           ))}
-        </ul>
-      </section>
+        </Posts>
+      </Wrapper>
     </Layout>
   );
 }

@@ -1,10 +1,3 @@
-// import renaissance from '../assets/images/renaissance.jpg';
-// import remixes from '../assets/images/remixes.jpg';
-// import darkArtsI from '../assets/images/dark-arts-i.jpg';
-// import futureScrews from '../assets/images/future-screws.jpg';
-// import mixes from '../assets/images/mixes.jpg';
-// import singles from '../assets/images/singles.jpg';
-
 export const albums = [
   {
     title: 'Renaissance',

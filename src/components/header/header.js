@@ -1,38 +1,38 @@
-import Link from './activeLink';
+import Link from '../ActiveLink';
 import Image from 'next/image';
 
-import styles from './header.module.scss';
+import { Wrapper, Nav, NavLink, Logo } from './header-styled';
 
 export default function Header({ menu, setMenu }) {
   return (
-    <header className={styles.header}>
+    <Wrapper>
       <div className="inner-wrapper">
-        <nav className={styles.nav}>
+        <Nav>
           <button onClick={() => setMenu(!menu)}>Menu</button>
 
           <ul>
             <li>
               <Link href="/">
-                <a className={styles.navLink}>Nightizm</a>
+                <NavLink>Nightizm</NavLink>
               </Link>
             </li>
             <li>
               <Link href="/discography">
-                <a className={styles.navLink}>Discography</a>
+                <NavLink>Discography</NavLink>
               </Link>
             </li>
             <li>
               <Link href="/writings">
-                <a className={styles.navLink}>Writings</a>
+                <NavLink>Writings</NavLink>
               </Link>
             </li>
           </ul>
-        </nav>
+        </Nav>
 
-        <figure className={styles.logo}>
+        <Logo>
           <Image src="/logo-white.png" width="66" height="66" alt="" />
-        </figure>
+        </Logo>
       </div>
-    </header>
+    </Wrapper>
   );
 }

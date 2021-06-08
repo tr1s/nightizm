@@ -1,8 +1,7 @@
 import Head from 'next/head';
-
-import '../styles/normalize.scss';
-import '../styles/typography.scss';
-import '../styles/global.scss';
+import { ThemeProvider } from 'styled-components';
+import GlobalStyles from '../styles/global';
+import theme from '../styles/theme';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -15,7 +14,12 @@ export default function App({ Component, pageProps }) {
           crossOrigin=""
         />
       </Head>
-      <Component {...pageProps} />
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
+
+      {/* Global styles get injected in the <head> */}
+      <GlobalStyles theme={theme} />
     </>
   );
 }

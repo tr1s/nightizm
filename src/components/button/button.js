@@ -1,41 +1,36 @@
 import React from 'react';
 import Link from 'next/link';
 
-import styles from './button.module.scss';
+import { HrefLink, ButtonLink } from './button-styled';
 
 const Button = ({ type, text, href, linkPath, className }) => {
   if (type === 'link') {
     return (
       <Link href={linkPath}>
-        <a className={`${styles.link} ${className}`}>{text}</a>
+        <HrefLink className={`${className}`}>{text}</HrefLink>
       </Link>
     );
   }
 
   if (type === 'href') {
     return (
-      <a href={href} className={`${styles.link} ${className}`}>
+      <HrefLink href={href} className={`${className}`}>
         {text}
-      </a>
+      </HrefLink>
     );
   }
 
   if (type === 'hrefOpenNew') {
     return (
-      <a
-        href={href}
-        className={`${styles.link} ${className}`}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <HrefLink href={href} className={`${className}`} target="_blank" rel="noopener noreferrer">
         {text}
-      </a>
+      </HrefLink>
     );
   }
 
   return (
     <>
-      <button className={`${styles.link} ${className}`}>{text}</button>
+      <ButtonLink className={`${className}`}>{text}</ButtonLink>
     </>
   );
 };

@@ -1,9 +1,9 @@
-import Layout from '../../components/layout';
+import Layout from '../../components/Layout';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
-import Date from '../../components/date';
+import Date from '../../components/Date';
 
-import styles from './styles.module.scss';
+import { Article, Content } from './post-styled';
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();
@@ -28,14 +28,14 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article className={styles.article}>
+      <Article>
         <h1>{postData.title}</h1>
         <Date dateString={postData.date} />
-        <div
-          className={`inner-wrapper ${styles.content}`}
+        <Content
+          className="inner-wrapper"
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         />
-      </article>
+      </Article>
     </Layout>
   );
 }
