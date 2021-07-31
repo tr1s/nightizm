@@ -4,7 +4,14 @@ import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
 
-import { Wrapper, Logo, Posts, PostTitle, PostDescription, Post } from './styles/writings-styled';
+import {
+  Wrapper,
+  Logo,
+  Posts,
+  PostTitle,
+  PostDescription,
+  Post,
+} from '../styles/pages/writings-styled';
 
 export default function Blog({ allPostsData }) {
   const publishedPosts = allPostsData.filter((post) => post.published === true);

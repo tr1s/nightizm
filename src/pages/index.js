@@ -19,7 +19,7 @@ import {
   MobileContainer,
   MobileMenu,
   MobileMenuLink,
-} from './styles/index-styled';
+} from '../styles/pages/index-styled';
 
 export default function Home() {
   const size = useWindowSize();

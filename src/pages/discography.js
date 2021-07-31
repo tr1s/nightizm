@@ -14,7 +14,7 @@ import {
   StripesRight,
   Description,
   ButtonWrapper,
-} from './styles/discography-styled.js';
+} from '../styles/pages/discography-styled.js';
 
 export default function Discography() {
   return (
