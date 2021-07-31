@@ -1,9 +1,10 @@
-import Layout from '../components/Layout';
+import Image from 'next/image';
+import Layout from '../components/layout';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
-import Date from '../components/Date';
+import Date from '../components/date';
 
-import { Wrapper, Posts, PostTitle, PostDescription, Post } from './styles/writings-styled';
+import { Wrapper, Logo, Posts, PostTitle, PostDescription, Post } from './styles/writings-styled';
 
 export default function Blog({ allPostsData }) {
   const publishedPosts = allPostsData.filter((post) => post.published === true);
@@ -15,6 +16,11 @@ export default function Blog({ allPostsData }) {
           <h1 className="title">WRITINGS</h1>
           <h1 className="subtitle">ON THE WALL</h1>
         </div>
+
+        <Logo>
+          <Image src="/logo-white.png" width="66" height="66" alt="" />
+          {/* 🔱 */}
+        </Logo>
 
         <Posts>
           {allPostsData.map(({ id, date, title, excerpt }) => (

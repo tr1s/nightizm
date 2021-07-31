@@ -11,6 +11,7 @@ export const albums = [
     releaseDate: '2020-08-04',
     link: 'https://night.fanlink.to/renaissance',
     order: '0',
+    latestRelease: false,
   },
   {
     title: 'Remixes',
@@ -28,6 +29,7 @@ export const albums = [
     releaseDate: '2015-07-29',
     link: 'https://nightizm.bandcamp.com/album/remixes',
     order: '1',
+    latestRelease: false,
   },
   {
     title: 'Dark Arts I',
@@ -45,6 +47,7 @@ export const albums = [
     releaseDate: '2016-02-29',
     link: 'https://night.fanlink.to/dark-arts-i',
     order: '2',
+    latestRelease: false,
   },
   {
     title: 'Future Screws<br />(2013​-​2014)',
@@ -62,6 +65,7 @@ export const albums = [
     releaseDate: '2020-08-10',
     link: 'https://nightizm.bandcamp.com/album/future-screws-2013-2014',
     order: '3',
+    latestRelease: false,
   },
   {
     title: 'Mixes<br />(2013 - 2017)',
@@ -80,6 +84,7 @@ export const albums = [
     releaseDate: '2020-08-10',
     link: 'https://nightizm.bandcamp.com/album/mixes-2013-2017',
     order: '4',
+    latestRelease: false,
   },
   {
     title: `Singles<br />(2013​-​2020)`,
@@ -99,5 +104,6 @@ export const albums = [
     releaseDate: '2020-08-10',
     link: 'https://nightizm.bandcamp.com/album/singles-2013-2020',
     order: '5',
+    latestRelease: false,
   },
 ];

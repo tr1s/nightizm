@@ -9,7 +9,7 @@ const Helmet = ({ title, description, image, imageDescription }) => {
       <link rel="icon" href="/favicon.ico" />
 
       <title>{title ? `${title} | ${siteName}` : siteName}</title>
-      <meta name="description" content={description} />
+      <meta name="description" content={description ? description : 'Seize the Night'} />
 
       {/* Open Graph */}
       {/* <meta property="og:url" content={{`https://nightizm.com/${url}`} key="ogurl" /> */}

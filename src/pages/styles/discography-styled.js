@@ -5,6 +5,21 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   border-bottom: 4px solid var(--black);
+  padding-bottom: 140px;
+
+  @media screen and (${(props) => props.theme.awkward}) {
+    padding-bottom: 80px;
+  }
+`;
+
+export const Logo = styled.div`
+  display: none;
+  @media screen and (${(props) => props.theme.awkward}) {
+    display: block;
+    margin-top: 70px;
+    margin-bottom: -10px;
+    text-align: center;
+  }
 `;
 
 export const Album = styled.div`
@@ -12,11 +27,12 @@ export const Album = styled.div`
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
-  border-bottom: 4px solid var(--black);
+  padding-bottom: 40px;
+  border-bottom: 4px solid var(--grey-100);
 `;
 
 export const Title = styled.h1`
-  color: #252525;
+  color: var(--grey-200);
   text-align: center;
   padding: 7.5rem 0;
   text-transform: uppercase;
@@ -25,19 +41,20 @@ export const Title = styled.h1`
   }
   @media screen and (${(props) => props.theme.tablet}) {
     font-size: 5.8rem;
-    padding: 8rem 0;
+    padding: 5.8rem 0;
+    padding-top: 5.9rem;
     margin-bottom: 0rem;
   }
 `;
 
 export const ArtworkLink = styled.a`
-  margin-bottom: 3.5rem;
+  margin-bottom: 2rem;
 `;
 
 export const Artwork = styled.figure`
   position: relative;
   img {
-    border: 1px solid #fff !important;
+    border: 1px solid var(--grey-100) !important;
     border-radius: var(--border-radius);
     @media screen and (${(props) => props.theme.mobileLarge}) {
       border: none !important;
@@ -50,7 +67,7 @@ export const StripesLeft = styled.div`
   &::before {
     content: '';
     position: absolute;
-    background: var(--black);
+    background: var(--grey-100);
     border: 1px solid var(--grey);
     border-radius: 4px;
     width: 1000px;
@@ -62,7 +79,7 @@ export const StripesLeft = styled.div`
   &::after {
     content: '';
     position: absolute;
-    background: var(--black);
+    background: var(--grey-100);
     border: 1px solid var(--grey);
     border-radius: 4px;
     width: 1000px;
@@ -76,7 +93,7 @@ export const StripesRight = styled.div`
   &::before {
     content: '';
     position: absolute;
-    background: var(--black);
+    background: var(--grey-100);
     border: 1px solid var(--grey);
     border-radius: 4px;
     width: 1000px;
@@ -88,7 +105,7 @@ export const StripesRight = styled.div`
   &::after {
     content: '';
     position: absolute;
-    background: var(--black);
+    background: var(--grey-100);
     border: 1px solid var(--grey);
     border-radius: 4px;
     width: 1000px;
@@ -100,29 +117,30 @@ export const StripesRight = styled.div`
 `;
 
 export const Description = styled.div`
-  max-width: 464px;
+  max-width: 666px;
   text-align: center;
   margin: 0 auto;
+  margin-bottom: 1.5rem;
   @media screen and (${(props) => props.theme.awkward}) {
     padding: 0 5%;
   }
   p {
-    margin-bottom: 4rem;
-    color: var(--grey-400);
+    margin-bottom: 1rem;
+    color: var(--grey-300);
   }
 `;
 
 export const ButtonWrapper = styled.div`
-  margin-bottom: 5.3rem;
   display: flex;
   flex-direction: column;
   text-align: center;
+  a {
+    margin-bottom: 3rem;
+  }
   a:first-of-type {
-    margin-bottom: 4rem;
     align-self: center;
   }
   a:last-of-type {
-    background: #1b9cbd;
-    background: var(--accent);
+    border: 2px dashed var(--blue);
   }
 `;

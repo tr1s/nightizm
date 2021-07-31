@@ -4,37 +4,17 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.header`
-  background: var(--black-200);
+  /* background: var(--black); */
 `;
 
 export const Nav = styled.nav`
   display: flex;
-  justify-content: center;
-  padding: 3rem 0;
-  position: relative;
-  button {
-    cursor: pointer;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    color: var(--grey-400);
-    padding: 0.7rem 1.2rem;
-    background: var(--black-soft);
-    border-radius: var(--border-radius);
-    border: none;
-    font-weight: bold;
-    &:hover {
-      color: var(--grey-400);
-    }
-  }
+  padding: 1.3rem 2rem;
+  position: fixed;
+
   ul {
     display: flex;
-    @media screen and (${(props) => props.theme.mobileLarge}) {
-      text-align: center;
-      flex-direction: column;
-    }
+    flex-direction: column;
   }
   li:not(:last-child) {
     margin-right: 3rem;
@@ -45,16 +25,20 @@ export const Nav = styled.nav`
 `;
 
 export const NavLink = styled.a`
-  color: var(--grey-300);
+  color: var(--grey-400);
   font-family: var(--font-mono);
   font-size: 1.6rem;
+  cursor: pointer;
   &:hover,
   &:focus {
-    color: var(--grey-400);
+    color: var(--grey-500);
   }
 `;
 
 export const Logo = styled.figure`
   text-align: center;
-  margin-bottom: -1rem;
+  font-size: 4rem;
+  /* border: 1px solid white; */
+  padding: 11rem;
+  padding-bottom: 0;
 `;

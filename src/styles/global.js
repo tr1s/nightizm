@@ -94,7 +94,7 @@ const GlobalStyles = createGlobalStyle`
     --title-size: 6px;
 
     --black: #000;
-    --black-100: hsl(0, 0%, 0%);
+    --black-100: hsl(0, 0%, 1%);
     --black-200: hsl(220, 11%, 11%);
     --black-soft: hsl(200, 2%, 25%);
     --black-soft: hsl(0, 0%, 15%);
@@ -108,6 +108,10 @@ const GlobalStyles = createGlobalStyle`
     --white-true: hsl(0, 0%, 100%);
 
     --blue: hsl(221, 90%, 59%);
+    --blue: #1786e8;
+    --gold: #e8cc17;
+    --green: #17e878;
+    --mono: #cf3e64;
     --red: hsl(344, 82%, 50%);
     --pink: hsl(299, 100%, 90%);
     --purple: hsl(250, 56%, 81%);
@@ -115,6 +119,8 @@ const GlobalStyles = createGlobalStyle`
     --primary: var(--red);
     --secondary: var(--red);
     --accent: var(--purple);
+    --accent: #fbed68;
+    --accent: var(--red);
   }
 
 
@@ -163,7 +169,6 @@ const GlobalStyles = createGlobalStyle`
     font-family: var(--font-body);
     font-family: var(--font-mono);
     &::-webkit-scrollbar {
-      width: 0.7rem;
       width: 1rem;
     }
     &::-webkit-scrollbar-track {
@@ -172,28 +177,25 @@ const GlobalStyles = createGlobalStyle`
       background: var(--black-soft);
     }
     &::-webkit-scrollbar-thumb {
-      background: rgba(34, 34, 34, 1);
       background: var(--accent);
     }
   }
 
   .wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
+    height: 100%;
   }
 
   .inner-wrapper {
     max-width: 1400px;
     margin: 0 auto;
     @media screen and (${(props) => props.theme.desktop15}) {
-      padding: 0 5%;
+      padding: 0 2rem;
     }
     @media screen and (${(props) => props.theme.tabletLarge}) {
-      padding: 0 5%;
+      padding: 0 2rem;
     }
     @media screen and (${(props) => props.theme.mobileLarge}) {
-      padding: 0 5%;
+      padding: 0 1.5rem;
     }
   }
 
@@ -240,8 +242,12 @@ const GlobalStyles = createGlobalStyle`
 
   div.double-header {
     padding: 8rem 0;
+    @media screen and (${(props) => props.theme.tablet}) {
+      padding-top: 5.9rem;
+      padding-bottom: 5.2rem;
+    }
     h1.title {
-      color: #252525;
+      color: var(--black-200);
       margin-bottom: -10.5rem;
       text-align: center;
       @media screen and (${(props) => props.theme.desktop13}) {
@@ -259,16 +265,13 @@ const GlobalStyles = createGlobalStyle`
       margin-bottom: 2rem;
       font-size: 17.3rem;
       font-size: clamp(5.8rem, 17.3rem, 11vw);
+      text-align: center;
       color: var(--black);
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: var(--grey-300);
-      text-align: center;
       @media screen and (${(props) => props.theme.tablet}) {
         display: none;
       }
-    }
-    @media screen and (${(props) => props.theme.awkward}) {
-      font-size: 4rem;
     }
   }
 

@@ -3,7 +3,7 @@ export const breakpoints = {
   mobile: 'max-width: 375px',
   mobileLarge: 'max-width: 414px',
   awkward: 'max-width: 668px',
-  tablet: 'max-width: 768',
+  tablet: 'max-width: 768px',
   tabletLarge: 'max-width: 1024px',
   desktop13: 'max-width: 1280px',
   desktop15: 'max-width: 1440px',

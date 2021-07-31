@@ -3,44 +3,24 @@
 
 import styled from 'styled-components';
 
-export const HrefLink = styled.a`
-  color: black;
-  background: var(--white);
-  padding: 7px 20px;
-  border: 4px solid var(--black);
-  border-radius: var(--border-radius);
-  font-weight: 900;
-  position: relative;
-  top: -2px;
-  transition: 0.1s all ease;
-  box-shadow: 0 3px 0 var(--white);
-  &:hover {
-    transition: 0.1s all ease;
-    box-shadow: 0 1px 0 var(--white);
-    top: 0;
-  }
-  &:active {
-    background: var(--grey-400);
-  }
-`;
-
 export const ButtonLink = styled.button`
-  color: black;
-  background: var(--white);
-  padding: 7px 20px;
-  border: 4px solid var(--black);
+  background: var(--black);
+  color: var(--grey-500);
+  padding: 9px 21px;
+  border: 2px solid var(--grey-500);
+  border: 2px dashed var(--red);
   border-radius: var(--border-radius);
-  font-weight: 900;
+  font-size: 1.9rem;
   position: relative;
-  top: -2px;
   transition: 0.1s all ease;
-  box-shadow: 0 3px 0 var(--white);
   &:hover {
     transition: 0.1s all ease;
-    box-shadow: 0 1px 0 var(--white);
-    top: 0;
+    background: var(--black-200);
+    color: var(--white-true);
   }
   &:active {
-    background: var(--grey-400);
+    color: var(--accent);
+    color: #fbed68;
+    border: 2px dashed var(--red);
   }
 `;

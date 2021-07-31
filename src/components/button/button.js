@@ -7,30 +7,38 @@ const Button = ({ type, text, href, linkPath, className }) => {
   if (type === 'link') {
     return (
       <Link href={linkPath}>
-        <HrefLink className={`${className}`}>{text}</HrefLink>
+        <ButtonLink as="a" className={className}>
+          {text}
+        </ButtonLink>
       </Link>
     );
   }
 
   if (type === 'href') {
     return (
-      <HrefLink href={href} className={`${className}`}>
+      <ButtonLink as="a" href={href} className={className}>
         {text}
-      </HrefLink>
+      </ButtonLink>
     );
   }
 
   if (type === 'hrefOpenNew') {
     return (
-      <HrefLink href={href} className={`${className}`} target="_blank" rel="noopener noreferrer">
+      <ButtonLink
+        as="a"
+        href={href}
+        className={className}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {text}
-      </HrefLink>
+      </ButtonLink>
     );
   }
 
   return (
     <>
-      <ButtonLink className={`${className}`}>{text}</ButtonLink>
+      <ButtonLink className={className}>{text}</ButtonLink>
     </>
   );
 };
