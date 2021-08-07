@@ -4,6 +4,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.section`
+  padding-top: 14rem;
   padding-bottom: 140px;
 
   @media screen and (${(props) => props.theme.awkward}) {

@@ -7,7 +7,9 @@ export const Wrapper = styled.footer`
   display: flex;
   justify-content: center;
   backdrop-filter: blur(14px);
-  border-top: 1px solid var(--grey-100);
+  /* border-top: 2px dashed var(--grey-300); */
+  border-bottom: 2px dashed var(--grey-300);
+  /* border-radius: var(--border-radius); */
   position: fixed;
   bottom: 0;
   left: 0;

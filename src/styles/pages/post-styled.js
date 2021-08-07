@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const Article = styled.article`
-  font-family: var(--font-body);
   display: flex;
   flex-direction: column;
+  font-family: var(--font-body);
+  color: blue;
   h1 {
     font-size: 9.5rem;
     font-size: clamp(5.8rem, 9.5rem, 7vw);
@@ -22,9 +23,11 @@ export const Article = styled.article`
     text-align: center;
     font-family: var(--font-mono);
     line-height: 1.6;
+    color: var(--grey-400);
   }
   time:last-of-type {
     margin-bottom: 8rem;
+    color: var(--accent);
   }
 `;
 

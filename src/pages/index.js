@@ -7,19 +7,9 @@ import Helmet from '../components/helmet';
 // import Link from '../components/activeLink';
 import Link from 'next/link';
 import Layout from '../components/layout';
+import Albums from '../components/albums/';
 
-import Image from 'next/image';
-import pic from '/public/images/artwork/renaissance.jpg';
-
-import {
-  Container,
-  TitleWrapper,
-  Title,
-  SubTitle,
-  MobileContainer,
-  MobileMenu,
-  MobileMenuLink,
-} from '../styles/pages/index-styled';
+import { Container, TitleWrapper, Title, SubTitle } from '../styles/pages/index-styled';
 
 export default function Home() {
   const size = useWindowSize();
@@ -37,35 +27,15 @@ export default function Home() {
             <SubTitle>SEIZE the NIGHT</SubTitle>
             <Title>NIGHTIZM</Title>
           </TitleWrapper>
+          <p>
+            A chronological list of releases. Please enjoy, and subscribe if you wan't updates about
+            my music.
+          </p>
+          <p>🌙🌙🌙</p>
         </Container>
       )}
 
-      {size.width < awkwardBreakpoint && (
-        <MobileContainer>
-          <div>
-            <h1>NIGHTIZM</h1>
-            <h2>SEIZE the NIGHT</h2>
-          </div>
-
-          <MobileMenu>
-            <Link href="/writings" passHref>
-              <MobileMenuLink>Writings</MobileMenuLink>
-            </Link>
-            <Link href="/discography" passHref>
-              <MobileMenuLink>Discography</MobileMenuLink>
-            </Link>
-
-            {/* <MobileMenuListItem>
-                <Link>Donate</Link>
-              </MobileMenuListItem> */}
-          </MobileMenu>
-        </MobileContainer>
-      )}
-
-      {/* <h2>Spotlight:</h2>
-        <Image src={pic} alt="pic..." placeholder="blur" /> */}
-
-      {/* Placeholder example, check docs again: */}
+      <Albums />
     </Layout>
   );
 }

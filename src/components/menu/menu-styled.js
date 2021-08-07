@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   width: 100%;
-  background: var(--white);
-  color: var(--black);
+  background: var(--black);
+  color: var(--white);
   position: fixed;
   top: 0;
   left: 0;
@@ -15,15 +15,10 @@ export const Wrapper = styled.div`
   align-items: center;
 
   @media screen and (${(props) => props.theme.awkward}) {
-    flex-direction: row;
+    /* flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: flex-end; */
   }
-
-  /* @media (prefers-color-scheme: dark) {
-    background: var(--black) !important;
-    color: var(--white);
-  } */
 
   button {
     cursor: pointer;
@@ -33,7 +28,7 @@ export const Wrapper = styled.div`
     }
   }
   button:first-of-type {
-    border: none;
+    border: 1px dashed white;
     border-radius: 4px;
     border-top-left-radius: 0;
     background: transparent;
@@ -45,7 +40,7 @@ export const Wrapper = styled.div`
     }
   }
   button:last-of-type {
-    border: none;
+    border: 1px dashed white;
     border-radius: 4px;
     border-bottom-right-radius: 0;
     background: transparent;
@@ -58,103 +53,123 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const SubmenuWrapper = styled.div`
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
+export const MenuLinkWrapper = styled.div`
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  @media screen and (${(props) => props.theme.awkward}) {
-    justify-content: flex-start;
-  }
-`;
-
-export const SubMenu = styled.div`
-  &:not(:last-of-type) {
-    margin-bottom: 7.5rem;
-    @media screen and (${(props) => props.theme.awkward}) {
-      margin-bottom: 4rem;
-    }
-  }
-`;
-
-export const SubMenuTitle = styled.h2`
-  color: var(--grey-100);
   text-align: center;
-  @media screen and (${(props) => props.theme.awkward}) {
-    font-size: 3.5rem;
-    text-align: left;
-    padding: 1.5rem;
-  }
-  /* &:hover {
-    @media (prefers-color-scheme: dark) {
-      color: var(--white);
-    }
-  } */
 `;
-export const SubMenuLinks = styled.div`
+
+export const MenuLink = styled.a`
+  color: var(--grey-200);
+  line-height: 1.4;
+  &:hover,
+  &:focus {
+    color: var(--blue);
+  }
+`;
+
+export const StreamingWrapper = styled.div`
+  width: 100%;
+  border-top: 1px solid var(--grey-100);
+  border-bottom: 1px solid var(--grey-100);
+  margin-bottom: 4rem;
+  &:hover,
+  &:focus {
+    border-top: 1px solid var(--black-soft);
+    border-bottom: 1px solid var(--black-soft);
+  }
+  img {
+    width: 30px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+  div {
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: var(--container-width);
+    margin: 0 auto;
+  }
+  p {
+    color: var(--grey-400);
+  }
+`;
+export const StreamingLink = styled.a`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  a:first-of-type {
-    @media screen and (${(props) => props.theme.awkward}) {
-      border-top: 1px solid var(--grey-400);
+  text-align: center;
+  padding: 4rem 2rem;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background: hsl(0, 0%, 4%);
+    & span {
+      color: var(--white-true);
     }
   }
-  a {
-    color: var(--black);
-    @media screen and (${(props) => props.theme.awkward}) {
-      padding-left: 2rem;
-      border-bottom: 1px solid var(--grey-400);
-      display: inline-block;
-      width: 100%;
-      padding: 1rem;
-      padding-left: 3rem;
-    }
-    /* @media (prefers-color-scheme: dark) {
-      color: var(--grey-300);
-    } */
+  span {
+    display: table;
+    margin: auto;
+    font-weight: bold;
   }
-  a:hover {
-    background: var(--grey-500);
-    /* @media (prefers-color-scheme: dark) {
-      color: var(--grey-400);
-    } */
-  }
-`;
-
-export const MobileClose = styled.aside`
-  display: none;
-
-  @media screen and (${(props) => props.theme.awkward}) {
-    border-left: 1px solid var(--grey-400);
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    position: relative;
-    cursor: pointer;
+  &:first-of-type {
+    border-right: 1px solid var(--grey-100);
     &:hover,
     &:focus {
-      background: var(--grey-500);
+      border-left: 1px solid var(--black-soft);
+      border-right: 1px solid var(--black-soft);
     }
-    h2 {
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-      align-self: center;
+  }
+  &:last-of-type {
+    &:hover,
+    &:focus {
+      border-left: 1px solid var(--black-soft);
+      border-right: 1px solid var(--black-soft);
     }
   }
 `;
-
-export const MobileIconWrapper = styled.div`
-  display: none;
-
-  @media screen and (${(props) => props.theme.awkward}) {
-    display: initial;
-    position: absolute;
-    bottom: 1rem;
+export const StreamingParagraph = styled.p`
+  margin-bottom: 3rem;
+  max-width: var(--container-width);
+  color: var(--grey-300);
+  text-align: center;
+  padding: 0 2rem;
+  text-align: justify;
+  a {
+    color: var(--blue);
+    font-weight: bold;
   }
+  span {
+    color: var(--yellow);
+    font-weight: bold;
+  }
+`;
+
+export const ButtonWrapper = styled.div`
+  margin-bottom: 4rem;
+  a {
+    border: 2px dashed var(--accent);
+  }
+  a:active {
+    border: 2px dashed var(--green);
+  }
+`;
+
+export const SocialWrapper = styled.div`
+  display: flex;
+  figure:not(:last-of-type) {
+    margin-right: 2rem;
+    border: 1px solid var(--black-soft);
+    border-radius: var(--border-radius);
+  }
+  figure {
+    width: 69px;
+    padding: 20px;
+    border: 1px solid var(--grey-100);
+  }
+`;
+
+export const SocialLink = styled.a`
+  font-weight: bold;
 `;

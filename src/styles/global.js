@@ -90,6 +90,7 @@ const GlobalStyles = createGlobalStyle`
     --font-body: 'PT Serif';
     --font-mono: 'MagdaCleanMono';
 
+    --container-width: 1000px;
     --border-radius: 6px;
     --title-size: 6px;
 
@@ -110,6 +111,7 @@ const GlobalStyles = createGlobalStyle`
     --blue: hsl(221, 90%, 59%);
     --blue: #1786e8;
     --gold: #e8cc17;
+    --yellow: #fbed68;
     --green: #17e878;
     --mono: #cf3e64;
     --red: hsl(344, 82%, 50%);

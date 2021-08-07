@@ -6,7 +6,7 @@ import { HrefLink, ButtonLink } from './button-styled';
 const Button = ({ type, text, href, linkPath, className }) => {
   if (type === 'link') {
     return (
-      <Link href={linkPath}>
+      <Link href={linkPath} passHref>
         <ButtonLink as="a" className={className}>
           {text}
         </ButtonLink>

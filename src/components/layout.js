@@ -16,8 +16,9 @@ export default function Layout({ children }) {
 
   return (
     <div className="wrapper">
-      {size.width > awkwardBreakpoint && <Header menu={menu} setMenu={setMenu} />}
-      <main style={{ height: '100%' }}>{children}</main>
+      {/* {size.width > awkwardBreakpoint && <Header menu={menu} setMenu={setMenu} />} */}
+      <Header menu={menu} setMenu={setMenu} />
+      <main>{children}</main>
       <Footer menu={menu} setMenu={setMenu} />
       {menu && <Menu menu={menu} setMenu={setMenu} />}
     </div>

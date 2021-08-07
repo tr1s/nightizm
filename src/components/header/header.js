@@ -1,7 +1,7 @@
 import Link from '../activeLink';
 import Image from 'next/image';
 
-import { Wrapper, Nav, NavLink, Logo } from './header-styled';
+import { Wrapper, Nav, NavLink, MenuButton, Logo } from './header-styled';
 
 export default function Header({ menu, setMenu }) {
   return (
@@ -10,12 +10,7 @@ export default function Header({ menu, setMenu }) {
         <ul>
           <li>
             <Link href="/">
-              <NavLink>Home</NavLink>
-            </Link>
-          </li>
-          <li>
-            <Link href="/discography">
-              <NavLink>Discography</NavLink>
+              <NavLink>Music</NavLink>
             </Link>
           </li>
           <li>
@@ -23,13 +18,20 @@ export default function Header({ menu, setMenu }) {
               <NavLink>Writings</NavLink>
             </Link>
           </li>
+          <li></li>
         </ul>
+        <Link href="/">
+          <a>
+            <Logo>
+              <Image src="/logo-white.png" width="66" height="66" alt="" />
+              {/* 🔱 */}
+            </Logo>
+          </a>
+        </Link>
+        <MenuButton onClick={() => setMenu(!menu)}>
+          <Image src="/menu.svg" width="40" height="30" alt="" />
+        </MenuButton>
       </Nav>
-
-      <Logo>
-        <Image src="/logo-white.png" width="66" height="66" alt="" />
-        {/* 🔱 */}
-      </Logo>
     </Wrapper>
   );
 }

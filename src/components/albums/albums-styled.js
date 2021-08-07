@@ -1,26 +1,7 @@
-/* Discography styles
+/* Albums styles
 ========================================================================== */
 
 import styled from 'styled-components';
-
-export const Wrapper = styled.div`
-  border-bottom: 4px solid var(--black);
-  padding-bottom: 140px;
-
-  @media screen and (${(props) => props.theme.awkward}) {
-    padding-bottom: 80px;
-  }
-`;
-
-export const Logo = styled.div`
-  display: none;
-  @media screen and (${(props) => props.theme.awkward}) {
-    display: block;
-    margin-top: 70px;
-    margin-bottom: -10px;
-    text-align: center;
-  }
-`;
 
 export const Album = styled.div`
   display: flex;
@@ -28,13 +9,14 @@ export const Album = styled.div`
   align-items: center;
   overflow-x: hidden;
   padding-bottom: 40px;
-  border-bottom: 4px solid var(--grey-100);
+  border-bottom: 2px dashed var(--grey-200);
 `;
 
-export const Title = styled.h1`
-  color: var(--grey-200);
+export const Title = styled.h3`
+  color: var(--grey-400);
   text-align: center;
   padding: 7.5rem 0;
+  padding-bottom: 2rem;
   text-transform: uppercase;
   @media screen and (${(props) => props.theme.tabletLarge}) {
     padding: 6rem 0;
@@ -53,6 +35,7 @@ export const ArtworkLink = styled.a`
 
 export const Artwork = styled.figure`
   position: relative;
+  z-index: -1;
   img {
     border: 1px solid var(--grey-100) !important;
     border-radius: var(--border-radius);
@@ -89,6 +72,7 @@ export const StripesLeft = styled.div`
     transform: translateY(-50%);
   }
 `;
+
 export const StripesRight = styled.div`
   &::before {
     content: '';
@@ -117,7 +101,7 @@ export const StripesRight = styled.div`
 `;
 
 export const Description = styled.div`
-  max-width: 666px;
+  max-width: 456px;
   text-align: center;
   margin: 0 auto;
   margin-bottom: 1.5rem;
@@ -141,6 +125,10 @@ export const ButtonWrapper = styled.div`
     align-self: center;
   }
   a:last-of-type {
-    border: 2px dashed var(--blue);
+    border: 2px solid var(--grey-200);
+  }
+  a:last-of-type:hover,
+  a:last-of-type:focus {
+    border: 2px solid var(--grey-300);
   }
 `;

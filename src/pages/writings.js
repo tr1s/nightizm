@@ -30,7 +30,7 @@ export default function Blog({ allPostsData }) {
         </Logo>
 
         <Posts>
-          {allPostsData.map(({ id, date, title, excerpt }) => (
+          {publishedPosts.map(({ id, date, title, excerpt }) => (
             <Post key={id}>
               <Link href="/posts/[id]" as={`/posts/${id}`}>
                 <a>
