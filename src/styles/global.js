@@ -230,15 +230,18 @@ const GlobalStyles = createGlobalStyle`
     font-weight: 100;
   }
   h4 {
-    /* font-size: 17.1rem; */
+    font-family: var(--font-mono);
+    font-size: 2.2rem;
     font-weight: 100;
   }
   h5 {
-    /* font-size: 17.1rem; */
+    font-family: var(--font-mono);
+    font-size: 1.6rem;
     font-weight: 100;
   }
   h6 {
-    /* font-size: 17.1rem; */
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
     font-weight: 100;
   }
 

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import Button from '../button/';
 import useKeypress from '../../hooks/useKeypress';
 import VisuallyHidden from '../visuallyHidden';
@@ -10,9 +9,9 @@ import {
   MenuLink,
   StreamingWrapper,
   StreamingLink,
-  StreamingParagraph,
   ButtonWrapper,
   SocialWrapper,
+  SocialLink,
 } from './menu-styled';
 
 export default function Menu({ menu, setMenu }) {
@@ -21,11 +20,12 @@ export default function Menu({ menu, setMenu }) {
   });
 
   return (
-    <Wrapper>
+    <Wrapper allowPinchZoom={true}>
+      {/* Menu Links ➡ */}
       <MenuLinkWrapper>
         <Link href="/" passHref>
           <MenuLink>
-            <h3>Home</h3>
+            <h3>Music</h3>
           </MenuLink>
         </Link>
         <Link href="/writings" passHref>
@@ -35,6 +35,7 @@ export default function Menu({ menu, setMenu }) {
         </Link>
       </MenuLinkWrapper>
 
+      {/* Streaming Links 🍎 */}
       <StreamingWrapper>
         <div>
           <StreamingLink href="https://google.ca">
@@ -53,46 +54,39 @@ export default function Menu({ menu, setMenu }) {
           </StreamingLink>
         </div>
       </StreamingWrapper>
-      <StreamingParagraph>
-        <strong>Don’t use either?</strong> Listen through your preferred streaming service{' '}
-        <a href="https://songwhip.com/nightizm"> here</a>, or{' '}
-        <a href="https://nightizm.bandcamp.com">download each album separately</a> if you prefer to
-        own your music. <strong>Consider using the button below</strong> as an alternative way to{' '}
-        <span>support</span> me and download all my music at once:
-      </StreamingParagraph>
 
+      {/* Button CTA 🎬 */}
       <ButtonWrapper>
-        <Button
-          type="hrefOpenNew"
-          text="Download Full Discography"
-          href="https://nightizm.bandcamp.com/vip-membership"
-        />
+        <Button type="hrefOpenNew" href="https://nightizm.bandcamp.com/vip-membership">
+          † Night Faction †
+        </Button>
       </ButtonWrapper>
 
+      {/* Social Links 🗣 */}
       <SocialWrapper>
-        <figure>
-          <img src="/apple-rainbow.svg" alt="" />
-        </figure>
-        <figure>
-          <img src="/apple-rainbow.svg" alt="" />
-        </figure>
-        <figure>
-          <img src="/apple-rainbow.svg" alt="" />
-        </figure>
-        <figure>
-          <img src="/apple-rainbow.svg" alt="" />
-        </figure>
-        <figure>
-          <img src="/apple-rainbow.svg" alt="" />
-        </figure>
+        <Link href="https://facebook.com/nightizm" passHref>
+          <SocialLink>Facebook</SocialLink>
+        </Link>
+        <Link href="https://instagram.com/nightizm" passHref>
+          <SocialLink>Instagram</SocialLink>
+        </Link>
+        <Link href="https://nightizm.bandcamp.com" passHref>
+          <SocialLink>Bandcamp</SocialLink>
+        </Link>
+        <Link href="https://soundcloud.com/nightizm" passHref>
+          <SocialLink>SoundCloud</SocialLink>
+        </Link>
+        <Link href="https://twitter.com/nightizm" passHref>
+          <SocialLink>Twitter</SocialLink>
+        </Link>
       </SocialWrapper>
 
       <button onClick={() => setMenu(!menu)}>
-        <Image src="/close.svg" alt="" width={50} height={50} layout="fixed" />
+        <img src="/close-icon.svg" alt="" />
         <VisuallyHidden>Close menu.</VisuallyHidden>
       </button>
       <button onClick={() => setMenu(!menu)}>
-        <Image src="/close.svg" alt="" width={50} height={50} layout="fixed" />
+        <img src="/close-icon.svg" alt="" />
         <VisuallyHidden>Close menu.</VisuallyHidden>
       </button>
     </Wrapper>

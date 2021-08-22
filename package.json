@@ -8,6 +8,7 @@
     "prod": "next start"
   },
   "dependencies": {
+    "@reach/dialog": "^0.16.0",
     "date-fns": "^2.16.1",
     "gray-matter": "^4.0.2",
     "next": "^11.0.0",

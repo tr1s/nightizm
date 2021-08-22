@@ -1,13 +1,9 @@
 import { Wrapper, MenuButton } from './footer-styled';
 
-export default function Footer({ menu, setMenu }) {
+export default function Footer() {
   return (
     <>
-      <Wrapper>
-        {/* <MenuButton onClick={() => setMenu(!menu)}>
-          <h2>Menu</h2>
-        </MenuButton> */}
-      </Wrapper>
+      <Wrapper></Wrapper>
     </>
   );
 }

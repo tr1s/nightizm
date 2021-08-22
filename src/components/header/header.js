@@ -1,16 +1,20 @@
+import { useState } from 'react';
 import Link from '../activeLink';
 import Image from 'next/image';
+import Menu from '../menu/';
 
 import { Wrapper, Nav, NavLink, MenuButton, Logo } from './header-styled';
 
-export default function Header({ menu, setMenu }) {
+export default function Header() {
+  const [menu, setMenu] = useState(false);
+
   return (
     <Wrapper>
       <Nav>
         <ul>
           <li>
             <Link href="/">
-              <NavLink>Music</NavLink>
+              <NavLink>Home</NavLink>
             </Link>
           </li>
           <li>
@@ -29,8 +33,11 @@ export default function Header({ menu, setMenu }) {
           </a>
         </Link>
         <MenuButton onClick={() => setMenu(!menu)}>
-          <Image src="/menu.svg" width="40" height="30" alt="" />
+          <img src="/menu-icon.svg" alt="" />
         </MenuButton>
+
+        {/* Modal Menu */}
+        {menu && <Menu menu={menu} setMenu={setMenu} />}
       </Nav>
     </Wrapper>
   );

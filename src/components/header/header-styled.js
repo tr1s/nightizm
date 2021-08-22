@@ -5,7 +5,6 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.header`
   z-index: 1;
-  /* background: var(--black); */
 `;
 
 export const Nav = styled.nav`
@@ -49,8 +48,7 @@ export const MenuButton = styled.button`
   border: none;
   padding: 0;
   margin: 0;
-  position: relative;
-  top: 3px;
+  width: 35px;
 `;
 
 export const Logo = styled.figure`

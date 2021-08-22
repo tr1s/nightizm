@@ -3,19 +3,12 @@
 
 import styled from 'styled-components';
 
-export const AlbumsWrapper = styled.div`
-  display: flex;
-  /* margin: -10px; */
-`;
-
 export const Album = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   overflow-x: hidden;
   padding: 40px;
-  /* margin: 20px; */
   border-bottom: 2px dashed var(--grey-200);
   border: 2px solid white;
 `;
@@ -26,8 +19,6 @@ export const Title = styled.h3`
   padding: 7.5rem 0;
   padding-bottom: 2rem;
   text-transform: uppercase;
-  font-family: var(--font-mono);
-  font-size: 1.9rem;
   @media screen and (${(props) => props.theme.tabletLarge}) {
     padding: 6rem 0;
   }
@@ -53,6 +44,60 @@ export const Artwork = styled.figure`
       border: none !important;
       border-radius: 0;
     }
+  }
+`;
+
+export const StripesLeft = styled.div`
+  &::before {
+    content: '';
+    position: absolute;
+    background: var(--grey-100);
+    border: 1px solid var(--grey);
+    border-radius: 4px;
+    width: 1000px;
+    height: 26px;
+    top: calc(50% + 2.3rem);
+    right: 548px;
+    transform: translateY(-50%);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    background: var(--grey-100);
+    border: 1px solid var(--grey);
+    border-radius: 4px;
+    width: 1000px;
+    height: 26px;
+    top: calc(50% - 2.3rem);
+    right: 548px;
+    transform: translateY(-50%);
+  }
+`;
+
+export const StripesRight = styled.div`
+  &::before {
+    content: '';
+    position: absolute;
+    background: var(--grey-100);
+    border: 1px solid var(--grey);
+    border-radius: 4px;
+    width: 1000px;
+    height: 26px;
+    top: calc(50% + 2.3rem);
+    left: 548px;
+    transform: translateY(-50%);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    background: var(--grey-100);
+    border: 1px solid var(--grey);
+    border-radius: 4px;
+    width: 1000px;
+    height: 26px;
+    top: calc(50% - 2.3rem);
+    left: 548px;
+    transform: translateY(-50%);
   }
 `;
 

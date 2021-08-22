@@ -15,6 +15,7 @@ export const ButtonLink = styled.button`
   transition: 0.1s all ease;
   &:hover {
     color: var(--white-true);
+    text-shadow: 0px 1px 11px var(--white-true);
     background: var(--black-200);
     transition: 0.1s all ease;
   }

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { DialogOverlay, DialogContent } from '@reach/dialog';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(DialogOverlay)`
   width: 100%;
   background: var(--black);
   color: var(--white);
@@ -13,48 +14,52 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: auto;
 
-  @media screen and (${(props) => props.theme.awkward}) {
-    /* flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end; */
+  @media screen and (max-height: 700px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 60px 0;
   }
 
   button {
     cursor: pointer;
     padding: 0;
+    width: 35px;
+    @media screen and (${(props) => props.theme.awkward}) {
+      width: 30px;
+    }
     img {
-      width: 69px;
+      width: 100%;
     }
   }
   button:first-of-type {
-    border: 1px dashed white;
-    border-radius: 4px;
+    border: none;
     border-top-left-radius: 0;
     background: transparent;
     position: absolute;
-    top: 23px;
-    left: 23px;
-    @media screen and (${(props) => props.theme.awkward}) {
-      display: none;
-    }
+    top: 20px;
+    right: 20px;
   }
   button:last-of-type {
-    border: 1px dashed white;
-    border-radius: 4px;
+    border: none;
     border-bottom-right-radius: 0;
     background: transparent;
     position: absolute;
-    bottom: 23px;
-    right: 23px;
+    bottom: 20px;
+    left: 20px;
+    @media screen and (max-height: 700px) {
+      display: none;
+    }
     @media screen and (${(props) => props.theme.awkward}) {
       display: none;
     }
   }
 `;
 
-export const MenuLinkWrapper = styled.div`
-  margin-bottom: 40px;
+export const MenuLinkWrapper = styled(DialogContent)`
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -83,6 +88,10 @@ export const StreamingWrapper = styled.div`
     width: 30px;
     margin: 0 auto;
     margin-bottom: 2rem;
+    @media screen and (${(props) => props.theme.awkward}) {
+      width: 23px;
+      margin-bottom: 1rem;
+    }
   }
   div {
     /* border: 1px solid red; */
@@ -93,19 +102,28 @@ export const StreamingWrapper = styled.div`
   }
   p {
     color: var(--grey-400);
+    @media screen and (${(props) => props.theme.awkward}) {
+      font-size: 1.3rem;
+      line-height: 1.6;
+    }
   }
 `;
+
 export const StreamingLink = styled.a`
   display: flex;
   flex-direction: column;
   text-align: center;
   padding: 4rem 2rem;
   cursor: pointer;
+  @media screen and (${(props) => props.theme.awkward}) {
+    padding: 3rem 1rem;
+  }
   &:hover,
   &:focus {
     background: hsl(0, 0%, 4%);
     & span {
       color: var(--white-true);
+      text-shadow: 0px 1px 11px var(--white-true);
     }
   }
   span {
@@ -129,22 +147,6 @@ export const StreamingLink = styled.a`
     }
   }
 `;
-export const StreamingParagraph = styled.p`
-  margin-bottom: 3rem;
-  max-width: var(--container-width);
-  color: var(--grey-300);
-  text-align: center;
-  padding: 0 2rem;
-  text-align: justify;
-  a {
-    color: var(--blue);
-    font-weight: bold;
-  }
-  span {
-    color: var(--yellow);
-    font-weight: bold;
-  }
-`;
 
 export const ButtonWrapper = styled.div`
   margin-bottom: 4rem;
@@ -157,19 +159,27 @@ export const ButtonWrapper = styled.div`
 `;
 
 export const SocialWrapper = styled.div`
-  display: flex;
+  padding: 0 2rem;
+  text-align: center;
   figure:not(:last-of-type) {
-    margin-right: 2rem;
-    border: 1px solid var(--black-soft);
-    border-radius: var(--border-radius);
+    margin-right: 0rem;
   }
   figure {
     width: 69px;
-    padding: 20px;
-    border: 1px solid var(--grey-100);
+    border-radius: var(--border-radius);
   }
 `;
 
 export const SocialLink = styled.a`
-  font-weight: bold;
+  line-height: 1.9;
+  color: var(--grey-400);
+  &:not(:last-child) {
+    margin-right: 2rem;
+  }
+  &:hover,
+  &:focus {
+    color: var(--white-true);
+    text-shadow: 0px 1px 11px var(--white-true);
+    font-weight: bold;
+  }
 `;

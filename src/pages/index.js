@@ -8,8 +8,20 @@ import Helmet from '../components/helmet';
 import Link from 'next/link';
 import Layout from '../components/layout';
 import Albums from '../components/albums/';
+import Button from '../components/button/';
 
-import { Container, TitleWrapper, Title, SubTitle } from '../styles/pages/index-styled';
+import {
+  Container,
+  TitleWrapper,
+  Title,
+  SubTitle,
+  StreamingWrapper,
+  StreamingLink,
+  StreamingParagraph,
+  ButtonWrapper,
+  Crosses,
+  TitleTwo,
+} from '../styles/pages/index-styled';
 
 export default function Home() {
   const size = useWindowSize();
@@ -23,15 +35,49 @@ export default function Home() {
       <Helmet title="The Lair" />
       {size.width > awkwardBreakpoint && (
         <Container>
+          <StreamingWrapper>
+            <div>
+              <StreamingLink href="https://google.ca">
+                <img src="/spotify.svg" alt="" />
+
+                <p>
+                  Listen on <span>Spotify</span>
+                </p>
+              </StreamingLink>
+              <StreamingLink href="https://google.ca">
+                <img src="/apple-rainbow.svg" alt="" />
+
+                <p>
+                  Listen on <span>Apple Music</span>
+                </p>
+              </StreamingLink>
+            </div>
+          </StreamingWrapper>
+
+          {/* Main Titles */}
           <TitleWrapper>
             <SubTitle>SEIZE the NIGHT</SubTitle>
             <Title>NIGHTIZM</Title>
           </TitleWrapper>
-          <p>
-            A chronological list of releases. Please enjoy, and subscribe if you wan't updates about
-            my music.
-          </p>
-          <p>🌙🌙🌙</p>
+
+          <StreamingParagraph>
+            <strong>Don’t use either?</strong> Listen through your preferred streaming service{' '}
+            <a href="https://songwhip.com/nightizm"> here</a>, or{' '}
+            <a href="https://nightizm.bandcamp.com">download each album separately</a> if you prefer
+            to own your music. <strong>Consider using the button below</strong> as an alternative
+            way to <span>support me</span> and download all my music at once:
+          </StreamingParagraph>
+
+          {/* Main CTA */}
+          <ButtonWrapper>
+            <Button type="hrefOpenNew" href="https://nightizm.bandcamp.com/vip-membership">
+              Download Full Discography
+            </Button>
+          </ButtonWrapper>
+
+          <Crosses>†††</Crosses>
+
+          <TitleTwo>DISCOGRAPHY</TitleTwo>
         </Container>
       )}
 

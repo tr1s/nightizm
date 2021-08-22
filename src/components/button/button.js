@@ -3,12 +3,12 @@ import Link from 'next/link';
 
 import { HrefLink, ButtonLink } from './button-styled';
 
-const Button = ({ type, text, href, linkPath, className }) => {
+const Button = ({ children, type, href, linkPath, className }) => {
   if (type === 'link') {
     return (
       <Link href={linkPath} passHref>
         <ButtonLink as="a" className={className}>
-          {text}
+          {children}
         </ButtonLink>
       </Link>
     );
@@ -17,7 +17,7 @@ const Button = ({ type, text, href, linkPath, className }) => {
   if (type === 'href') {
     return (
       <ButtonLink as="a" href={href} className={className}>
-        {text}
+        {children}
       </ButtonLink>
     );
   }
@@ -31,14 +31,14 @@ const Button = ({ type, text, href, linkPath, className }) => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        {text}
+        {children}
       </ButtonLink>
     );
   }
 
   return (
     <>
-      <ButtonLink className={className}>{text}</ButtonLink>
+      <ButtonLink className={className}>{children}</ButtonLink>
     </>
   );
 };
