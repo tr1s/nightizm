@@ -32,7 +32,7 @@ export default function Home() {
 
   return (
     <Layout>
-      <Helmet title="The Lair" />
+      {/* <Helmet title="The Lair" />
       {size.width > awkwardBreakpoint && (
         <Container>
           <StreamingWrapper>
@@ -54,7 +54,6 @@ export default function Home() {
             </div>
           </StreamingWrapper>
 
-          {/* Main Titles */}
           <TitleWrapper>
             <SubTitle>SEIZE the NIGHT</SubTitle>
             <Title>NIGHTIZM</Title>
@@ -68,7 +67,6 @@ export default function Home() {
             way to <span>support me</span> and download all my music at once:
           </StreamingParagraph>
 
-          {/* Main CTA */}
           <ButtonWrapper>
             <Button type="hrefOpenNew" href="https://nightizm.bandcamp.com/vip-membership">
               Download Full Discography
@@ -81,7 +79,7 @@ export default function Home() {
         </Container>
       )}
 
-      <Albums />
+      <Albums /> */}
     </Layout>
   );
 }

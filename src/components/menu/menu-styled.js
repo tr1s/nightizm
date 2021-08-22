@@ -58,7 +58,7 @@ export const Wrapper = styled(DialogOverlay)`
   }
 `;
 
-export const MenuLinkWrapper = styled(DialogContent)`
+export const MenuLinkWrapper = styled.div`
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;

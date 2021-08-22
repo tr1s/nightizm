@@ -29,7 +29,7 @@ export default function Blog({ allPostsData }) {
           {/* 🔱 */}
         </Logo>
 
-        <Posts>
+        {/* <Posts>
           {publishedPosts.map(({ id, date, title, excerpt }) => (
             <Post key={id}>
               <Link href="/posts/[id]" as={`/posts/${id}`}>
@@ -43,7 +43,7 @@ export default function Blog({ allPostsData }) {
               </Link>
             </Post>
           ))}
-        </Posts>
+        </Posts> */}
       </Wrapper>
     </Layout>
   );

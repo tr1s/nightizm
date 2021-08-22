@@ -230,19 +230,22 @@ const GlobalStyles = createGlobalStyle`
     font-weight: 100;
   }
   h4 {
+    text-shadow: 0px 1px 11px var(--white-true);
     font-family: var(--font-mono);
     font-size: 2.2rem;
-    font-weight: 100;
+    font-weight: bold;
   }
   h5 {
+    text-shadow: 0px 1px 11px var(--white-true);
     font-family: var(--font-mono);
     font-size: 1.6rem;
-    font-weight: 100;
+    font-weight: bold;
   }
   h6 {
+    text-shadow: 0px 1px 11px var(--white-true);
     font-family: var(--font-mono);
     font-size: 1.1rem;
-    font-weight: 100;
+    font-weight: bold;
   }
 
   div.double-header {
