@@ -58,6 +58,10 @@ export const Wrapper = styled(DialogOverlay)`
   }
 `;
 
+export const WrapperContent = styled(DialogContent)`
+  width: 100%;
+`;
+
 export const MenuLinkWrapper = styled.div`
   margin-bottom: 20px;
   display: flex;
@@ -149,6 +153,7 @@ export const StreamingLink = styled.a`
 `;
 
 export const ButtonWrapper = styled.div`
+  text-align: center;
   margin-bottom: 4rem;
   a {
     border: 2px dashed var(--accent);
