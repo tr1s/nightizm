@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Link from '../activeLink';
+import Link from 'next/link';
 import Image from 'next/image';
 import Menu from '../menu/';
 
@@ -7,24 +7,21 @@ import { Wrapper, Nav, NavLink, MenuButton, Logo } from './header-styled';
 
 export default function Header() {
   const [menu, setMenu] = useState(false);
+  const toggleMenu = () => setMenu(!menu);
+  const close = () => setMenu(false);
 
   return (
     <Wrapper>
       <Nav>
-        <ul>
-          <li>
-            <Link href="/">
-              <NavLink>Home</NavLink>
-            </Link>
-          </li>
-          <li>
-            <Link href="/writings">
-              <NavLink>Writings</NavLink>
-            </Link>
-          </li>
-          <li></li>
-        </ul>
-        <Link href="/">
+        <Link href="/" passHref>
+          <NavLink>Home</NavLink>
+        </Link>
+
+        <Link href="/writings" passHref>
+          <NavLink>Writings</NavLink>
+        </Link>
+
+        <Link href="/" passHref>
           <a>
             <Logo>
               <Image src="/logo-white.png" width="66" height="66" alt="" />
@@ -32,12 +29,12 @@ export default function Header() {
             </Logo>
           </a>
         </Link>
-        <MenuButton onClick={() => setMenu(!menu)}>
+        <MenuButton onClick={toggleMenu}>
           <img src="/menu-icon.svg" alt="" />
         </MenuButton>
 
         {/* Modal Menu */}
-        {menu && <Menu menu={menu} setMenu={setMenu} />}
+        {menu && <Menu menu={menu} setMenu={setMenu} close={close} />}
       </Nav>
     </Wrapper>
   );

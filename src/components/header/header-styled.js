@@ -4,31 +4,20 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.header`
-  z-index: 1;
+  /* z-index: 1; */
 `;
 
 export const Nav = styled.nav`
+  height: 7.6rem;
   padding: 1.3rem 2rem;
   padding-bottom: 1.5rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   position: fixed;
   left: 0;
   right: 0;
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--grey-200);
-
-  ul {
-    display: flex;
-    flex-direction: column;
-  }
-  li:not(:last-child) {
-    margin-right: 3rem;
-    @media screen and (${(props) => props.theme.mobileLarge}) {
-      margin-right: 0;
-    }
-  }
 `;
 
 export const NavLink = styled.a`
@@ -36,19 +25,23 @@ export const NavLink = styled.a`
   font-family: var(--font-mono);
   font-size: 1.6rem;
   cursor: pointer;
+  margin-right: 3rem;
   &:hover,
   &:focus {
-    color: var(--grey-500);
+    color: var(--white-true);
+    text-shadow: 0px 1px 11px var(--white-true);
+    font-weight: bold;
   }
 `;
 
 export const MenuButton = styled.button`
+  width: 35px;
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
   cursor: pointer;
   background: none;
   border: none;
-  padding: 0;
-  margin: 0;
-  width: 35px;
 `;
 
 export const Logo = styled.figure`

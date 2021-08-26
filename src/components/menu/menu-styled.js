@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import { DialogOverlay, DialogContent } from '@reach/dialog';
 
 export const Wrapper = styled(DialogOverlay)`
-  width: 100%;
-  background: var(--black);
   color: var(--white);
+  background: var(--black);
+  border-bottom: 2px dashed var(--blue);
   position: fixed;
   top: 0;
   left: 0;
@@ -13,7 +13,6 @@ export const Wrapper = styled(DialogOverlay)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   overflow: auto;
 
   @media screen and (max-height: 700px) {
@@ -58,14 +57,17 @@ export const Wrapper = styled(DialogOverlay)`
   }
 `;
 
+export const WrapperContent = styled(DialogContent)``;
+
 export const MenuLinkWrapper = styled.div`
-  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-bottom: 20px;
 `;
 
 export const MenuLink = styled.a`
+  align-self: center; // allows focus state to only span the text.
   color: var(--grey-200);
   line-height: 1.4;
   &:hover,
@@ -149,6 +151,7 @@ export const StreamingLink = styled.a`
 `;
 
 export const ButtonWrapper = styled.div`
+  text-align: center;
   margin-bottom: 4rem;
   a {
     border: 2px dashed var(--accent);
