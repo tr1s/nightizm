@@ -29,7 +29,7 @@ export const NavLink = styled.a`
   &:hover,
   &:focus {
     color: var(--white-true);
-    text-shadow: 0px 1px 11px var(--white-true);
+    text-shadow: var(--text-shadow);
     font-weight: bold;
   }
 `;

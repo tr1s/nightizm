@@ -89,10 +89,11 @@ const GlobalStyles = createGlobalStyle`
     --font-heading: 'Amarante';
     --font-body: 'PT Serif';
     --font-mono: 'MagdaCleanMono';
+    --text-shadow: 0px 1px 11px var(--white-true);
+    --title-size: 6px;
 
     --container-width: 1000px;
     --border-radius: 6px;
-    --title-size: 6px;
 
     --black: #000;
     --black-100: hsl(0, 0%, 1%);
@@ -123,6 +124,8 @@ const GlobalStyles = createGlobalStyle`
     --accent: var(--purple);
     --accent: #fbed68;
     --accent: var(--red);
+
+
   }
 
 
@@ -230,19 +233,19 @@ const GlobalStyles = createGlobalStyle`
     font-weight: 100;
   }
   h4 {
-    text-shadow: 0px 1px 11px var(--white-true);
+    text-shadow: var(--text-shadow);
     font-family: var(--font-mono);
     font-size: 2.2rem;
     font-weight: bold;
   }
   h5 {
-    text-shadow: 0px 1px 11px var(--white-true);
+    text-shadow: var(--text-shadow);
     font-family: var(--font-mono);
     font-size: 1.6rem;
     font-weight: bold;
   }
   h6 {
-    text-shadow: 0px 1px 11px var(--white-true);
+    text-shadow: var(--text-shadow);
     font-family: var(--font-mono);
     font-size: 1.1rem;
     font-weight: bold;

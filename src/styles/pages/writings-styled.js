@@ -47,6 +47,10 @@ export const PostTitle = styled.h2`
   @media screen and (${(props) => props.theme.tabletLarge}) {
     font-size: 2.3rem;
   }
+  &:hover,
+  &:focus {
+    text-shadow: var(--text-shadow);
+  }
 `;
 
 export const PostDescription = styled.p`

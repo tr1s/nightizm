@@ -10,7 +10,7 @@ export const Article = styled.article`
     font-size: clamp(5.8rem, 9.5rem, 7vw);
     text-align: center;
     color: var(--black-soft);
-    padding: 8rem 5%;
+    padding: 0rem 5%;
     padding-bottom: 2rem;
     width: 100%;
     margin: 0 auto;

@@ -125,7 +125,7 @@ export const StreamingLink = styled.a`
     background: hsl(0, 0%, 4%);
     & span {
       color: var(--white-true);
-      text-shadow: 0px 1px 11px var(--white-true);
+      text-shadow: var(--text-shadow);
     }
   }
   span {
@@ -182,7 +182,7 @@ export const SocialLink = styled.a`
   &:hover,
   &:focus {
     color: var(--white-true);
-    text-shadow: 0px 1px 11px var(--white-true);
+    text-shadow: var(--text-shadow);
     font-weight: bold;
   }
 `;
