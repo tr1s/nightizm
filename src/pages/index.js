@@ -32,7 +32,7 @@ export default function Home() {
 
   return (
     <Layout>
-      {/* <Helmet title="The Lair" />
+      <Helmet title="The Lair" />
       {size.width > awkwardBreakpoint && (
         <Container>
           <StreamingWrapper>
@@ -60,11 +60,12 @@ export default function Home() {
           </TitleWrapper>
 
           <StreamingParagraph>
-            <strong>Don’t use either?</strong> Listen through your preferred streaming service{' '}
+            {/* Late night instrumental music for your life... */}
+            {/* <strong>Don’t use either?</strong> Listen through your preferred streaming service{' '}
             <a href="https://songwhip.com/nightizm"> here</a>, or{' '}
             <a href="https://nightizm.bandcamp.com">download each album separately</a> if you prefer
             to own your music. <strong>Consider using the button below</strong> as an alternative
-            way to <span>support me</span> and download all my music at once:
+            way to <span>support me</span> and download all my music at once: */}
           </StreamingParagraph>
 
           <ButtonWrapper>
@@ -79,7 +80,7 @@ export default function Home() {
         </Container>
       )}
 
-      <Albums /> */}
+      <Albums />
     </Layout>
   );
 }

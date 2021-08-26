@@ -13,7 +13,8 @@ export const ButtonLink = styled.button`
   font-size: 1.9rem;
   position: relative;
   transition: 0.1s all ease;
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--white-true);
     text-shadow: 0px 1px 11px var(--white-true);
     background: var(--black-200);

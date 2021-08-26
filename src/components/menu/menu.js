@@ -15,14 +15,14 @@ import {
   SocialLink,
 } from './menu-styled';
 
-export default function Menu({ menu, setMenu }) {
+export default function Menu({ menu, setMenu, close }) {
   useKeypress('Escape', () => {
     setMenu(!menu);
   });
 
   return (
-    <Wrapper allowPinchZoom={true}>
-      <WrapperContent>
+    <Wrapper>
+      <WrapperContent aria-label="Main menu.">
         {/* Menu Links ➡ */}
         <MenuLinkWrapper>
           <Link href="/" passHref>
@@ -83,11 +83,11 @@ export default function Menu({ menu, setMenu }) {
           </Link>
         </SocialWrapper>
 
-        <button onClick={() => setMenu(!menu)}>
+        <button onClick={close}>
           <img src="/close-icon.svg" alt="" />
           <VisuallyHidden>Close menu.</VisuallyHidden>
         </button>
-        <button onClick={() => setMenu(!menu)}>
+        <button onClick={close}>
           <img src="/close-icon.svg" alt="" />
           <VisuallyHidden>Close menu.</VisuallyHidden>
         </button>
