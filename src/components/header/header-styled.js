@@ -8,9 +8,8 @@ export const Wrapper = styled.header`
 `;
 
 export const Nav = styled.nav`
-  height: 7.6rem;
-  padding: 1.3rem 2rem;
-  padding-bottom: 1.5rem;
+  height: 6.7rem;
+  padding: 0 2rem;
   display: flex;
   align-items: center;
   position: fixed;
@@ -18,6 +17,10 @@ export const Nav = styled.nav`
   right: 0;
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--grey-200);
+  @media screen and (${(props) => props.theme.awkward}) {
+    background: var(--black-100);
+    backdrop-filter: none;
+  }
 `;
 
 export const NavLink = styled.a`

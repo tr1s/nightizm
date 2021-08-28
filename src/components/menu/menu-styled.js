@@ -41,20 +41,6 @@ export const Wrapper = styled(DialogOverlay)`
     top: 20px;
     right: 20px;
   }
-  button:last-of-type {
-    border: none;
-    border-bottom-right-radius: 0;
-    background: transparent;
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    @media screen and (max-height: 700px) {
-      display: none;
-    }
-    @media screen and (${(props) => props.theme.awkward}) {
-      display: none;
-    }
-  }
 `;
 
 export const WrapperContent = styled(DialogContent)``;

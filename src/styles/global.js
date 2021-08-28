@@ -186,6 +186,10 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
+  main {
+    padding-top: 66px;
+  }
+
   .wrapper {
     height: 100%;
   }
@@ -254,8 +258,8 @@ const GlobalStyles = createGlobalStyle`
   div.double-header {
     padding: 8rem 0;
     @media screen and (${(props) => props.theme.tablet}) {
-      padding-top: 5.9rem;
-      padding-bottom: 5.2rem;
+      padding-top: 40px;
+      padding-bottom: 20px;
     }
     h1.title {
       color: var(--black-200);

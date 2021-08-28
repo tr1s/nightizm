@@ -87,10 +87,6 @@ export default function Menu({ menu, setMenu, close }) {
           <img src="/close-icon.svg" alt="" />
           <VisuallyHidden>Close menu.</VisuallyHidden>
         </button>
-        <button onClick={close}>
-          <img src="/close-icon.svg" alt="" />
-          <VisuallyHidden>Close menu.</VisuallyHidden>
-        </button>
       </WrapperContent>
     </Wrapper>
   );

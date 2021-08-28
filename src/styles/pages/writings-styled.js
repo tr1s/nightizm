@@ -8,7 +8,7 @@ export const Wrapper = styled.section`
   padding-bottom: 140px;
 
   @media screen and (${(props) => props.theme.awkward}) {
-    padding-bottom: 80px;
+    padding: 0;
   }
 `;
 
@@ -17,7 +17,7 @@ export const Logo = styled.div`
   @media screen and (${(props) => props.theme.awkward}) {
     display: block;
     text-align: center;
-    margin-bottom: 48px;
+    margin-bottom: 20px;
   }
 `;
 

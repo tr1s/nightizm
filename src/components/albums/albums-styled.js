@@ -6,6 +6,7 @@ import styled from 'styled-components';
 export const AlbumsWrapper = styled.div`
   display: flex;
   /* margin: -10px; */
+  display: none;
 `;
 
 export const Album = styled.div`

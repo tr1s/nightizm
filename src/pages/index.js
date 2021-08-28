@@ -33,52 +33,51 @@ export default function Home() {
   return (
     <Layout>
       <Helmet title="The Lair" />
-      {size.width > awkwardBreakpoint && (
-        <Container>
-          <StreamingWrapper>
-            <div>
-              <StreamingLink href="https://google.ca">
-                <img src="/spotify.svg" alt="" />
 
-                <p>
-                  Listen on <span>Spotify</span>
-                </p>
-              </StreamingLink>
-              <StreamingLink href="https://google.ca">
-                <img src="/apple-rainbow.svg" alt="" />
+      <Container>
+        <StreamingWrapper>
+          <div>
+            <StreamingLink href="https://google.ca">
+              <img src="/spotify.svg" alt="" />
 
-                <p>
-                  Listen on <span>Apple Music</span>
-                </p>
-              </StreamingLink>
-            </div>
-          </StreamingWrapper>
+              <p>
+                Listen on <span>Spotify</span>
+              </p>
+            </StreamingLink>
+            <StreamingLink href="https://google.ca">
+              <img src="/apple-rainbow.svg" alt="" />
 
-          <TitleWrapper>
-            <SubTitle>SEIZE the NIGHT</SubTitle>
-            <Title>NIGHTIZM</Title>
-          </TitleWrapper>
+              <p>
+                Listen on <span>Apple Music</span>
+              </p>
+            </StreamingLink>
+          </div>
+        </StreamingWrapper>
 
-          <StreamingParagraph>
-            {/* Late night instrumental music for your life... */}
-            {/* <strong>Don’t use either?</strong> Listen through your preferred streaming service{' '}
+        <TitleWrapper>
+          <SubTitle>SEIZE the NIGHT</SubTitle>
+          <Title>NIGHTIZM</Title>
+        </TitleWrapper>
+
+        <StreamingParagraph>
+          {/* Late night instrumental music for your life... */}
+          {/* <strong>Don’t use either?</strong> Listen through your preferred streaming service{' '}
             <a href="https://songwhip.com/nightizm"> here</a>, or{' '}
             <a href="https://nightizm.bandcamp.com">download each album separately</a> if you prefer
             to own your music. <strong>Consider using the button below</strong> as an alternative
             way to <span>support me</span> and download all my music at once: */}
-          </StreamingParagraph>
+        </StreamingParagraph>
 
-          <ButtonWrapper>
-            <Button type="hrefOpenNew" href="https://nightizm.bandcamp.com/vip-membership">
-              Download Full Discography
-            </Button>
-          </ButtonWrapper>
+        <ButtonWrapper>
+          <Button type="hrefOpenNew" href="https://nightizm.bandcamp.com/vip-membership">
+            Download Full Discography
+          </Button>
+        </ButtonWrapper>
 
-          <Crosses>†††</Crosses>
+        <Crosses>†††</Crosses>
 
-          <TitleTwo>DISCOGRAPHY</TitleTwo>
-        </Container>
-      )}
+        <TitleTwo>DISCOGRAPHY</TitleTwo>
+      </Container>
 
       <Albums />
     </Layout>
