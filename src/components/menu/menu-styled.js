@@ -59,6 +59,8 @@ export const MenuLink = styled.a`
   &:hover,
   &:focus {
     color: var(--blue);
+    text-shadow: var(--text-shadow);
+    text-shadow: 0 1px 11px var(--blue);
   }
 `;
 
@@ -132,6 +134,23 @@ export const StreamingLink = styled.a`
     &:focus {
       border-left: 1px solid var(--black-soft);
       border-right: 1px solid var(--black-soft);
+    }
+  }
+`;
+
+export const Paragraph = styled.p`
+  max-width: 900px;
+  margin: 0 auto;
+  color: var(--grey-300);
+  font-family: var(--font-body);
+  text-align: center;
+  margin-bottom: 4rem;
+  a {
+    color: red;
+    font-weight: bold;
+    &:hover,
+    &:focus {
+      text-shadow: var(--text-shadow);
     }
   }
 `;

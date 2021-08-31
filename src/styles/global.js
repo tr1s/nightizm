@@ -124,8 +124,6 @@ const GlobalStyles = createGlobalStyle`
     --accent: var(--purple);
     --accent: #fbed68;
     --accent: var(--red);
-
-
   }
 
 
@@ -163,18 +161,15 @@ const GlobalStyles = createGlobalStyle`
   }
 
   html {
-    box-sizing: border-box;
     font-size: 62.5%; /* 1rem = 10px, 3.5rem = 35px; */
-  }
-
-  body {
-    color: var(--white);
-    background: var(--black-100);
-    font-size: 1.6rem;
-    font-family: var(--font-body);
-    font-family: var(--font-mono);
+    box-sizing: border-box;
+    /* custom scrollbar for firefox, soon to be default? */
+    scrollbar-width: normal;
+    scrollbar-color: var(--accent) var(--black-soft);
+    /* custom scrollbar for webkit (safari / chrome) */
+    /* use vw unit if you don't want the scrollbar to grow on zoom */
     &::-webkit-scrollbar {
-      width: 1rem;
+      width: 10px;
     }
     &::-webkit-scrollbar-track {
       border-left: 1px solid rgba(0, 0, 0, 0.3);
@@ -184,6 +179,14 @@ const GlobalStyles = createGlobalStyle`
     &::-webkit-scrollbar-thumb {
       background: var(--accent);
     }
+  }
+
+  body {
+    color: var(--white);
+    background: var(--black-100);
+    font-size: 1.6rem;
+    font-family: var(--font-body);
+    font-family: var(--font-mono);
   }
 
   main {

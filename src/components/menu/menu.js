@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import Link from 'next/link';
 import Button from '../button/';
 import useKeypress from '../../hooks/useKeypress';
@@ -10,19 +11,22 @@ import {
   MenuLink,
   StreamingWrapper,
   StreamingLink,
+  Paragraph,
   ButtonWrapper,
   SocialWrapper,
   SocialLink,
 } from './menu-styled';
 
 export default function Menu({ menu, setMenu, close }) {
+  const wrapperRef = useRef();
+
   useKeypress('Escape', () => {
     setMenu(!menu);
   });
 
   return (
-    <Wrapper>
-      <WrapperContent aria-label="Main menu.">
+    <Wrapper initialFocusRef={wrapperRef}>
+      <WrapperContent ref={wrapperRef} aria-label="Main menu.">
         {/* Menu Links ➡ */}
         <MenuLinkWrapper>
           <Link href="/" passHref>
@@ -56,6 +60,12 @@ export default function Menu({ menu, setMenu, close }) {
             </StreamingLink>
           </div>
         </StreamingWrapper>
+
+        <Paragraph>
+          Don’t use Spotify or Apple Music? Choose from a list of streaming services{' '}
+          <a href="https://songwhip.com/nightizm">here</a>. Prefer local copies of my music?
+          Download everything at once by joining the <span>Night Faction</span> below:
+        </Paragraph>
 
         {/* Button CTA 🎬 */}
         <ButtonWrapper>
