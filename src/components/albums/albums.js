@@ -19,7 +19,7 @@ export default function Albums() {
         {albums.map((album) => {
           return (
             <Album key={album.order}>
-              <Title dangerouslySetInnerHTML={{ __html: album.title }} />
+              {/* <Title dangerouslySetInnerHTML={{ __html: album.title }} /> */}
               {/* LEARN ABOUT RAW HTML???????????????????????????????????????????? */}
               {/* <Title rawHtml="First &middot; Second" /> */}
               {/* ARTWORK */}

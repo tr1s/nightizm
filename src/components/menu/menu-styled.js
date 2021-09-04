@@ -144,9 +144,13 @@ export const Paragraph = styled.p`
   color: var(--grey-300);
   font-family: var(--font-body);
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
+  span {
+    font-weight: bold;
+    color: var(--grey-400);
+  }
   a {
-    color: red;
+    color: var(--accent);
     font-weight: bold;
     &:hover,
     &:focus {
@@ -158,12 +162,6 @@ export const Paragraph = styled.p`
 export const ButtonWrapper = styled.div`
   text-align: center;
   margin-bottom: 4rem;
-  a {
-    border: 2px dashed var(--accent);
-  }
-  a:active {
-    border: 2px dashed var(--green);
-  }
 `;
 
 export const SocialWrapper = styled.div`
@@ -180,7 +178,7 @@ export const SocialWrapper = styled.div`
 
 export const SocialLink = styled.a`
   line-height: 1.9;
-  color: var(--grey-400);
+  color: var(--grey-300);
   &:not(:last-child) {
     margin-right: 2rem;
   }

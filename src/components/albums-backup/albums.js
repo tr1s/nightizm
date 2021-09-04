@@ -34,9 +34,9 @@ export default function Albums() {
             </ArtworkLink>
             <Description dangerouslySetInnerHTML={{ __html: album.description }} />
             <ButtonWrapper>
-              <Button type="hrefOpenNew" text="Stream or Download" href={album.link} />
+              <Button element="hrefOpenNew" text="Stream or Download" href={album.link} />
               <Button
-                type="hrefOpenNew"
+                element="hrefOpenNew"
                 text="Download Full Discography"
                 href="https://nightizm.bandcamp.com/vip-membership"
               />

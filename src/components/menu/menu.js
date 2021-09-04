@@ -1,4 +1,7 @@
-import { useRef } from 'react';
+/* eslint-disable @next/next/no-img-element */
+
+import { useRef, useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 import Link from 'next/link';
 import Button from '../button/';
 import useKeypress from '../../hooks/useKeypress';
@@ -18,6 +21,11 @@ import {
 } from './menu-styled';
 
 export default function Menu({ menu, setMenu, close }) {
+  const themeContext = useContext(ThemeContext);
+
+  const spotify = themeContext.nightizmSpotify;
+  const appleMusic = themeContext.nightizmAppleMusic;
+
   const wrapperRef = useRef();
 
   useKeypress('Escape', () => {
@@ -26,6 +34,12 @@ export default function Menu({ menu, setMenu, close }) {
 
   return (
     <Wrapper initialFocusRef={wrapperRef}>
+      {/* Close X Button */}
+      <button onClick={close}>
+        <img src="/close-icon.svg" alt="" />
+        <VisuallyHidden>Close menu.</VisuallyHidden>
+      </button>
+
       <WrapperContent ref={wrapperRef} aria-label="Main menu.">
         {/* Menu Links ➡ */}
         <MenuLinkWrapper>
@@ -44,14 +58,14 @@ export default function Menu({ menu, setMenu, close }) {
         {/* Streaming Links 🍎 */}
         <StreamingWrapper>
           <div>
-            <StreamingLink href="https://google.ca">
+            <StreamingLink href={spotify} target="_blank" rel="noopener noreferrer">
               <img src="/spotify.svg" alt="" />
 
               <p>
                 Listen on <span>Spotify</span>
               </p>
             </StreamingLink>
-            <StreamingLink href="https://google.ca">
+            <StreamingLink href={appleMusic} target="_blank" rel="noopener noreferrer">
               <img src="/apple-rainbow.svg" alt="" />
 
               <p>
@@ -62,14 +76,14 @@ export default function Menu({ menu, setMenu, close }) {
         </StreamingWrapper>
 
         <Paragraph>
-          Don’t use Spotify or Apple Music? Choose from a list of streaming services{' '}
+          <span>Don’t use Spotify or Apple Music?</span> Choose from a list of streaming services{' '}
           <a href="https://songwhip.com/nightizm">here</a>. Prefer local copies of my music?
-          Download everything at once by joining the <span>Night Faction</span> below:
+          Download everything at once by <span>joining the Night Faction</span> below:
         </Paragraph>
 
         {/* Button CTA 🎬 */}
         <ButtonWrapper>
-          <Button type="hrefOpenNew" href="https://nightizm.bandcamp.com/vip-membership">
+          <Button element="hrefOpenNew" href="https://nightizm.bandcamp.com/vip-membership">
             † Night Faction †
           </Button>
         </ButtonWrapper>
@@ -92,11 +106,6 @@ export default function Menu({ menu, setMenu, close }) {
             <SocialLink>Twitter</SocialLink>
           </Link>
         </SocialWrapper>
-
-        <button onClick={close}>
-          <img src="/close-icon.svg" alt="" />
-          <VisuallyHidden>Close menu.</VisuallyHidden>
-        </button>
       </WrapperContent>
     </Wrapper>
   );

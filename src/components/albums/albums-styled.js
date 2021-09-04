@@ -4,29 +4,31 @@
 import styled from 'styled-components';
 
 export const AlbumsWrapper = styled.div`
+  background: var(--black-200);
+  padding: 4rem;
+  padding-bottom: 3.3rem;
   display: flex;
-  /* margin: -10px; */
-  display: none;
+  gap: 4rem;
+  border-radius: var(--border-radius);
+  margin: 0 4rem 0 4rem;
+  border: 1px solid var(--grey-200);
 `;
 
 export const Album = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow-x: hidden;
-  padding: 40px;
+  flex-basis: 1 1 1080px; /* ???????????????????????????????? */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* overflow-x: hidden; */
+  /* padding: 40px; */
   /* margin: 20px; */
-  border-bottom: 2px dashed var(--grey-200);
-  border: 2px solid white;
 `;
 
 export const Title = styled.h3`
   color: var(--grey-400);
-  text-align: center;
-  padding: 7.5rem 0;
-  padding-bottom: 2rem;
   text-transform: uppercase;
+  padding: 0.5rem;
   font-family: var(--font-mono);
   font-size: 1.9rem;
   @media screen and (${(props) => props.theme.tabletLarge}) {
@@ -41,14 +43,14 @@ export const Title = styled.h3`
 `;
 
 export const ArtworkLink = styled.a`
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 `;
 
 export const Artwork = styled.figure`
   position: relative;
-  z-index: -1;
   img {
-    border: 1px solid var(--grey-100) !important;
+    /* border: 1px solid var(--accent) !important; */
+    width: 100% !important;
     border-radius: var(--border-radius);
     @media screen and (${(props) => props.theme.mobileLarge}) {
       border: none !important;

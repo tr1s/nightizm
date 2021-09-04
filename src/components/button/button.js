@@ -1,45 +1,63 @@
 import React from 'react';
 import Link from 'next/link';
 
-import { HrefLink, ButtonLink } from './button-styled';
+import { Wrapper, Emoji, ButtonLink } from './button-styled';
 
-const Button = ({ children, type, href, linkPath, className }) => {
-  if (type === 'link') {
+const Button = ({ children, element, type, href, linkPath, className, emoji }) => {
+  if (element === 'link') {
     return (
-      <Link href={linkPath} passHref>
-        <ButtonLink as="a" className={className}>
+      <Wrapper>
+        <Link href={linkPath} passHref>
+          <ButtonLink type={type} as="a" className={className} emoji={emoji}>
+            {children}
+          </ButtonLink>
+        </Link>
+        {/* <Emoji>🏛</Emoji> */}
+        <Emoji>🔱</Emoji>
+      </Wrapper>
+    );
+  }
+
+  if (element === 'href') {
+    return (
+      <Wrapper>
+        <ButtonLink type={type} as="a" href={href} className={className} emoji={emoji}>
           {children}
         </ButtonLink>
-      </Link>
+        {/* <Emoji>🏛</Emoji> */}
+        <Emoji>🔱</Emoji>
+      </Wrapper>
     );
   }
 
-  if (type === 'href') {
+  if (element === 'hrefOpenNew') {
     return (
-      <ButtonLink as="a" href={href} className={className}>
-        {children}
-      </ButtonLink>
-    );
-  }
-
-  if (type === 'hrefOpenNew') {
-    return (
-      <ButtonLink
-        as="a"
-        href={href}
-        className={className}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {children}
-      </ButtonLink>
+      <Wrapper>
+        <ButtonLink
+          type={type}
+          as="a"
+          href={href}
+          className={className}
+          emoji={emoji}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {children}
+        </ButtonLink>
+        {/* <Emoji>🏛</Emoji> */}
+        <Emoji>🔱</Emoji>
+      </Wrapper>
     );
   }
 
   return (
-    <>
-      <ButtonLink className={className}>{children}</ButtonLink>
-    </>
+    <Wrapper>
+      <ButtonLink type={type} className={className} emoji={emoji}>
+        {children}
+      </ButtonLink>
+      {/* <Emoji>🏛</Emoji> */}
+      <Emoji>🔱</Emoji>
+    </Wrapper>
   );
 };
 

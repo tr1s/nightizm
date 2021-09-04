@@ -89,7 +89,7 @@ const GlobalStyles = createGlobalStyle`
     --font-heading: 'Amarante';
     --font-body: 'PT Serif';
     --font-mono: 'MagdaCleanMono';
-    --text-shadow: 0px 1px 11px var(--white-true);
+    --text-shadow: 0px 1px 10px var(--white-true);
     --title-size: 6px;
 
     --container-width: 1000px;
@@ -111,6 +111,7 @@ const GlobalStyles = createGlobalStyle`
 
     --blue: hsl(221, 90%, 59%);
     --blue: #1786e8;
+    --blue: #acc0ff;
     --gold: #e8cc17;
     --yellow: #fbed68;
     --green: #17e878;
@@ -157,7 +158,7 @@ const GlobalStyles = createGlobalStyle`
   html,
   body,
   #__next {
-    height: 100%;
+    ${'' /* height: 100%; */}
   }
 
   html {
@@ -194,7 +195,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .wrapper {
-    height: 100%;
+    ${'' /* height: 100%; */}
   }
 
   .inner-wrapper {

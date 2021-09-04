@@ -7,14 +7,12 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
-  flex: 1 0 auto;
 `;
 
 export const TitleWrapper = styled.div`
-  padding: 0;
   display: flex;
   flex-direction: column;
+  margin-bottom: 2.5rem;
   @media screen and (${(props) => props.theme.tablet}) {
     flex-direction: column-reverse;
   }
@@ -111,12 +109,10 @@ export const StreamingLink = styled.a`
 `;
 
 export const StreamingParagraph = styled.p`
-  margin-bottom: 3rem;
   max-width: var(--container-width);
   color: var(--grey-300);
   text-align: center;
   padding: 0 2rem;
-  font-family: var(--font-body);
   line-height: 1.7;
   @media screen and (${(props) => props.theme.awkward}) {
     text-align: justify;
@@ -132,24 +128,20 @@ export const StreamingParagraph = styled.p`
 `;
 
 export const ButtonWrapper = styled.div`
-  margin-bottom: 4rem;
-  a {
-    border: 2px dashed var(--accent);
-  }
-  a:active {
-    border: 2px dashed var(--green);
-  }
+  margin-bottom: 7rem;
 `;
 
 export const Crosses = styled.p`
   font-size: 2.4rem;
-  margin-bottom: 8.5rem;
+  margin-top: 5.5rem;
+  margin-bottom: 3.5rem;
 `;
 
 export const TitleTwo = styled.h2`
   color: var(--black-200);
   font-size: clamp(5.8rem, 17.1rem, 11vw);
   font-weight: 100;
+  margin-bottom: 4rem;
   @media screen and (${(props) => props.theme.awkward}) {
     font-size: 4rem;
   }
