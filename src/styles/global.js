@@ -93,6 +93,7 @@ const GlobalStyles = createGlobalStyle`
     --title-size: 6px;
 
     --container-width: 1000px;
+    --max-container-width: 2560px;
     --border-radius: 6px;
 
     --black: #000;
@@ -196,6 +197,8 @@ const GlobalStyles = createGlobalStyle`
 
   .wrapper {
     ${'' /* height: 100%; */}
+    max-width: var(--max-container-width);
+    margin: 0 auto;
   }
 
   .inner-wrapper {

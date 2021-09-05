@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 
-import { useRef, useContext } from 'react';
-import { ThemeContext } from 'styled-components';
+import { useRef } from 'react';
 import Link from 'next/link';
 import Button from '../button/';
+import StreamingSpotlight from '../streamingSpotlight/';
 import useKeypress from '../../hooks/useKeypress';
 import VisuallyHidden from '../visuallyHidden';
 
@@ -12,8 +12,6 @@ import {
   WrapperContent,
   MenuLinkWrapper,
   MenuLink,
-  StreamingWrapper,
-  StreamingLink,
   Paragraph,
   ButtonWrapper,
   SocialWrapper,
@@ -21,11 +19,6 @@ import {
 } from './menu-styled';
 
 export default function Menu({ menu, setMenu, close }) {
-  const themeContext = useContext(ThemeContext);
-
-  const spotify = themeContext.nightizmSpotify;
-  const appleMusic = themeContext.nightizmAppleMusic;
-
   const wrapperRef = useRef();
 
   useKeypress('Escape', () => {
@@ -56,24 +49,7 @@ export default function Menu({ menu, setMenu, close }) {
         </MenuLinkWrapper>
 
         {/* Streaming Links 🍎 */}
-        <StreamingWrapper>
-          <div>
-            <StreamingLink href={spotify} target="_blank" rel="noopener noreferrer">
-              <img src="/spotify.svg" alt="" />
-
-              <p>
-                Listen on <span>Spotify</span>
-              </p>
-            </StreamingLink>
-            <StreamingLink href={appleMusic} target="_blank" rel="noopener noreferrer">
-              <img src="/apple-rainbow.svg" alt="" />
-
-              <p>
-                Listen on <span>Apple Music</span>
-              </p>
-            </StreamingLink>
-          </div>
-        </StreamingWrapper>
+        <StreamingSpotlight />
 
         <Paragraph>
           <span>Don’t use Spotify or Apple Music?</span> Choose from a list of streaming services{' '}
