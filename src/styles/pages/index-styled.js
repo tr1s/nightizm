@@ -61,6 +61,9 @@ export const Paragraph = styled.p`
   span {
     display: block;
   }
+  span:last-of-type {
+    color: var(--accent);
+  }
 `;
 
 export const ButtonWrapper = styled.div`

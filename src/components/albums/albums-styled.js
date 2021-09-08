@@ -4,25 +4,22 @@
 import styled from 'styled-components';
 
 export const AlbumsWrapper = styled.div`
-  background: var(--black-200);
+  /* background: var(--black-200); */
+  /* border: 1px solid var(--grey-200); */
+  /* border-radius: var(--border-radius); */
   padding: 4rem;
   padding-bottom: 3.3rem;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
   gap: 4rem;
-  border-radius: var(--border-radius);
   margin: 0 4rem 0 4rem;
-  border: 1px solid var(--grey-200);
 `;
 
 export const Album = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-basis: 1 1 1080px; /* ???????????????????????????????? */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* overflow-x: hidden; */
-  /* padding: 40px; */
-  /* margin: 20px; */
+  /* flex: 1 1 800px; */
 `;
 
 export const Title = styled.h3`
