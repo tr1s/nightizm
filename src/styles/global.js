@@ -126,6 +126,7 @@ const GlobalStyles = createGlobalStyle`
     --accent: var(--purple);
     --accent: #fbed68;
     --accent: var(--red);
+    --links: var(--blue);
   }
 
 

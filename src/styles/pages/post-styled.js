@@ -4,7 +4,7 @@ export const Article = styled.article`
   display: flex;
   flex-direction: column;
   font-family: var(--font-body);
-  color: blue;
+  color: var(--blue);
   h1 {
     font-size: 9.5rem;
     font-size: clamp(5.8rem, 9.5rem, 7vw);
@@ -82,7 +82,7 @@ export const Content = styled.div`
   }
 
   a {
-    color: var(--accent);
+    color: var(--blue);
     font-weight: bolder;
     font-size: 1.8rem;
   }

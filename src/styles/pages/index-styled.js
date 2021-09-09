@@ -47,7 +47,7 @@ export const SubTitle = styled.h1`
 
 export const Paragraph = styled.p`
   max-width: var(--container-width);
-  color: var(--grey-300);
+  color: var(--grey-400);
   text-align: center;
   padding: 0 2rem;
   line-height: 1.7;
