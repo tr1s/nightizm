@@ -112,7 +112,7 @@ const GlobalStyles = createGlobalStyle`
 
     --blue: hsl(221, 90%, 59%);
     --blue: #1786e8;
-    --blue: #acc0ff;
+    ${'' /* --blue: #acc0ff; */}
     --gold: #e8cc17;
     --yellow: #fbed68;
     --green: #17e878;
@@ -143,6 +143,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   *::selection {
+    background: rgba(255, 255, 255, .4);
     background: var(--blue);
   }
 
@@ -181,6 +182,9 @@ const GlobalStyles = createGlobalStyle`
     }
     &::-webkit-scrollbar-thumb {
       background: var(--accent);
+    }
+    &::::selection {
+      background: red;
     }
   }
 

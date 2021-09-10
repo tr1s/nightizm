@@ -61,6 +61,9 @@ export const Paragraph = styled.p`
   span {
     display: block;
   }
+  span:first-of-type {
+    color: var(--blue);
+  }
   span:last-of-type {
     color: var(--accent);
   }

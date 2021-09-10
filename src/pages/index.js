@@ -31,7 +31,8 @@ export default function Home() {
 
         <Paragraph>
           <span>Music Beyond Borders</span>
-          <span>Instrumentals for the Night</span>
+          <span>Instrumentals that tell Stories</span>
+          <span>†NZM†</span>
         </Paragraph>
 
         <Crosses>†††</Crosses>

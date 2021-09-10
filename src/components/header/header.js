@@ -14,10 +14,6 @@ export default function Header() {
     <Wrapper>
       <Nav>
         <Link href="/" passHref>
-          <img src="/moon.png" alt="" />
-        </Link>
-
-        <Link href="/" passHref>
           <NavLink>Home</NavLink>
         </Link>
 
