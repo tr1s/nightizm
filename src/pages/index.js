@@ -14,7 +14,7 @@ import {
   ButtonWrapper,
   Crosses,
   TitleTwo,
-} from '../styles/pages/index-styled';
+} from '../pages-styled/index-styled';
 
 export default function Home() {
   return (

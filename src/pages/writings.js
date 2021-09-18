@@ -11,7 +11,7 @@ import {
   PostTitle,
   PostDescription,
   Post,
-} from '../styles/pages/writings-styled';
+} from '../pages-styled/writings-styled';
 
 export default function Blog({ allPostsData }) {
   const publishedPosts = allPostsData.filter((post) => post.published === true);

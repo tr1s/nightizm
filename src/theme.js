@@ -11,6 +11,4 @@ const theme = {
   nightizmSpotify,
 };
 
-console.log(theme);
-
 export default theme;

@@ -112,7 +112,7 @@ const GlobalStyles = createGlobalStyle`
     --white-true: hsl(0, 0%, 100%);
 
     --blue: hsl(221, 90%, 59%);
-    ${'' /* --blue: #1786e8; */}
+    --blue: #1786e8;
     --blue-soft: #acc0ff;
     --gold: #e8cc17;
     --yellow: #fbed68;

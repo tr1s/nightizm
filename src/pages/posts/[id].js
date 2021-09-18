@@ -4,7 +4,7 @@ import Head from 'next/head';
 import Spacer from '../../components/spacer';
 import Date from '../../components/date';
 
-import { Article, Content } from '../../styles/pages/post-styled';
+import { Article, Content } from '../../pages-styled/post-styled';
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();
