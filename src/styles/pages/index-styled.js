@@ -18,22 +18,30 @@ export const TitleWrapper = styled.div`
   }
 `;
 
-export const Title = styled.h2`
+export const Title = styled.h1`
+  min-height: 0vh; /* fixes clamp bug in safari */
   font-size: clamp(5.8rem, 17.3rem, 11vw);
   color: var(--black);
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--grey-300);
   text-align: center;
-  @media screen and (${(props) => props.theme.tablet}) {
-    /* display: none; */
+  @media screen and (${(props) => props.theme.phone}) {
+    color: var(--black-200);
+    -webkit-text-stroke-width: 0;
+    margin-bottom: -7px;
+  }
+  @media screen and (${(props) => props.theme.phoneSmall}) {
+    margin-bottom: 0;
   }
 `;
 
-export const SubTitle = styled.h1`
+export const SubTitle = styled.h2`
+  min-height: 0vh; /* fixes clamp bug in safari */
+  font-size: clamp(5.8rem, 17.1rem, 11vw);
   color: var(--black-200);
   margin-bottom: -10.5rem;
   text-align: center;
-  @media screen and (${(props) => props.theme.desktop13}) {
+  @media screen and (${(props) => props.theme.laptopSmall}) {
     margin-bottom: -8rem;
   }
   @media screen and (${(props) => props.theme.tabletLarge}) {
@@ -43,6 +51,9 @@ export const SubTitle = styled.h1`
     font-size: 13vw;
     margin-bottom: 0rem;
   }
+  @media screen and (${(props) => props.theme.phoneSmall}) {
+    display: none;
+  }
 `;
 
 export const Paragraph = styled.p`
@@ -51,7 +62,7 @@ export const Paragraph = styled.p`
   text-align: center;
   padding: 0 2rem;
   line-height: 1.7;
-  @media screen and (${(props) => props.theme.awkward}) {
+  @media screen and (${(props) => props.theme.phone}) {
     text-align: justify;
   }
   a {
@@ -60,12 +71,13 @@ export const Paragraph = styled.p`
   }
   span {
     display: block;
+    text-align: center;
   }
   span:first-of-type {
     color: var(--blue);
   }
   span:last-of-type {
-    color: var(--accent);
+    color: var(--grey-400);
   }
 `;
 
@@ -77,14 +89,18 @@ export const Crosses = styled.p`
   font-size: 2.4rem;
   margin-top: 5.5rem;
   margin-bottom: 3.5rem;
+  @media screen and (${(props) => props.theme.phoneSmall}) {
+    margin-top: 4.5rem;
+  }
 `;
 
 export const TitleTwo = styled.h2`
   color: var(--black-200);
   font-size: clamp(5.8rem, 17.1rem, 11vw);
+  min-height: 0vh; /* fixes clamp bug in safari */
   font-weight: 100;
   margin-bottom: 4rem;
-  @media screen and (${(props) => props.theme.awkward}) {
-    font-size: 4rem;
+  @media screen and (${(props) => props.theme.phone}) {
+    font-size: 15vw;
   }
 `;

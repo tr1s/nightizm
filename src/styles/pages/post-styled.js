@@ -15,7 +15,7 @@ export const Article = styled.article`
     width: 100%;
     margin: 0 auto;
     grid-column: 1 / 4;
-    @media screen and (${(props) => props.theme.mobileLarge}) {
+    @media screen and (${(props) => props.theme.phoneSmall}) {
       font-size: 4rem;
     }
   }

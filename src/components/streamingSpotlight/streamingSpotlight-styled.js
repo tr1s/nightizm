@@ -14,7 +14,7 @@ export const StreamingWrapper = styled.div`
     width: 30px;
     margin: 0 auto;
     margin-bottom: 2rem;
-    @media screen and (${(props) => props.theme.awkward}) {
+    @media screen and (${(props) => props.theme.phone}) {
       width: 23px;
       margin-bottom: 1rem;
     }
@@ -28,7 +28,7 @@ export const StreamingWrapper = styled.div`
   }
   p {
     color: var(--grey-400);
-    @media screen and (${(props) => props.theme.awkward}) {
+    @media screen and (${(props) => props.theme.phone}) {
       font-size: 1.3rem;
       line-height: 1.6;
     }
@@ -41,7 +41,7 @@ export const StreamingLink = styled.a`
   text-align: center;
   padding: 4rem 2rem;
   cursor: pointer;
-  @media screen and (${(props) => props.theme.awkward}) {
+  @media screen and (${(props) => props.theme.phone}) {
     padding: 3rem 1rem;
   }
   &:hover,

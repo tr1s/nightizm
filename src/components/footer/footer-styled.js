@@ -27,11 +27,11 @@ export const MenuButton = styled.button`
     color: var(--grey-400);
     background: var(--grey-100);
   }
-  @media screen and (${(props) => props.theme.awkward}) {
+  @media screen and (${(props) => props.theme.phone}) {
     height: 80px;
   }
   h2 {
-    @media screen and (${(props) => props.theme.awkward}) {
+    @media screen and (${(props) => props.theme.phone}) {
       font-size: 4rem;
     }
   }

@@ -7,14 +7,14 @@ export const Wrapper = styled.section`
   padding-top: 14rem;
   padding-bottom: 140px;
 
-  @media screen and (${(props) => props.theme.awkward}) {
+  @media screen and (${(props) => props.theme.phone}) {
     padding: 0;
   }
 `;
 
 export const Logo = styled.div`
   display: none;
-  @media screen and (${(props) => props.theme.awkward}) {
+  @media screen and (${(props) => props.theme.phone}) {
     display: block;
     text-align: center;
     margin-bottom: 20px;

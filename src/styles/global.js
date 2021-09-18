@@ -2,6 +2,7 @@
 ========================================================================== */
 
 import { createGlobalStyle } from 'styled-components';
+import { COLORS } from './breakpoints';
 
 const GlobalStyles = createGlobalStyle`
 
@@ -96,23 +97,23 @@ const GlobalStyles = createGlobalStyle`
     --max-container-width: 2560px;
     --border-radius: 6px;
 
-    --black: #000;
+    --black: hsl(0, 0%, 0%);
     --black-100: hsl(0, 0%, 1%);
     --black-200: hsl(220, 11%, 11%);
-    --black-soft: hsl(200, 2%, 25%);
     --black-soft: hsl(0, 0%, 15%);
-    --brown: hsl(41, 13%, 66%);
+
     --grey-100: hsl(0, 0%, 10%);
     --grey-200: hsl(0, 0%, 25%);
     --grey-300: hsl(0, 0%, 47%);
     --grey-400: hsl(0, 0%, 73%);
     --grey-500: hsl(0, 0%, 96%);
+
     --white: hsl(0, 0%, 99%);
     --white-true: hsl(0, 0%, 100%);
 
     --blue: hsl(221, 90%, 59%);
-    --blue: #1786e8;
-    ${'' /* --blue: #acc0ff; */}
+    ${'' /* --blue: #1786e8; */}
+    --blue-soft: #acc0ff;
     --gold: #e8cc17;
     --yellow: #fbed68;
     --green: #17e878;
@@ -143,8 +144,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   *::selection {
-    background: rgba(255, 255, 255, .4);
-    background: var(--blue);
+    ${'' /* background: rgba(255, 255, 255, .4); */}
+    ${'' /* background: var(--blue); */}
   }
 
   #__next {
@@ -183,9 +184,6 @@ const GlobalStyles = createGlobalStyle`
     &::-webkit-scrollbar-thumb {
       background: var(--accent);
     }
-    &::::selection {
-      background: red;
-    }
   }
 
   body {
@@ -209,13 +207,13 @@ const GlobalStyles = createGlobalStyle`
   .inner-wrapper {
     max-width: 1400px;
     margin: 0 auto;
-    @media screen and (${(props) => props.theme.desktop15}) {
+    @media screen and (${(props) => props.theme.laptop}) {
       padding: 0 2rem;
     }
     @media screen and (${(props) => props.theme.tabletLarge}) {
       padding: 0 2rem;
     }
-    @media screen and (${(props) => props.theme.mobileLarge}) {
+    @media screen and (${(props) => props.theme.phoneSmall}) {
       padding: 0 1.5rem;
     }
   }
@@ -236,7 +234,7 @@ const GlobalStyles = createGlobalStyle`
   h1 {
     font-size: clamp(5.8rem, 17.1rem, 11vw);
     font-weight: 100;
-    @media screen and (${(props) => props.theme.awkward}) {
+    @media screen and (${(props) => props.theme.phone}) {
       font-size: 4rem;
     }
   }
@@ -277,7 +275,7 @@ const GlobalStyles = createGlobalStyle`
       color: var(--black-200);
       margin-bottom: -10.5rem;
       text-align: center;
-      @media screen and (${(props) => props.theme.desktop13}) {
+      @media screen and (${(props) => props.theme.laptopSmall}) {
         margin-bottom: -8rem;
       }
       @media screen and (${(props) => props.theme.tabletLarge}) {

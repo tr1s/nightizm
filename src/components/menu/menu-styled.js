@@ -26,7 +26,7 @@ export const Wrapper = styled(DialogOverlay)`
     cursor: pointer;
     padding: 0;
     width: 35px;
-    @media screen and (${(props) => props.theme.awkward}) {
+    @media screen and (${(props) => props.theme.phone}) {
       width: 30px;
     }
     img {

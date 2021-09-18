@@ -17,7 +17,7 @@ export const Nav = styled.nav`
   right: 0;
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--grey-200);
-  @media screen and (${(props) => props.theme.awkward}) {
+  @media screen and (${(props) => props.theme.phone}) {
     background: var(--black-100);
     backdrop-filter: none;
   }
@@ -58,7 +58,7 @@ export const Logo = styled.figure`
   padding-top: 14px;
   padding-bottom: 13px;
   background: black;
-  @media screen and (${(props) => props.theme.mobileLarge}) {
+  @media screen and (${(props) => props.theme.phoneSmall}) {
     display: none;
   }
   &:hover,
