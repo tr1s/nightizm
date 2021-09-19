@@ -1,16 +1,7 @@
 import Image from 'next/image';
 import { albums } from '../../data/music';
-import Button from '../button/';
 
-import {
-  AlbumsWrapper,
-  Album,
-  Title,
-  ArtworkLink,
-  Artwork,
-  Description,
-  ButtonWrapper,
-} from './albums-styled.js';
+import { AlbumsWrapper, Album, ArtworkLink, Artwork } from './albums-styled.js';
 
 export default function Albums() {
   return (

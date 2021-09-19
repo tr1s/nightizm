@@ -15,7 +15,7 @@ export const Nav = styled.nav`
   position: fixed;
   left: 0;
   right: 0;
-  backdrop-filter: blur(14px);
+  backdrop-filter: saturate(180%) blur(14px);
   border-bottom: 1px solid var(--grey-200);
   @media screen and (${(props) => props.theme.phone}) {
     background: var(--black-100);
