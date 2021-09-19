@@ -10,8 +10,8 @@ export default class MyDocument extends Document {
       ctx.renderPage = () =>
         originalRenderPage({
           enhanceApp: (App) =>
-            function (props) {
-              sheet.collectStyles(<App {...props} />);
+            function EnhancedApp(props) {
+              return sheets.collect(<App {...props} />);
             },
         });
 
