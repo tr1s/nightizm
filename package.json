@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@reach/dialog": "^0.16.0",
-    "date-fns": "^2.23.0",
+    "date-fns": "^2.24.0",
     "gray-matter": "^4.0.3",
     "next": "^11.1.2",
     "react": "^17.0.2",
@@ -23,6 +23,6 @@
     "babel-loader": "^8.2.2",
     "babel-plugin-styled-components": "^1.13.2",
     "eslint": "^7.32.0",
-    "eslint-config-next": "^11.1.0"
+    "eslint-config-next": "^11.1.2"
   }
 }
