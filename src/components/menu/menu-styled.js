@@ -73,6 +73,7 @@ export const Paragraph = styled.p`
   font-family: var(--font-body);
   text-align: center;
   margin-bottom: 5rem;
+  padding: 1.5rem;
   span {
     font-weight: bold;
     color: var(--grey-400);

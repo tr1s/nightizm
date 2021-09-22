@@ -18,7 +18,7 @@ export default function Blog({ allPostsData }) {
 
   return (
     <Layout>
-      <Wrapper className="inner-wrapper">
+      <Wrapper>
         <div className="double-header">
           <h1 className="title">WRITINGS</h1>
           <h1 className="subtitle">ON THE WALL</h1>

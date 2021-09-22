@@ -3,16 +3,15 @@ import Link from 'next/link';
 
 import { Wrapper, Emoji, ButtonLink } from './button-styled';
 
-const Button = ({ children, element, type, href, linkPath, className, emoji }) => {
+const Button = ({ children, element, type, href, linkPath, className }) => {
   if (element === 'link') {
     return (
       <Wrapper>
         <Link href={linkPath} passHref>
-          <ButtonLink type={type} as="a" className={className} emoji={emoji}>
+          <ButtonLink type={type} as="a" className={className}>
             {children}
           </ButtonLink>
         </Link>
-        {/* <Emoji>🏛</Emoji> */}
         <Emoji>🔱</Emoji>
       </Wrapper>
     );
@@ -21,10 +20,9 @@ const Button = ({ children, element, type, href, linkPath, className, emoji }) =
   if (element === 'href') {
     return (
       <Wrapper>
-        <ButtonLink type={type} as="a" href={href} className={className} emoji={emoji}>
+        <ButtonLink type={type} as="a" href={href} className={className}>
           {children}
         </ButtonLink>
-        {/* <Emoji>🏛</Emoji> */}
         <Emoji>🔱</Emoji>
       </Wrapper>
     );
@@ -38,13 +36,11 @@ const Button = ({ children, element, type, href, linkPath, className, emoji }) =
           as="a"
           href={href}
           className={className}
-          emoji={emoji}
           target="_blank"
           rel="noopener noreferrer"
         >
           {children}
         </ButtonLink>
-        {/* <Emoji>🏛</Emoji> */}
         <Emoji>🔱</Emoji>
       </Wrapper>
     );
@@ -52,10 +48,9 @@ const Button = ({ children, element, type, href, linkPath, className, emoji }) =
 
   return (
     <Wrapper>
-      <ButtonLink type={type} className={className} emoji={emoji}>
+      <ButtonLink type={type} className={className}>
         {children}
       </ButtonLink>
-      {/* <Emoji>🏛</Emoji> */}
       <Emoji>🔱</Emoji>
     </Wrapper>
   );

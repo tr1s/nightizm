@@ -39,7 +39,7 @@ export default function Home() {
         <TitleTwo>DISCOGRAPHY</TitleTwo>
 
         <ButtonWrapper>
-          <Button element="hrefOpenNew" type="primary" href="https://nightizm.bandcamp.com">
+          <Button element="hrefOpenNew" type="secondary" href="https://nightizm.bandcamp.com">
             Download Discography
           </Button>
         </ButtonWrapper>

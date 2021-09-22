@@ -10,21 +10,29 @@ export const StreamingWrapper = styled.div`
     border-top: 1px solid var(--black-soft);
     border-bottom: 1px solid var(--black-soft);
   }
-  img {
-    width: 30px;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-    @media screen and (${(props) => props.theme.phone}) {
-      width: 23px;
-      margin-bottom: 1rem;
-    }
-  }
   div {
-    /* border: 1px solid red; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     max-width: var(--container-width);
     margin: 0 auto;
+  }
+  a:first-child:hover img,
+  a:first-child:focus img {
+    filter: saturate(280%);
+  }
+  a:last-child:hover img,
+  a:last-child:focus img {
+    filter: saturate(280%);
+  }
+  img {
+    width: 30px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    filter: saturate(21%);
+    @media screen and (${(props) => props.theme.phone}) {
+      width: 23px;
+      margin-bottom: 1rem;
+    }
   }
   p {
     color: var(--grey-400);

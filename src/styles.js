@@ -123,8 +123,6 @@ const GlobalStyles = createGlobalStyle`
 
     --primary: var(--red);
     --secondary: var(--red);
-    --accent: var(--purple);
-    --accent: #fbed68;
     --accent: var(--red);
     --links: var(--blue);
   }
@@ -266,9 +264,16 @@ const GlobalStyles = createGlobalStyle`
 
   div.double-header {
     padding: 8rem 0;
+    padding-top: 10.3rem;
+    @media screen and (${(props) => props.theme.tabletLarge}) {
+      padding-bottom: 4rem;
+    }
     @media screen and (${(props) => props.theme.tablet}) {
-      padding-top: 40px;
-      padding-bottom: 20px;
+      padding-bottom: 3.1rem;
+    }
+    @media screen and (${(props) => props.theme.phoneSmall}) {
+      padding-top: 3rem;
+      padding-bottom: 2.1rem;
     }
     h1.title {
       color: var(--black-200);

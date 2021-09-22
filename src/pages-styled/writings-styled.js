@@ -4,17 +4,12 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.section`
-  padding-top: 14rem;
-  padding-bottom: 140px;
-
-  @media screen and (${(props) => props.theme.phone}) {
-    padding: 0;
-  }
+  /* padding-top: 2rem; */
 `;
 
 export const Logo = styled.div`
   display: none;
-  @media screen and (${(props) => props.theme.phone}) {
+  @media screen and (${(props) => props.theme.tablet}) {
     display: block;
     text-align: center;
     margin-bottom: 20px;
