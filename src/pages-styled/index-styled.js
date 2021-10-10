@@ -39,12 +39,10 @@ export const SubTitle = styled.h2`
   min-height: 0vh; /* fixes clamp bug in safari */
   font-size: clamp(5.8rem, 17.1rem, 11vw);
   color: var(--black-200);
-  color: var(--accent);
   margin-bottom: -10.5rem;
   text-align: center;
   @media screen and (${(props) => props.theme.laptopSmall}) {
     margin-bottom: -8rem;
-    color: blue;
   }
   @media screen and (${(props) => props.theme.tabletLarge}) {
     margin-bottom: -6rem;
@@ -74,9 +72,12 @@ export const Paragraph = styled.p`
   span {
     display: block;
     text-align: center;
+    @media screen and (${(props) => props.theme.phone}) {
+      font-size: 1.4rem;
+    }
   }
   span:first-of-type {
-    color: var(--blue);
+    color: var(--slate);
   }
   span:last-of-type {
     color: var(--grey-400);

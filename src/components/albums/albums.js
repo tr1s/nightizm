@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { albums } from '../../data/music';
 
-import { AlbumsWrapper, Album, ArtworkLink, Artwork } from './albums-styled.js';
+import { AlbumsWrapper, Album, ArtworkLink, Artwork, Title } from './albums-styled.js';
 
 export default function Albums() {
   return (
@@ -10,7 +10,7 @@ export default function Albums() {
         {albums.map((album) => {
           return (
             <Album key={album.order}>
-              {/* <Title dangerouslySetInnerHTML={{ __html: album.title }} /> */}
+              <Title dangerouslySetInnerHTML={{ __html: album.title }} />
               {/* LEARN ABOUT RAW HTML???????????????????????????????????????????? */}
               {/* <Title rawHtml="First &middot; Second" /> */}
               {/* ARTWORK */}

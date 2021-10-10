@@ -16,7 +16,7 @@ export const Nav = styled.nav`
   left: 0;
   right: 0;
   backdrop-filter: saturate(180%) blur(14px);
-  border-bottom: 1px solid var(--grey-200);
+  border-bottom: 1px solid var(--grey-100);
   @media screen and (${(props) => props.theme.phone}) {
     background: var(--black-100);
     backdrop-filter: none;
@@ -24,7 +24,7 @@ export const Nav = styled.nav`
 `;
 
 export const NavLink = styled.a`
-  color: var(--grey-400);
+  color: var(--grey-200);
   font-family: var(--font-mono);
   font-size: 1.6rem;
   cursor: pointer;

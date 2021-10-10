@@ -15,12 +15,12 @@ export const Wrapper = styled(DialogOverlay)`
   justify-content: center;
   overflow: auto;
 
-  @media screen and (max-height: 700px) {
+  /* @media screen and (max-height: 700px) {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     padding: 60px 0;
-  }
+  } */
 
   button {
     cursor: pointer;
@@ -55,8 +55,8 @@ export const MenuLinkWrapper = styled.div`
 `;
 
 export const MenuLink = styled.a`
-  align-self: center; // allows focus state to only span the text.
-  color: var(--grey-200);
+  align-self: center; /* allows focus state to only span the text. */
+  color: var(--black-200);
   line-height: 1.4;
   &:hover,
   &:focus {
@@ -74,6 +74,9 @@ export const Paragraph = styled.p`
   text-align: center;
   margin-bottom: 5rem;
   padding: 1.5rem;
+  @media screen and (${(p) => p.theme.phone}) {
+    display: none;
+  }
   span {
     font-weight: bold;
     color: var(--grey-400);
@@ -107,7 +110,11 @@ export const SocialWrapper = styled.div`
 
 export const SocialLink = styled.a`
   line-height: 1.9;
-  color: var(--grey-300);
+  color: var(--grey-200);
+  @media screen and (${(props) => props.theme.phone}) {
+    font-size: 1.3rem;
+    line-height: 2.4;
+  }
   &:not(:last-child) {
     margin-right: 2rem;
   }

@@ -108,6 +108,8 @@ const GlobalStyles = createGlobalStyle`
     --grey-400: hsl(0, 0%, 73%);
     --grey-500: hsl(0, 0%, 96%);
 
+    --slate: #a0aec0;
+
     --white: hsl(0, 0%, 99%);
     --white-true: hsl(0, 0%, 100%);
 
@@ -116,7 +118,9 @@ const GlobalStyles = createGlobalStyle`
     --gold: #e8cc17;
     --yellow: #fbed68;
     --green: #17e878;
-    --mono: #cf3e64;
+    --red-100: hsl(344, 82%, 10%);
+    --red-200: hsl(344, 82%, 20%);
+    --red-200: hsl(344, 62%, 30%);
     --red: hsl(344, 82%, 50%);
     --pink: hsl(299, 100%, 90%);
     --purple: hsl(250, 56%, 81%);
@@ -125,6 +129,7 @@ const GlobalStyles = createGlobalStyle`
     --secondary: var(--red);
     --accent: var(--red);
     --links: var(--blue);
+    --mono: #cf3e64;
   }
 
 
@@ -253,6 +258,7 @@ const GlobalStyles = createGlobalStyle`
     text-shadow: var(--text-shadow);
     font-family: var(--font-mono);
     font-size: 1.6rem;
+    line-height: 1.4;
     font-weight: bold;
   }
   h6 {

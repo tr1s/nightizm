@@ -5,11 +5,6 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div`
   position: relative;
-  &:hover span,
-  &:focus span {
-    top: -1.9rem;
-    transition: 0.6s all ease;
-  }
 `;
 
 export const Emoji = styled.span`
@@ -40,9 +35,8 @@ export const ButtonLink = styled.button`
     props.type === 'secondary' &&
     css`
       background: var(--black);
-      border: 2px dashed var(--accent);
+      border: 2px dashed var(--red-200);
     `}
-
   &:hover,
   &:focus {
     background: var(--black-200);
@@ -52,8 +46,16 @@ export const ButtonLink = styled.button`
     text-shadow: var(--text-shadow);
     transition: 0.6s all ease;
   }
+  &:hover ~ span,
+  &:focus ~ span {
+    top: -1.9rem;
+    transition: 0.6s all ease;
+  }
   &:active {
     border: 2px dashed var(--accent);
     transition: 0.1s all ease;
+  }
+  @media screen and (${(props) => props.theme.phone}) {
+    font-size: 1.6rem;
   }
 `;

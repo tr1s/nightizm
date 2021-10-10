@@ -16,26 +16,30 @@ export const StreamingWrapper = styled.div`
     max-width: var(--container-width);
     margin: 0 auto;
   }
+  a:hover p,
+  a:focus p {
+    color: var(--grey-400);
+  }
   a:first-child:hover img,
   a:first-child:focus img {
-    filter: saturate(280%);
+    filter: saturate(166%);
   }
   a:last-child:hover img,
   a:last-child:focus img {
-    filter: saturate(280%);
+    filter: saturate(166%);
   }
   img {
     width: 30px;
     margin: 0 auto;
     margin-bottom: 2rem;
-    filter: saturate(21%);
+    filter: saturate(69%);
     @media screen and (${(props) => props.theme.phone}) {
       width: 23px;
       margin-bottom: 1rem;
     }
   }
   p {
-    color: var(--grey-400);
+    color: var(--grey-300);
     @media screen and (${(props) => props.theme.phone}) {
       font-size: 1.3rem;
       line-height: 1.6;
@@ -64,6 +68,7 @@ export const StreamingLink = styled.a`
     display: table;
     margin: auto;
     font-weight: bold;
+    color: var(--grey-400);
   }
   &:first-of-type {
     border-right: 1px solid var(--grey-100);
