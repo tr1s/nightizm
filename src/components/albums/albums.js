@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { albums } from '../../data/music';
 
-import { AlbumsWrapper, Album, ArtworkLink, Artwork, Title } from './albums-styled.js';
+import { AlbumsWrapper, Album, ArtworkLink, Artwork, InnerTitle, Title } from './albums-styled.js';
 
 export default function Albums() {
   return (
@@ -16,6 +16,7 @@ export default function Albums() {
               {/* ARTWORK */}
               <ArtworkLink href={album.link} target="_blank" rel="noopener noreferrer">
                 <Artwork>
+                  <InnerTitle dangerouslySetInnerHTML={{ __html: album.title }} />
                   <Image src={album.artwork} alt="Album artwork." width={464} height={464} />
                 </Artwork>
               </ArtworkLink>

@@ -36,6 +36,7 @@ export const ButtonLink = styled.button`
     css`
       background: var(--black);
       border: 2px dashed var(--red-200);
+      border: 2px dashed var(--blue-300);
     `}
   &:hover,
   &:focus {

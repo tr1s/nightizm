@@ -8,21 +8,21 @@
     "prod": "next start"
   },
   "dependencies": {
-    "@reach/dialog": "^0.16.0",
-    "date-fns": "^2.24.0",
+    "@reach/dialog": "^0.16.2",
+    "date-fns": "^2.25.0",
     "gray-matter": "^4.0.3",
-    "next": "^11.1.2",
+    "next": "^12.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "remark": "^14.0.1",
-    "remark-html": "^14.0.1",
-    "styled-components": "^5.3.1"
+    "remark-html": "^15.0.0",
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.5",
-    "babel-loader": "^8.2.2",
-    "babel-plugin-styled-components": "^1.13.2",
-    "eslint": "^7.32.0",
-    "eslint-config-next": "^11.1.2"
+    "@babel/core": "^7.15.8",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-styled-components": "^1.13.3",
+    "eslint": "^8.1.0",
+    "eslint-config-next": "^12.0.0"
   }
 }

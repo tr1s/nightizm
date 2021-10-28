@@ -4,7 +4,6 @@ export const StreamingWrapper = styled.div`
   width: 100%;
   border-top: 1px solid var(--grey-100);
   border-bottom: 1px solid var(--grey-100);
-  margin-bottom: 4rem;
   &:hover,
   &:focus {
     border-top: 1px solid var(--black-soft);
@@ -13,7 +12,7 @@ export const StreamingWrapper = styled.div`
   div {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    max-width: var(--container-width);
+    max-width: var(--container-inner-width);
     margin: 0 auto;
   }
   a:hover p,

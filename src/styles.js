@@ -2,7 +2,6 @@
 ========================================================================== */
 
 import { createGlobalStyle } from 'styled-components';
-import { COLORS } from './breakpoints';
 
 const GlobalStyles = createGlobalStyle`
 
@@ -87,14 +86,22 @@ const GlobalStyles = createGlobalStyle`
   ========================================================================== */
 
   :root {
-    --font-heading: 'Amarante';
-    --font-body: 'PT Serif';
+    --font-serif:
+      Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times,
+      Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    --font-sans-serif:
+      -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica,
+      Ubuntu, roboto, noto, arial, sans-serif;
+
+
+    --font-heading: 'Amarante', var(--font-serif);
+    --font-body: 'PT Serif', var(--font-sans-serif);
     --font-mono: 'MagdaCleanMono';
     --text-shadow: 0px 1px 10px var(--white-true);
     --title-size: 6px;
 
-    --container-width: 1000px;
-    --max-container-width: 2560px;
+    --container-inner-width: 1000px;
+    --container-max-width: 2560px;
     --border-radius: 6px;
 
     --black: hsl(0, 0%, 0%);
@@ -113,6 +120,7 @@ const GlobalStyles = createGlobalStyle`
     --white: hsl(0, 0%, 99%);
     --white-true: hsl(0, 0%, 100%);
 
+    --blue-300: hsl(221, 90%, 39%);
     --blue: hsl(221, 90%, 59%);
     --blue-soft: #acc0ff;
     --gold: #e8cc17;
@@ -125,10 +133,10 @@ const GlobalStyles = createGlobalStyle`
     --pink: hsl(299, 100%, 90%);
     --purple: hsl(250, 56%, 81%);
 
-    --primary: var(--red);
+    --primary: var(--blue);
     --secondary: var(--red);
     --accent: var(--red);
-    --links: var(--blue);
+    --links: var(--accent);
     --mono: #cf3e64;
   }
 
@@ -202,7 +210,7 @@ const GlobalStyles = createGlobalStyle`
 
   .wrapper {
     ${'' /* height: 100%; */}
-    max-width: var(--max-container-width);
+    max-width: var(--container-max-width);
     margin: 0 auto;
   }
 
@@ -246,6 +254,7 @@ const GlobalStyles = createGlobalStyle`
   }
   h3 {
     font-size: 3.6rem;
+    line-height: 1.4;
     font-weight: 100;
   }
   h4 {

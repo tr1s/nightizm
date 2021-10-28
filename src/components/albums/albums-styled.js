@@ -40,6 +40,7 @@ export const ArtworkLink = styled.a`
 
 export const Artwork = styled.figure`
   position: relative;
+  background: black;
   /* border: 2px dashed var(--black-soft) !important; */
   /* border-radius: calc(var(--border-radius) + 2px) !important; */
 
@@ -58,12 +59,23 @@ export const Artwork = styled.figure`
     /* animation-delay: 0.3s; */
   }
   img {
-    border-radius: var(--border-radius) !important;
+    filter: grayscale(40%);
+    z-index: -1;
+    /* border-radius: var(--border-radius) !important; */
     /* transition: border-radius 0.3s ease; */
     @media screen and (${(props) => props.theme.phone}) {
       width: 1500px !important;
     }
   }
+`;
+
+export const InnerTitle = styled.h3`
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 export const Title = styled.h5`
