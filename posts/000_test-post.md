@@ -1,5 +1,5 @@
 ---
-title: 'Testing, Testing... 666_'
+title: 'Testing, Testing... 123_'
 date: '2020-01-31'
 tags: [test, personal]
 excerpt: This is just a test post with some fluff content to check all the styling etc
@@ -38,8 +38,8 @@ How about a list?
 4. Floating Points
 5. Tool
 
-Let's get quote from my favourite Renaissance Man; **Leonardo DaVinci** himself:
+Let's get quote from my favourite Renaissance Man...
 
-> One can have no smaller or greater mastery than mastery of oneself.
+> One can have no smaller or greater mastery than mastery of oneself. **― Leonardo da Vinci**
 
 To be continued...

@@ -2,10 +2,12 @@
 
 import { useRef } from 'react';
 import Link from 'next/link';
+import useKeypress from '../../hooks/useKeypress';
+
 import Button from '../button/';
 import StreamingSpotlight from '../streamingSpotlight/';
-import useKeypress from '../../hooks/useKeypress';
 import VisuallyHidden from '../visuallyHidden';
+import Spacer from '../spacer';
 
 import {
   Wrapper,
@@ -34,33 +36,36 @@ export default function Menu({ menu, setMenu, close }) {
       </button>
 
       <WrapperContent ref={wrapperRef} aria-label="Main menu.">
-        {/* Menu Links ➡ */}
+        {/* Menu Links */}
         <MenuLinkWrapper>
           <Link href="/" passHref>
             <MenuLink>
-              <h3>Music</h3>
+              <h3>HOME</h3>
             </MenuLink>
           </Link>
           <Link href="/writings" passHref>
             <MenuLink>
-              <h3>Writings</h3>
+              <h3>WRITINGS</h3>
             </MenuLink>
           </Link>
         </MenuLinkWrapper>
 
-        {/* Streaming Links 🍎 */}
+        {/* Streaming Links */}
         <StreamingSpotlight />
 
+        <Spacer size="50" />
+
+        {/* Paragraph */}
         <Paragraph>
           <span>Don’t use Spotify or Apple Music?</span> Choose from a list of streaming services{' '}
           <a href="https://songwhip.com/nightizm">here</a>. Prefer local copies of my music?
           Download everything at once by <span>joining the Night Faction</span> below:
         </Paragraph>
 
-        {/* Button CTA 🎬 */}
+        {/* Call to Action */}
         <ButtonWrapper>
           <Button element="hrefOpenNew" href="https://nightizm.bandcamp.com/vip-membership">
-            † Night Faction †
+            † Night Wing †
           </Button>
         </ButtonWrapper>
 

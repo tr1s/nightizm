@@ -7,19 +7,8 @@ export const Wrapper = styled.div`
   position: relative;
 `;
 
-export const Emoji = styled.span`
-  z-index: -1;
-  font-size: 3.5rem;
-  position: absolute;
-  top: -0.9rem;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: 0.2s all ease;
-`;
-
 export const ButtonLink = styled.button`
-  color: var(--black-soft);
-  background: var(--white);
+  display: inline-block;
   color: var(--white-true);
   background: var(--black-200);
   border: 2px dashed var(--grey-200);
@@ -31,12 +20,14 @@ export const ButtonLink = styled.button`
   font-size: 1.9rem;
   position: relative;
   transition: 0.2s all ease;
+  @media screen and (${(props) => props.theme.phone}) {
+    font-size: 1.6rem;
+  }
   ${(props) =>
     props.type === 'secondary' &&
     css`
-      background: var(--black);
-      border: 2px dashed var(--red-200);
-      border: 2px dashed var(--blue-300);
+      background: var(--blue-100);
+      border: 2px dashed var(--grey-200);
     `}
   &:hover,
   &:focus {
@@ -46,17 +37,30 @@ export const ButtonLink = styled.button`
     color: var(--white-true);
     text-shadow: var(--text-shadow);
     transition: 0.6s all ease;
+    ${(props) =>
+      props.type === 'secondary' &&
+      css`
+        background: var(--blue-100);
+        border: 2px dashed var(--red);
+      `}
   }
   &:hover ~ span,
   &:focus ~ span {
-    top: -1.9rem;
+    top: -2.4rem;
     transition: 0.6s all ease;
   }
   &:active {
     border: 2px dashed var(--accent);
     transition: 0.1s all ease;
   }
-  @media screen and (${(props) => props.theme.phone}) {
-    font-size: 1.6rem;
-  }
+`;
+
+export const Emoji = styled.span`
+  z-index: -1;
+  font-size: 3.5rem;
+  position: absolute;
+  top: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.2s all ease;
 `;

@@ -1,6 +1,9 @@
 import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
-import GlobalStyles from '../styles';
+import ResetStyles from '../styles/styled-reset';
+import TypographyStyles from '../styles/styled-typography';
+import GlobalStyles from '../styles/styled-global';
+
 import theme from '../theme';
 
 export default function App({ Component, pageProps }) {
@@ -19,6 +22,8 @@ export default function App({ Component, pageProps }) {
       </ThemeProvider>
 
       {/* Global styles get injected in the <head> */}
+      <ResetStyles />
+      <TypographyStyles />
       <GlobalStyles theme={theme} />
     </>
   );

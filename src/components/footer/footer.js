@@ -6,7 +6,7 @@ export default function Footer() {
     <>
       <Wrapper>
         <StreamingSpotlight />
-        <Footnotes>Much Love, Forever Yours...</Footnotes>
+        <Footnotes>Much Love, Seize the Night...</Footnotes>
       </Wrapper>
     </>
   );

@@ -57,7 +57,6 @@ export const MenuLinkWrapper = styled.div`
 export const MenuLink = styled.a`
   align-self: center; /* allows focus state to only span the text. */
   color: var(--black-200);
-  line-height: 1.4;
   &:hover,
   &:focus {
     color: var(--blue);
@@ -110,13 +109,12 @@ export const SocialWrapper = styled.div`
 
 export const SocialLink = styled.a`
   line-height: 1.9;
+  display: inline-block;
   color: var(--grey-200);
+  margin: 0 1rem;
   @media screen and (${(props) => props.theme.phone}) {
     font-size: 1.3rem;
     line-height: 2.4;
-  }
-  &:not(:last-child) {
-    margin-right: 2rem;
   }
   &:hover,
   &:focus {

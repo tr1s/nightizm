@@ -20,7 +20,6 @@ export const AlbumsWrapper = styled.div`
   flex-wrap: wrap;
   gap: 4rem;
   margin: 0 4rem 0 4rem;
-  padding-bottom: 3.3rem;
   @media screen and (${(props) => props.theme.phone}) {
     gap: 8rem;
     margin: 0 2rem 0 2rem;
@@ -61,7 +60,8 @@ export const Artwork = styled.figure`
   img {
     filter: grayscale(40%);
     z-index: -1;
-    /* border-radius: var(--border-radius) !important; */
+    border: 2px dashed var(--black-soft) !important;
+    border-radius: var(--border-radius) !important;
     /* transition: border-radius 0.3s ease; */
     @media screen and (${(props) => props.theme.phone}) {
       width: 1500px !important;

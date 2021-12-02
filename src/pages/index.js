@@ -1,45 +1,65 @@
+import { useContext } from 'react';
+import Image from 'next/image';
+import { useWindowSize } from '../hooks/useWindowSize';
+import { ThemeContext } from 'styled-components';
+
 import Helmet from '../components/helmet';
 import Layout from '../components/layout';
-import Button from '../components/button/';
-import Albums from '../components/albums/';
+import Button from '../components/button';
+import Albums from '../components/albums';
 import Spacer from '../components/spacer';
 
+import heroImage from '/public/night.jpg';
+
 import {
-  Container,
-  MainTitle,
+  HeroTitleWrapper,
+  HeroTitle,
+  HeroImageWrapper,
+  DiscographyContainer,
+  DiscographyTitle,
+  DiscographyDescription,
   TitleWrapper,
   Title,
   SubTitle,
-  Paragraph,
   ButtonWrapper,
-  Crosses,
-} from '../pages-styled/index-styled';
+} from '../styles/styled-pages/styled-index.js';
 
 export default function Home() {
+  const themeContext = useContext(ThemeContext);
+  const windowSize = useWindowSize();
+  const phone = themeContext.phone_PIXELS;
+
   return (
     <Layout>
       <Helmet title="The Lair" />
 
-      <Container>
-        <Spacer axis="vertical" size="100" />
+      <HeroTitleWrapper>
+        <HeroTitle>NIGHTIZM</HeroTitle>
+        <HeroTitle>SEIZE the NIGHT</HeroTitle>
+      </HeroTitleWrapper>
 
-        <MainTitle>DISCOGRAPHY</MainTitle>
+      <HeroImageWrapper>
+        <Image src={heroImage} alt="Photo of Nightizm." layout="responsive" />
+      </HeroImageWrapper>
+
+      <DiscographyContainer>
+        {/* {windowSize.width < phone && <Spacer axis="vertical" size="40" />}
+        {windowSize.width > phone && <Spacer axis="vertical" size="100" />} */}
+        <DiscographyTitle>DISCOGRAPHY</DiscographyTitle>
 
         <ButtonWrapper>
           <Button element="hrefOpenNew" type="primary" href="https://songwhip.com/nightizm">
             Stream Discography
           </Button>
-          <Spacer axis="horizontal" size="20" />
+          {windowSize.width < phone && <Spacer axis="vertical" size="40" />}
+          {windowSize.width > phone && <Spacer axis="horizontal" size="20" />}
           <Button element="hrefOpenNew" type="secondary" href="https://nightizm.bandcamp.com">
             Download Discography
           </Button>
         </ButtonWrapper>
 
-        <Paragraph>
-          Here is a collection of music... Download or stream for your pleasure. Seize the Night
-          baby fuck yeah. Woooo. It's Friday baby fuck.
-        </Paragraph>
-      </Container>
+        <Spacer axis="vertical" size="100" />
+      </DiscographyContainer>
 
       <Albums />
 

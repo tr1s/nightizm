@@ -28,6 +28,7 @@ export const Article = styled.article`
   time:last-of-type {
     margin-bottom: 8rem;
     color: var(--accent);
+    font-weight: bold;
   }
 `;
 
@@ -67,7 +68,6 @@ export const Content = styled.div`
   a,
   li {
     font-size: 1.9rem;
-    line-height: 2.9rem;
     letter-spacing: 0.06rem;
     color: var(--grey-300);
   }

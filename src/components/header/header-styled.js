@@ -29,6 +29,9 @@ export const NavLink = styled.a`
   font-size: 1.6rem;
   cursor: pointer;
   margin-right: 3rem;
+  @media screen and (${(props) => props.theme.phone}) {
+    display: none;
+  }
   &:hover,
   &:focus {
     color: var(--white-true);
@@ -51,21 +54,19 @@ export const Logo = styled.figure`
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  text-align: center;
-  font-size: 4rem;
-  border: 1px dashed var(--grey-300);
+  background: var(--black);
+  border: 2px dashed var(--grey-200);
   border-radius: var(--border-radius);
   padding-top: 14px;
-  padding-bottom: 13px;
-  background: black;
-  @media screen and (${(props) => props.theme.phoneSmall}) {
+  padding-bottom: 7px;
+  @media screen and (${(props) => props.theme.phone}) {
     display: none;
   }
   &:hover,
   &:focus {
-    border: 1px dashed var(--grey-400);
+    border: 2px dashed var(--grey-300);
   }
   &:active {
-    border: 1px dashed var(--blue);
+    border: 2px dashed var(--blue);
   }
 `;

@@ -11,7 +11,7 @@ import {
   PostTitle,
   PostDescription,
   Post,
-} from '../pages-styled/writings-styled';
+} from '../styles/styled-pages/styled-writings';
 
 export default function Blog({ allPostsData }) {
   const publishedPosts = allPostsData.filter((post) => post.published === true);
@@ -26,7 +26,6 @@ export default function Blog({ allPostsData }) {
 
         <Logo>
           <Image src="/logo-white.png" width="66" height="66" alt="" />
-          {/* 🔱 */}
         </Logo>
 
         <Posts>
