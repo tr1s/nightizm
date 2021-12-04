@@ -1,11 +1,12 @@
 {
-  "name": "learn-starter",
+  "name": "nightizm",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "next dev",
-    "build": "next build && next export",
-    "prod": "next start"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@reach/dialog": "^0.16.2",
