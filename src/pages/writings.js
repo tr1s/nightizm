@@ -8,9 +8,10 @@ import {
   Wrapper,
   Logo,
   Posts,
+  Post,
+  PostLink,
   PostTitle,
   PostDescription,
-  Post,
 } from '../styles/styled-pages/styled-writings';
 
 export default function Blog({ allPostsData }) {
@@ -31,14 +32,14 @@ export default function Blog({ allPostsData }) {
         <Posts>
           {publishedPosts.map(({ id, date, title, excerpt }) => (
             <Post key={id}>
-              <Link href="/posts/[id]" as={`/posts/${id}`}>
-                <a>
+              <Link href="/posts/[id]" as={`/posts/${id}`} passHref>
+                <PostLink>
                   <small>
                     <Date dateString={date} blogList />
                   </small>
                   <PostTitle>{title}</PostTitle>
                   <PostDescription>{excerpt}</PostDescription>
-                </a>
+                </PostLink>
               </Link>
             </Post>
           ))}

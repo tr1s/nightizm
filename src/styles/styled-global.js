@@ -28,6 +28,7 @@ const GlobalStyles = createGlobalStyle`
     --border-radius: 6px;
 
     --black: hsl(0, 0%, 0%);
+    --black-see-through: hsl(0, 0%, 1%, .7);
     --black-100: hsl(0, 0%, 1%);
     --black-200: hsl(220, 11%, 11%);
     --black-300: hsl(220, 11%, 13%);
@@ -103,13 +104,16 @@ const GlobalStyles = createGlobalStyle`
   }
 
   main {
+    flex: 1;
     padding-top: 67px;
   }
 
   .wrapper {
-    /* height: 100%; */
-    max-width: var(--container-max-width);
     margin: 0 auto;
+    max-width: var(--container-max-width);
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   .inner-wrapper {

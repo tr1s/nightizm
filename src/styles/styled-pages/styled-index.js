@@ -72,9 +72,6 @@ export const TitleWrapper = styled.div`
   flex-direction: column;
   margin-top: 5.5rem;
   margin-bottom: 2rem;
-  @media screen and (${(props) => props.theme.tablet}) {
-    flex-direction: column-reverse;
-  }
   @media screen and (${(props) => props.theme.phone}) {
     display: none;
   }
@@ -92,10 +89,6 @@ export const SubTitle = styled.h2`
   @media screen and (${(props) => props.theme.tabletLarge}) {
     margin-bottom: -6rem;
   }
-  @media screen and (${(props) => props.theme.tablet}) {
-    font-size: 13vw;
-    margin-bottom: 0rem;
-  }
   @media screen and (${(props) => props.theme.phoneSmall}) {
     display: none;
   }
@@ -104,17 +97,12 @@ export const SubTitle = styled.h2`
 export const Title = styled.h1`
   min-height: 0vh; /* fixes clamp bug in safari */
   font-size: clamp(5.8rem, 17.3rem, 11vw);
-  /* text-shadow: 1px 2px 2px var(--white); */
   color: crimson;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--grey-300);
   -webkit-text-stroke-color: white;
   text-align: center;
   margin-bottom: 0rem;
-  @media screen and (${(props) => props.theme.tablet}) {
-    color: var(--black-200);
-    -webkit-text-stroke-width: 0;
-  }
   @media screen and (${(props) => props.theme.phoneSmall}) {
     margin-bottom: 0;
   }

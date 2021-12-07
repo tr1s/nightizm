@@ -39,7 +39,7 @@ export const ArtworkLink = styled.a`
 
 export const Artwork = styled.figure`
   position: relative;
-  background: black;
+  /* background: black; */
   /* border: 2px dashed var(--black-soft) !important; */
   /* border-radius: calc(var(--border-radius) + 2px) !important; */
 
@@ -50,18 +50,23 @@ export const Artwork = styled.figure`
 
   &:hover img,
   &:focus img {
-    /* transition: border-radius 0.3s ease; */
-    /* transition: all 0.3s ease; */
-    /* border-radius: var(--border-radius) !important; */
-    /* border-radius: 50% !important; */
-    /* animation: ${rotate} 4s linear infinite; */
-    /* animation-delay: 0.3s; */
+    filter: grayscale(100%);
+    filter: brightness(100%);
+    border: 12px ridge var(--red) !important;
+
+    /* Test this out after animation module!!!!!!!!!!!!!!! */
+    /* transition: border-radius 0.3s ease;
+    transition: all 0.3s ease;
+    border-radius: var(--border-radius) !important;
+    border-radius: 50% !important;
+    animation: ${rotate} 4s linear infinite;
+    animation-delay: 0.3s; */
   }
   img {
-    filter: grayscale(40%);
-    z-index: -1;
-    border: 2px dashed var(--black-soft) !important;
-    border-radius: var(--border-radius) !important;
+    filter: brightness(60%) grayscale(60%);
+    background: var(--black-see-through);
+    border: 12px ridge var(--grey-400) !important;
+    border-radius: 12px !important;
     /* transition: border-radius 0.3s ease; */
     @media screen and (${(props) => props.theme.phone}) {
       width: 1500px !important;
@@ -76,6 +81,7 @@ export const InnerTitle = styled.h3`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: none;
 `;
 
 export const Title = styled.h5`

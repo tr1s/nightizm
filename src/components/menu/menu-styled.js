@@ -39,12 +39,16 @@ export const Wrapper = styled(DialogOverlay)`
     background: transparent;
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: 30px;
   }
 `;
 
 export const WrapperContent = styled(DialogContent)`
   /*  */
+  /* min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; */
 `;
 
 export const MenuLinkWrapper = styled.div`

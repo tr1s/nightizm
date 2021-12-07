@@ -21,21 +21,19 @@ import {
 } from './menu-styled';
 
 export default function Menu({ menu, setMenu, close }) {
-  const wrapperRef = useRef();
-
   useKeypress('Escape', () => {
     setMenu(!menu);
   });
 
   return (
-    <Wrapper initialFocusRef={wrapperRef}>
+    <Wrapper>
       {/* Close X Button */}
       <button onClick={close}>
         <img src="/close-icon.svg" alt="" />
         <VisuallyHidden>Close menu.</VisuallyHidden>
       </button>
 
-      <WrapperContent ref={wrapperRef} aria-label="Main menu.">
+      <WrapperContent aria-label="Main menu.">
         {/* Menu Links */}
         <MenuLinkWrapper>
           <Link href="/" passHref>
@@ -65,7 +63,7 @@ export default function Menu({ menu, setMenu, close }) {
         {/* Call to Action */}
         <ButtonWrapper>
           <Button element="hrefOpenNew" href="https://nightizm.bandcamp.com/vip-membership">
-            † Night Wing †
+            † Join Night Faction †
           </Button>
         </ButtonWrapper>
 

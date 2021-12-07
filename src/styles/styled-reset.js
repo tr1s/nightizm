@@ -16,6 +16,12 @@ const ResetStyles = createGlobalStyle`
   */
   * {
     margin: 0;
+    /* Create custom keyboard-only focus states
+    Reference: https://css-tricks.com/keyboard-only-focus-styles/ */
+    &:focus-visible {
+      outline: auto var(--red);
+      outline-offset: 6px;
+    }
   }
   /*
     3. Allow percentage-based heights in the application
@@ -63,6 +69,7 @@ const ResetStyles = createGlobalStyle`
     above the next app
   */
   #__next {
+    height: 100%;
     isolation: isolate;
   }
 

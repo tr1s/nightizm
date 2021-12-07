@@ -43,8 +43,6 @@ export default function Home() {
       </HeroImageWrapper>
 
       <DiscographyContainer>
-        {/* {windowSize.width < phone && <Spacer axis="vertical" size="40" />}
-        {windowSize.width > phone && <Spacer axis="vertical" size="100" />} */}
         <DiscographyTitle>DISCOGRAPHY</DiscographyTitle>
 
         <ButtonWrapper>

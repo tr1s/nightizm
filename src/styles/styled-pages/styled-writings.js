@@ -35,9 +35,32 @@ export const Posts = styled.ul`
   }
 `;
 
+export const Post = styled.li`
+  &:not(:last-child) {
+    margin-bottom: 10rem;
+    @media screen and (${(props) => props.theme.tabletLarge}) {
+      margin-bottom: 4rem;
+    }
+  }
+  @media screen and (${(props) => props.theme.tablet}) {
+    text-align: center;
+  }
+`;
+
+export const PostLink = styled.a`
+  &:hover h2,
+  &:focus h2 {
+    text-shadow: var(--text-shadow);
+    color: var(--white);
+  }
+  &:hover p,
+  &:focus p {
+    color: var(--grey-400);
+  }
+`;
+
 export const PostTitle = styled.h2`
   font-size: 5.8rem;
-  line-height: 1.2;
   color: var(--grey-400);
   @media screen and (${(props) => props.theme.tabletLarge}) {
     font-size: 2.3rem;
@@ -49,7 +72,6 @@ export const PostDescription = styled.p`
   font-size: 1.9rem;
   line-height: 2.9rem;
   margin-top: 2rem;
-  display: none;
   @media screen and (${(props) => props.theme.tabletLarge}) {
     font-size: 1.4rem;
     line-height: 2.4rem;
@@ -60,30 +82,7 @@ export const PostDescription = styled.p`
     line-height: 2.4rem;
     margin-top: 0.5rem;
   }
-`;
-
-export const Post = styled.li`
-  &:not(:last-child) {
-    margin-bottom: 10rem;
-    @media screen and (${(props) => props.theme.tabletLarge}) {
-      margin-bottom: 4rem;
-    }
-  }
-  &:hover h2,
-  &:focus h2 {
-    text-shadow: var(--text-shadow);
-    color: var(--white);
-  }
-  &:active h2 {
-    color: red;
-    color: var(--blue);
-  }
-  &:hover p,
-  &:focus p {
-    color: var(--grey-400);
-  }
-
-  @media screen and (${(props) => props.theme.tablet}) {
-    text-align: center;
+  @media screen and (${(props) => props.theme.phone}) {
+    display: none;
   }
 `;
