@@ -33,7 +33,12 @@ export default function Home() {
               <strong>― Leonardo da Vinci**</strong>
             </p>
           </blockquote>
-          <time style={{ textAlign: 'left', color: 'var(--blue)' }}>2021/12/08</time>
+          <time
+            style={{ fontFamily: 'var(--font-body)', textAlign: 'left', color: 'var(--grey-200)' }}
+          >
+            2021<span style={{ color: 'var(--grey-300)' }}> / </span>12
+            <span style={{ color: 'var(--grey-300)' }}> / </span>08
+          </time>
         </Content>
       </Article>
 
