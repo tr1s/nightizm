@@ -41,6 +41,11 @@ export default function Menu({ menu, setMenu, close }) {
               <h3>HOME</h3>
             </MenuLink>
           </Link>
+          <Link href="/discography" passHref>
+            <MenuLink>
+              <h3>DISCOGRAPHY</h3>
+            </MenuLink>
+          </Link>
           <Link href="/writings" passHref>
             <MenuLink>
               <h3>WRITINGS</h3>
