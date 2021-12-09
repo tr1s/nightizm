@@ -25,7 +25,7 @@ export const Nav = styled.nav`
 `;
 
 export const NavLink = styled.a`
-  color: var(--grey-200);
+  color: var(--grey-300);
   font-family: var(--font-mono);
   font-size: 1.6rem;
   cursor: pointer;

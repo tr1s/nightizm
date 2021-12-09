@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Spacer from '../spacer';
 import { albums } from '../../data/music';
 
 import { AlbumsWrapper, Album, ArtworkLink, Artwork, InnerTitle, Title } from './albums-styled.js';
@@ -24,6 +25,7 @@ export default function Albums() {
           );
         })}
       </AlbumsWrapper>
+      <Spacer axis="vertical" size="60" />
     </>
   );
 }

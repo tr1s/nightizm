@@ -154,7 +154,7 @@ const GlobalStyles = createGlobalStyle`
   h2 {
     font-size: 5.8rem;
     font-weight: 100;
-    line-height: 1.3;
+    line-height: 1.2;
   }
   h3 {
     font-size: 3.6rem;
@@ -183,8 +183,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   div.double-header {
-    padding: 8rem 0;
-    padding-top: 12.8rem;
+    padding: 10rem 0 5rem 0;
     @media screen and (${(props) => props.theme.tabletLarge}) {
       padding-bottom: 4rem;
     }
