@@ -56,7 +56,7 @@ export default function Menu({ menu, setMenu, close }) {
         {/* Streaming Links */}
         <StreamingSpotlight />
 
-        <Spacer size="50" />
+        <Spacer size="20" />
 
         {/* Paragraph */}
         <Paragraph>

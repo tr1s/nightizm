@@ -43,13 +43,7 @@ export const Wrapper = styled(DialogOverlay)`
   }
 `;
 
-export const WrapperContent = styled(DialogContent)`
-  /*  */
-  /* min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; */
-`;
+export const WrapperContent = styled(DialogContent)``;
 
 export const MenuLinkWrapper = styled.div`
   display: flex;
@@ -59,13 +53,12 @@ export const MenuLinkWrapper = styled.div`
 `;
 
 export const MenuLink = styled.a`
-  align-self: center; /* allows focus state to only span the text. */
-  color: var(--black-200);
+  align-self: center; /* allows focus state to only span the width of text. */
+  color: var(--grey-400);
   &:hover,
   &:focus {
-    color: var(--blue);
+    color: var(--white-true);
     text-shadow: var(--text-shadow);
-    text-shadow: 0 1px 11px var(--blue);
   }
 `;
 
@@ -75,7 +68,7 @@ export const Paragraph = styled.p`
   color: var(--grey-300);
   font-family: var(--font-body);
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   padding: 1.5rem;
   @media screen and (${(p) => p.theme.phone}) {
     display: none;
@@ -97,6 +90,9 @@ export const Paragraph = styled.p`
 export const ButtonWrapper = styled.div`
   text-align: center;
   margin-bottom: 4rem;
+  @media screen and (${(props) => props.theme.phone}) {
+    display: none;
+  }
 `;
 
 export const SocialWrapper = styled.div`

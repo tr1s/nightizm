@@ -4,8 +4,6 @@ import Helmet from '../components/helmet';
 import Layout from '../components/layout';
 import Spacer from '../components/spacer';
 
-import heroImage from '/public/night.jpg';
-
 import { TitleWrapper, Title, SubTitle, Logo } from '../styles/styled-pages/styled-index.js';
 
 import { Article, Content } from '../styles/styled-pages/styled-post';
@@ -24,7 +22,7 @@ export default function Home() {
       </Logo>
 
       <Article>
-        <Content className="inner-wrapper">
+        <Content className="inner-wrapper" homepage>
           <h2>Hello...</h2>
           <p>...I’m almost ready, I promise. Have a look around in the meantime.</p>
           <blockquote>
@@ -33,12 +31,19 @@ export default function Home() {
               <strong>― Leonardo da Vinci**</strong>
             </p>
           </blockquote>
-          <time
-            style={{ fontFamily: 'var(--font-body)', textAlign: 'left', color: 'var(--grey-200)' }}
+          <p
+            style={{
+              fontSize: '1.6rem',
+              fontStyle: 'italic',
+              fontFamily: 'var(--font-body)',
+              color: 'var(--grey-200)',
+              fontWeight: 'bold',
+              textAlign: 'left',
+            }}
           >
-            2021<span style={{ color: 'var(--grey-300)' }}> / </span>12
-            <span style={{ color: 'var(--grey-300)' }}> / </span>08
-          </time>
+            2021<span style={{ color: 'var(--grey-400)' }}> ~ </span>12
+            <span style={{ color: 'var(--grey-400)' }}> ~ </span>08
+          </p>
         </Content>
       </Article>
 

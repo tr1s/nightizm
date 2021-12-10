@@ -5,20 +5,6 @@ export const Article = styled.article`
   flex-direction: column;
   font-family: var(--font-body);
   color: var(--blue);
-  h1 {
-    font-size: 9.5rem;
-    font-size: clamp(5.8rem, 9.5rem, 7vw);
-    text-align: center;
-    color: var(--black-soft);
-    padding: 0rem 5%;
-    padding-bottom: 2rem;
-    width: 100%;
-    margin: 0 auto;
-    grid-column: 1 / 4;
-    @media screen and (${(props) => props.theme.phoneSmall}) {
-      font-size: 4rem;
-    }
-  }
   time {
     text-align: center;
     font-family: var(--font-mono);
@@ -32,13 +18,27 @@ export const Article = styled.article`
   }
 `;
 
+export const Title = styled.h1`
+  font-size: 9.5rem;
+  font-size: clamp(5.8rem, 9.5rem, 7vw);
+  text-align: center;
+  color: var(--black-soft);
+  padding: 10rem 5% 2rem 5%;
+  width: 100%;
+  margin: 0 auto;
+  grid-column: 1 / 4;
+  @media screen and (${(props) => props.theme.phoneSmall}) {
+    font-size: 4rem;
+  }
+`;
+
 export const Content = styled.div`
   display: grid;
   grid-template-columns:
     1fr
     min(69ch, 100%)
     1fr;
-  margin-bottom: 10rem;
+  margin-bottom: 4.4rem;
 
   & > * {
     grid-column: 2;
@@ -55,6 +55,11 @@ export const Content = styled.div`
     &:hover {
       color: var(--white);
     }
+  }
+
+  h1 {
+    font-size: clamp(5.8rem, 9.5rem, 7vw);
+    text-align: center;
   }
 
   h2 {

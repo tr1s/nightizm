@@ -190,9 +190,8 @@ const GlobalStyles = createGlobalStyle`
     @media screen and (${(props) => props.theme.tablet}) {
       padding-bottom: 3.1rem;
     }
-    @media screen and (${(props) => props.theme.phoneSmall}) {
-      padding-top: 3rem;
-      padding-bottom: 2.1rem;
+    @media screen and (${(props) => props.theme.phone}) {
+      padding: 5rem 0 4.2rem 0;
     }
     h1.title {
       color: var(--black-200);

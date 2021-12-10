@@ -8,7 +8,7 @@ export const Wrapper = styled.footer`
 `;
 
 export const Footnotes = styled.p`
-  padding: 2rem;
+  padding: 2.1rem;
   color: var(--grey-300);
   @media screen and (${(props) => props.theme.phone}) {
     font-size: 1.3rem;
