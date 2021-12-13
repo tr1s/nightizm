@@ -1,3 +1,5 @@
+import RemoveServiceWorkerPlugin from 'webpack-remove-serviceworker-plugin';
+
 module.exports = {
   images: {
     formats: ['image/avif', 'image/webp'],
