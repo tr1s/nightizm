@@ -40,7 +40,7 @@ export default function App({ Component, pageProps }) {
         <Component {...pageProps} />
       </ThemeProvider>
 
-      {/* Global styles get injected in the <head> */}
+      {/* Global styles that get injected in the <head> */}
       <ResetStyles />
       <TypographyStyles />
       <GlobalStyles theme={theme} />
