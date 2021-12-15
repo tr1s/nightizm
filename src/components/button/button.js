@@ -50,7 +50,6 @@ const Button = ({ children, element, type, href, linkPath, className }) => {
       <ButtonLink type={type} className={className}>
         {children}
       </ButtonLink>
-      <Emoji>🔱</Emoji>
     </Wrapper>
   );
 };

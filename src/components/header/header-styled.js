@@ -2,6 +2,7 @@
 ========================================================================== */
 
 import styled from 'styled-components';
+import Button from '../button/';
 
 export const Wrapper = styled.header`
   z-index: 1;
@@ -51,15 +52,14 @@ export const MenuButton = styled.button`
   border: none;
 `;
 
-export const Logo = styled.figure`
+export const LogoWrapper = styled.div`
   position: absolute;
   left: 50%;
+  top: 33px;
   transform: translateX(-50%);
   background: var(--black);
   border: 2px dashed var(--grey-200);
   border-radius: var(--border-radius);
-  padding-top: 14px;
-  padding-bottom: 7px;
   @media screen and (${(props) => props.theme.phone}) {
     display: none;
   }
@@ -69,5 +69,10 @@ export const Logo = styled.figure`
   }
   &:active {
     border: 2px dashed var(--blue);
+  }
+  a {
+    display: inline-block;
+    padding-top: 14px;
+    padding-bottom: 7px;
   }
 `;
