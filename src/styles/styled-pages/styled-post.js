@@ -90,6 +90,11 @@ export const Content = styled.div`
     color: var(--blue);
     font-weight: bolder;
     font-size: 1.8rem;
+    text-decoration: underline var(--grey-400);
+    &:hover,
+    &:focus {
+      text-decoration: underline var(--white);
+    }
   }
 
   strong {
