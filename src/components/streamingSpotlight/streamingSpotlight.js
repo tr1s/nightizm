@@ -1,6 +1,7 @@
 import { useContext } from 'react';
+import Image from 'next/image';
 import { ThemeContext } from 'styled-components';
-import { StreamingWrapper, StreamingLink } from './streamingSpotlight-styled';
+import { Wrapper, InnerWrapper, Link, ImageContainer, Text } from './streamingSpotlight-styled';
 
 export default function StreamingSpotlight() {
   const themeContext = useContext(ThemeContext);
@@ -9,23 +10,26 @@ export default function StreamingSpotlight() {
   const appleMusic = themeContext.nightizmAppleMusic;
 
   return (
-    <StreamingWrapper>
-      <div>
-        <StreamingLink href={spotify} target="_blank" rel="noopener noreferrer">
-          <img src="/spotify.svg" alt="" />
-
-          <p>
+    <Wrapper>
+      <InnerWrapper>
+        <Link href={spotify} target="_blank" rel="noopener noreferrer">
+          <ImageContainer>
+            <Image src="/spotify.svg" width="30" height="30" alt="" />
+          </ImageContainer>
+          <Text>
             Listen on <span>Spotify</span>
-          </p>
-        </StreamingLink>
-        <StreamingLink href={appleMusic} target="_blank" rel="noopener noreferrer">
-          <img src="/apple-rainbow.svg" alt="" />
+          </Text>
+        </Link>
+        <Link href={appleMusic} target="_blank" rel="noopener noreferrer">
+          <ImageContainer apple>
+            <Image src="/apple-rainbow.svg" width="857.529" height="1000" alt="" />
+          </ImageContainer>
 
-          <p>
+          <Text>
             Listen on <span>Apple Music</span>
-          </p>
-        </StreamingLink>
-      </div>
-    </StreamingWrapper>
+          </Text>
+        </Link>
+      </InnerWrapper>
+    </Wrapper>
   );
 }

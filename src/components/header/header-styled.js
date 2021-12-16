@@ -50,6 +50,8 @@ export const MenuButton = styled.button`
   cursor: pointer;
   background: none;
   border: none;
+  display: flex;
+  place-items: center;
 `;
 
 export const LogoWrapper = styled.div`

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+
 import Menu from '../menu/';
 
 import { Wrapper, Nav, NavLink, LogoWrapper, MenuButton } from './header-styled';
@@ -34,7 +35,7 @@ export default function Header() {
         </LogoWrapper>
 
         <MenuButton onClick={toggleMenu}>
-          <img src="/menu-icon.svg" alt="" />
+          <Image src="/menu-icon.svg" width="35" height="35" alt="" />
         </MenuButton>
 
         {/* Modal Menu */}

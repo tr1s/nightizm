@@ -1,6 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-
-import { useRef } from 'react';
 import Link from 'next/link';
 import useKeypress from '../../hooks/useKeypress';
 
