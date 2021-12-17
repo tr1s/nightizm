@@ -21,7 +21,7 @@ export default function StreamingSpotlight() {
           </Text>
         </Link>
         <Link href={appleMusic} target="_blank" rel="noopener noreferrer">
-          <ImageContainer apple>
+          <ImageContainer>
             <Image src="/apple-rainbow.svg" width="857.529" height="1000" alt="" />
           </ImageContainer>
 

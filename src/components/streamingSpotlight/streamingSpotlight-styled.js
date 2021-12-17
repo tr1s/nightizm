@@ -81,12 +81,6 @@ export const ImageContainer = styled.span`
     width: 23px;
     margin-bottom: 1rem;
   }
-
-  ${(p) =>
-    p.apple &&
-    css`
-      ${'' /* width: 30px; */}
-    `}
 `;
 
 export const Text = styled.p`
