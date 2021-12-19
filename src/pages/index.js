@@ -4,7 +4,6 @@ import HeroTitle from '../components/heroTitle/heroTitle';
 
 import Helmet from '../components/helmet';
 import Layout from '../components/layout';
-import Spacer from '../components/spacer';
 
 import { Logo } from '../styles/styled-pages/styled-index.js';
 
@@ -14,16 +13,18 @@ export default function Home() {
   return (
     <Layout>
       <Helmet title="The Lair" />
-      <HeroTitle />
 
       <Logo>
         <Image src="/logo-white.png" width="66" height="66" alt="" />
       </Logo>
 
-      <Article>
+      <Article homepage>
         <Content className="inner-wrapper" homepage>
           <h2>Hello...</h2>
-          <p>...I’m almost ready, I promise. Have a look around in the meantime.</p>
+          <p>
+            ...I’m almost ready to return, I promise. Meanwhile, welcome to my digital garden 🪴 have
+            a look around...
+          </p>
           <blockquote>
             <p>
               One can have no smaller or greater mastery than mastery of oneself.{' '}
@@ -40,13 +41,13 @@ export default function Home() {
               textAlign: 'left',
             }}
           >
-            2021<span style={{ color: 'var(--grey-400)' }}> ~ </span>12
-            <span style={{ color: 'var(--grey-400)' }}> ~ </span>08
+            2021<span style={{ color: 'var(--grey-300)' }}> ~ </span>12
+            <span style={{ color: 'var(--grey-300)' }}> ~ </span>08
           </p>
         </Content>
       </Article>
 
-      <Spacer axis="vertical" size="40" />
+      <HeroTitle />
     </Layout>
   );
 }

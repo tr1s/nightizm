@@ -1,12 +1,14 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const TitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 10rem 0 5rem 0;
+  padding: 0rem 0 5rem 0;
+  margin: -3rem 0 -0.3rem 0;
   @media screen and (${(props) => props.theme.phone}) {
     flex-direction: column-reverse;
-    padding: 5rem 0 4.2rem 0;
+    padding: 0;
+    margin: 0 0 -0.3rem 0;
   }
 `;
 
@@ -48,5 +50,6 @@ export const Title = styled.h1`
   margin-bottom: 0rem;
   @media screen and (${(props) => props.theme.phone}) {
     -webkit-text-stroke-width: 0;
+    margin-bottom: -1.4rem;
   }
 `;

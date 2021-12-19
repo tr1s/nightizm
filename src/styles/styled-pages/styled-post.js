@@ -1,10 +1,19 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Article = styled.article`
   display: flex;
   flex-direction: column;
   font-family: var(--font-body);
   color: var(--blue);
+  ${(props) =>
+    props.homepage &&
+    css`
+      padding: 10rem 0 0 0;
+      @media screen and (${(props) => props.theme.phone}) {
+        padding: 3rem 0 0 0;
+      }
+    `};
+
   time {
     text-align: center;
     font-family: var(--font-mono);
@@ -12,7 +21,7 @@ export const Article = styled.article`
     color: var(--grey-400);
   }
   time:last-of-type {
-    margin-bottom: 8rem;
+    margin-bottom: 6rem;
     color: var(--accent);
     font-weight: bold;
   }

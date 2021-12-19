@@ -30,19 +30,21 @@ export default function Blog({ allPostsData }) {
         </Logo>
 
         <Posts>
-          {publishedPosts.map(({ id, date, title, excerpt }) => (
-            <Post key={id}>
-              <Link href="/posts/[id]" as={`/posts/${id}`} passHref>
-                <PostLink>
-                  <small>
-                    <Date dateString={date} blogList />
-                  </small>
-                  <PostTitle>{title}</PostTitle>
-                  <PostDescription>{excerpt}</PostDescription>
-                </PostLink>
-              </Link>
-            </Post>
-          ))}
+          {publishedPosts.map(({ id, date, title, excerpt }) => {
+            return (
+              <Post key={id}>
+                <Link href="/posts/[id]" as={`/posts/${id}`} passHref>
+                  <PostLink>
+                    <small>
+                      <Date dateString={date} blogList />
+                    </small>
+                    <PostTitle>{title}</PostTitle>
+                    <PostDescription>{excerpt}</PostDescription>
+                  </PostLink>
+                </Link>
+              </Post>
+            );
+          })}
         </Posts>
       </Wrapper>
     </Layout>
