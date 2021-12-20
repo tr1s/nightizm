@@ -8,7 +8,7 @@ published: true
 
 ## Nightizm
 
-Seize the Night
+Motto: _Seize the Night_
 
 ### Location
 

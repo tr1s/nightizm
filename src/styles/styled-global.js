@@ -49,6 +49,7 @@ const GlobalStyles = createGlobalStyle`
     --blue-300: hsl(221, 90%, 39%);
     --blue: hsl(221, 90%, 59%);
     --blue: hsl(200, 50%, 59%);
+    --blue: #7BB7F8;
     --blue-soft: #acc0ff;
     --gold: #e8cc17;
     --yellow: #fbed68;
@@ -58,6 +59,8 @@ const GlobalStyles = createGlobalStyle`
     --red-200: hsl(344, 62%, 30%);
     --red: hsl(344, 82%, 50%);
     --red: crimson;
+    ${'' /* --red: #E92600; */}
+    ${'' /* --red: hsl(332, 76%, 60%); */}
     --pink: hsl(299, 100%, 90%);
     --purple: hsl(250, 56%, 81%);
 

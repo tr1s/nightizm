@@ -20,10 +20,10 @@ export default function Home() {
 
       <Article homepage>
         <Content className="inner-wrapper" homepage>
-          <h1 style={{ color: 'var(--black-200)' }}>~ ?! ~</h1>
-          <h2>Hello... World 🌙 🗺</h2>
+          <h1 style={{ color: 'var(--black-200)' }}>~ N ~</h1>
+          <h2>Hello World... 🗺 🌙</h2>
           <p>
-            ...I’m almost ready to return, I promise. Meanwhile, welcome to my{' '}
+            ...I’m almost ready to return, finally. Meanwhile, welcome to my{' '}
             <a
               href="https://www.google.com/search?q=digital+garden&oq=digital+garden&aqs=chrome..69i57j0i512l9.2023j0j7&sourceid=chrome&ie=UTF-8"
               target="_blank"
@@ -31,12 +31,12 @@ export default function Home() {
             >
               digital garden
             </a>{' '}
-            💻 🪴 have a look around...
+            🪴 have a look around.
           </p>
           <blockquote>
             <p>
               One can have no smaller or greater mastery than mastery of oneself.{' '}
-              <strong>― Leonardo da Vinci**</strong>
+              <strong>― Leonardo da Vinci</strong>
             </p>
           </blockquote>
           <p

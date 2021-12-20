@@ -42,10 +42,10 @@ export const SubTitle = styled.h2`
 export const Title = styled.h1`
   min-height: 0vh; /* fixes clamp bug in safari */
   font-size: clamp(5.8rem, 17.3rem, 11vw);
-  color: crimson;
+  color: var(--red);
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: var(--grey-300);
-  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-color: var(--grey-500);
+  /* -webkit-text-stroke-color: white; */
   text-align: center;
   margin-bottom: 0rem;
   @media screen and (${(props) => props.theme.phone}) {
