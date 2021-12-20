@@ -122,10 +122,14 @@ export const Content = styled.div`
 `;
 
 export const Back = styled.div`
-  border: 1px solid var(--grey-300);
+  border: 2px solid var(--black-200);
+  border-radius: var(--border-radius);
   padding: 2rem;
   font-size: 1.9rem;
   margin-bottom: 6.6rem;
+  &:hover {
+    border: 2px solid var(--black-300);
+  }
   h3,
   p,
   a {

@@ -2,12 +2,12 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   width: 100%;
-  border-top: 1px solid var(--grey-100);
-  border-bottom: 1px solid var(--grey-100);
+  border-top: 2px solid var(--grey-100);
+  border-bottom: 2px solid var(--grey-100);
   &:hover,
   &:focus {
-    border-top: 1px solid var(--black-soft);
-    border-bottom: 1px solid var(--black-soft);
+    border-top: 2px solid var(--black-soft);
+    border-bottom: 2px solid var(--black-soft);
   }
   img {
     filter: saturate(69%);
@@ -57,18 +57,18 @@ export const Link = styled.a`
     color: var(--grey-400);
   }
   &:first-of-type {
-    border-right: 1px solid var(--grey-100);
+    border-right: 2px solid var(--grey-100);
     &:hover,
     &:focus {
-      border-left: 1px solid var(--black-soft);
-      border-right: 1px solid var(--black-soft);
+      border-left: 2px solid var(--black-soft);
+      border-right: 2px solid var(--black-soft);
     }
   }
   &:last-of-type {
     &:hover,
     &:focus {
-      border-left: 1px solid var(--black-soft);
-      border-right: 1px solid var(--black-soft);
+      border-left: 0px solid var(--black-soft);
+      border-right: 2px solid var(--black-soft);
     }
   }
 `;

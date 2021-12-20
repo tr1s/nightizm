@@ -2,7 +2,6 @@
 ========================================================================== */
 
 import styled from 'styled-components';
-import Button from '../button/';
 
 export const Wrapper = styled.header`
   z-index: 1;
@@ -18,7 +17,7 @@ export const Nav = styled.nav`
   right: 0;
   background: var(--black-see-through);
   backdrop-filter: saturate(180%) blur(14px);
-  border-bottom: 1px solid var(--grey-100);
+  border-bottom: 2px solid var(--grey-100);
   @media screen and (${(props) => props.theme.phone}) {
     background: var(--black-100);
     backdrop-filter: none;
