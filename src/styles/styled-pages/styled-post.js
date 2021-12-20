@@ -8,7 +8,7 @@ export const Article = styled.article`
   ${(props) =>
     props.homepage &&
     css`
-      padding: 10rem 0 0 0;
+      padding: 11.6rem 0 0 0;
       @media screen and (${(props) => props.theme.phone}) {
         padding: 3rem 0 0 0;
       }
@@ -29,7 +29,7 @@ export const Article = styled.article`
 
 export const Title = styled.h1`
   font-size: 9.5rem;
-  font-size: clamp(5.8rem, 9.5rem, 7vw);
+  font-size: clamp(5.8rem, 17.1rem, 7vw);
   text-align: center;
   color: var(--black-soft);
   padding: 10rem 5% 2rem 5%;
@@ -47,7 +47,6 @@ export const Content = styled.div`
     1fr
     min(69ch, 100%)
     1fr;
-  margin-bottom: 4.4rem;
 
   & > * {
     grid-column: 2;
@@ -67,6 +66,7 @@ export const Content = styled.div`
   }
 
   h1 {
+    min-height: 0vh; /* fixes clamp bug in safari */
     font-size: clamp(5.8rem, 9.5rem, 7vw);
     text-align: center;
   }
@@ -118,5 +118,17 @@ export const Content = styled.div`
       position: absolute;
       left: -4rem;
     }
+  }
+`;
+
+export const Back = styled.div`
+  border: 1px solid var(--grey-300);
+  padding: 2rem;
+  font-size: 1.9rem;
+  margin-bottom: 6.6rem;
+  h3,
+  p,
+  a {
+    font-size: 1.9rem;
   }
 `;

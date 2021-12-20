@@ -1,9 +1,10 @@
+import Link from 'next/link';
 import Layout from '../../components/layout';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
 import Date from '../../components/date';
 
-import { Article, Title, Content } from '../../styles/styled-pages/styled-post';
+import { Article, Title, Content, Back } from '../../styles/styled-pages/styled-post';
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();
@@ -36,6 +37,18 @@ export default function Post({ postData }) {
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         />
       </Article>
+
+      <Content className="inner-wrapper">
+        <Back>
+          <h3>
+            Head back to the{' '}
+            <Link href="/writings" passHref>
+              <a>list of writings</a>
+            </Link>
+            .
+          </h3>
+        </Back>
+      </Content>
     </Layout>
   );
 }

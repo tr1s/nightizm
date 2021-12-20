@@ -71,7 +71,7 @@ export const PostDescription = styled.p`
   color: var(--grey-300);
   font-size: 1.9rem;
   line-height: 2.9rem;
-  margin-top: 0.7rem;
+  margin-top: 0;
   @media screen and (${(props) => props.theme.tabletLarge}) {
     font-size: 1.4rem;
     line-height: 2.4rem;

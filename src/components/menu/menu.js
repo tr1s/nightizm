@@ -48,6 +48,12 @@ export default function Menu({ menu, setMenu, close }) {
               <h3>WRITINGS</h3>
             </MenuLink>
           </Link>
+
+          <Link href="/posts/now" passHref>
+            <MenuLink>
+              <h3>NOW</h3>
+            </MenuLink>
+          </Link>
         </MenuLinkWrapper>
 
         {/* Streaming Links */}

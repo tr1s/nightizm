@@ -48,6 +48,7 @@ const GlobalStyles = createGlobalStyle`
     --blue-100: hsl(221, 90%, 14%);
     --blue-300: hsl(221, 90%, 39%);
     --blue: hsl(221, 90%, 59%);
+    --blue: hsl(200, 50%, 59%);
     --blue-soft: #acc0ff;
     --gold: #e8cc17;
     --yellow: #fbed68;
@@ -145,6 +146,7 @@ const GlobalStyles = createGlobalStyle`
 
   h1 {
     line-height: 1.2;
+    min-height: 0vh; /* fixes clamp bug in safari */
     font-size: clamp(5.8rem, 17.1rem, 11vw);
     font-weight: 100;
     @media screen and (${(props) => props.theme.phone}) {
@@ -210,7 +212,7 @@ const GlobalStyles = createGlobalStyle`
     }
     h1.subtitle {
       margin-bottom: 2rem;
-      font-size: 17.3rem;
+      min-height: 0vh; /* fixes clamp bug in safari */
       font-size: clamp(5.8rem, 17.3rem, 11vw);
       text-align: center;
       color: var(--black);

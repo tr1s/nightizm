@@ -26,6 +26,10 @@ export default function Header() {
           <NavLink>Writings</NavLink>
         </Link>
 
+        <Link href="/posts/now" passHref>
+          <NavLink>Now</NavLink>
+        </Link>
+
         <LogoWrapper>
           <Link href="/" passHref>
             <a>
