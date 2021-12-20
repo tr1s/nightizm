@@ -41,7 +41,7 @@ export default function Post({ postData }) {
       <Content className="inner-wrapper">
         <Back>
           <h3>
-            Head back to the{' '}
+            🔙 Head back to the{' '}
             <Link href="/writings" passHref>
               <a>list of writings</a>
             </Link>
