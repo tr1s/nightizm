@@ -31,7 +31,7 @@ export default function Home() {
             >
               digital garden
             </a>{' '}
-            🪴 have a look around.
+            🪴 – have a look around.
           </p>
           <blockquote>
             <p>
