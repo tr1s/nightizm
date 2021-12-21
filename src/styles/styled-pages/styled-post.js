@@ -28,14 +28,18 @@ export const Article = styled.article`
 `;
 
 export const Title = styled.h1`
-  font-size: 9.5rem;
+  min-height: 0vh; /* fixes clamp bug in safari */
   font-size: clamp(5.8rem, 17.1rem, 7vw);
   text-align: center;
   color: var(--black-soft);
+  color: var(--black-200);
   padding: 10rem 5% 2rem 5%;
   width: 100%;
   margin: 0 auto;
   grid-column: 1 / 4;
+  @media screen and (${(props) => props.theme.phone}) {
+    padding: 5rem 0 4.2rem 0;
+  }
   @media screen and (${(props) => props.theme.phoneSmall}) {
     font-size: 4rem;
   }

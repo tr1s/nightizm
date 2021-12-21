@@ -8,6 +8,6 @@ export const Logo = styled.div`
   @media screen and (${(props) => props.theme.phone}) {
     display: block;
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 4rem;
   }
 `;

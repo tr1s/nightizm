@@ -20,8 +20,7 @@ export default function Home() {
 
       <Article homepage>
         <Content className="inner-wrapper" homepage>
-          <h1 style={{ color: 'var(--black-200)' }}>~ N ~</h1>
-          <h2>Hello World... 🗺 🌙</h2>
+          <h2>Hello World... 🗺</h2>
           <p>
             ...I’m almost ready to return, finally. Meanwhile, welcome to my{' '}
             <a
