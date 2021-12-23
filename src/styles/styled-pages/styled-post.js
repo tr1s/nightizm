@@ -8,7 +8,7 @@ export const Article = styled.article`
   ${(props) =>
     props.homepage &&
     css`
-      padding: 11.6rem 0 0 0;
+      padding: 11.6rem 0 2rem 0;
       @media screen and (${(props) => props.theme.phone}) {
         padding: 3rem 0 0 0;
       }
@@ -125,14 +125,20 @@ export const Content = styled.div`
   }
 `;
 
-export const Back = styled.div`
+export const Back = styled.a`
   border: 2px solid var(--black-200);
   border-radius: var(--border-radius);
   padding: 2rem;
   font-size: 1.9rem;
   margin-bottom: 6.6rem;
+  text-decoration: none !important;
   &:hover {
     border: 2px solid var(--black-300);
+  }
+  h3 span {
+    color: var(--blue);
+    text-decoration: underline;
+    text-decoration-color: var(--grey-400);
   }
   h3,
   p,

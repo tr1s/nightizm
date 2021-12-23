@@ -39,15 +39,13 @@ export default function Post({ postData }) {
       </Article>
 
       <Content className="inner-wrapper">
-        <Back>
-          <h3>
-            🔙 Head back to the{' '}
-            <Link href="/writings" passHref>
-              <a>list of writings</a>
-            </Link>
-            .
-          </h3>
-        </Back>
+        <Link href="/writings" passHref>
+          <Back>
+            <h3>
+              🔙 Head back to the <span>list of writings</span>.
+            </h3>
+          </Back>
+        </Link>
       </Content>
     </Layout>
   );
