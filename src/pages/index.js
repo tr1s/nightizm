@@ -40,16 +40,15 @@ export default function Home() {
           </blockquote>
           <p
             style={{
-              fontSize: '1.6rem',
+              fontSize: '1.3rem',
               fontStyle: 'italic',
-              fontFamily: 'var(--font-body)',
+              fontFamily: 'var(--font-mono)',
               color: 'var(--grey-200)',
               fontWeight: 'bold',
               textAlign: 'left',
             }}
           >
-            2021<span style={{ color: 'var(--grey-300)' }}> ~ </span>12
-            <span style={{ color: 'var(--grey-300)' }}> ~ </span>08
+            posted Dec. 8th 2021
           </p>
         </Content>
       </Article>
