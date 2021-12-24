@@ -106,6 +106,7 @@ export const Content = styled.div`
     text-decoration: underline var(--grey-400);
     &:hover,
     &:focus {
+      color: var(--pink);
       text-decoration: underline var(--white);
     }
   }
@@ -132,13 +133,19 @@ export const Back = styled.a`
   font-size: 1.9rem;
   margin-bottom: 6.6rem;
   text-decoration: none !important;
-  &:hover {
+  &:hover,
+  &:focus {
     border: 2px solid var(--black-300);
   }
   h3 span {
     color: var(--blue);
     text-decoration: underline;
     text-decoration-color: var(--grey-400);
+  }
+  &:hover h3 span,
+  &:focus h3 span {
+    color: var(--pink);
+    text-decoration: underline var(--white);
   }
   h3,
   p,
