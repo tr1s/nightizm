@@ -4,13 +4,13 @@ import { ThemeContext } from 'styled-components';
 import { useWindowSize } from '../hooks/useWindowSize';
 
 import Layout from '../components/layout';
-import Albums from '../components/albums/';
+import Albums from '../components/albums';
 import Spacer from '../components/spacer';
-import Button from '../components/button/';
+import Button from '../components/button';
 
-import { Container, Title, Logo, ButtonWrapper } from '../styles/styled-pages/styled-discography';
+import { Container, Title, Logo, ButtonWrapper } from '../styles/styled-pages/styled-music';
 
-export default function Discography() {
+export default function Music() {
   const themeContext = useContext(ThemeContext);
   const phone = themeContext.phone_PIXELS;
   const windowSize = useWindowSize();
@@ -26,7 +26,7 @@ export default function Discography() {
 
         <ButtonWrapper>
           <Button element="hrefOpenNew" type="primary" href="https://songwhip.com/nightizm">
-            Stream Discography
+            Streaming Platforms
           </Button>
           {windowSize.width < phone && <Spacer axis="vertical" size="40" />}
           {windowSize.width > phone && <Spacer axis="horizontal" size="20" />}

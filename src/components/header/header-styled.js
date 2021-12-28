@@ -16,6 +16,7 @@ export const Nav = styled.nav`
   left: 0;
   right: 0;
   background: var(--black-see-through);
+  background-image: url('/nnnoise.svg');
   backdrop-filter: saturate(180%) blur(14px);
   border-bottom: 2px solid var(--grey-100);
   @media screen and (${(props) => props.theme.phone}) {

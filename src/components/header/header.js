@@ -18,8 +18,8 @@ export default function Header() {
           <NavLink>Home</NavLink>
         </Link>
 
-        <Link href="/discography" passHref>
-          <NavLink>Discography</NavLink>
+        <Link href="/music" passHref>
+          <NavLink>Music</NavLink>
         </Link>
 
         <Link href="/writings" passHref>

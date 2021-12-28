@@ -35,23 +35,17 @@ export default function Menu({ menu, setMenu, close }) {
         <MenuLinkWrapper>
           <Link href="/" passHref>
             <MenuLink>
-              <h3>HOME</h3>
+              <h3>HOME BASE</h3>
             </MenuLink>
           </Link>
-          <Link href="/discography" passHref>
+          <Link href="/music" passHref>
             <MenuLink>
-              <h3>DISCOGRAPHY</h3>
+              <h3>MUSIC</h3>
             </MenuLink>
           </Link>
           <Link href="/writings" passHref>
             <MenuLink>
               <h3>WRITINGS</h3>
-            </MenuLink>
-          </Link>
-
-          <Link href="/posts/now" passHref>
-            <MenuLink>
-              <h3>NOW</h3>
             </MenuLink>
           </Link>
         </MenuLinkWrapper>
