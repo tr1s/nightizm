@@ -4,6 +4,7 @@ import { ThemeContext } from 'styled-components';
 import { useWindowSize } from '../hooks/useWindowSize';
 
 import Layout from '../components/layout';
+import Helmet from '../components/helmet';
 import Albums from '../components/albums';
 import Spacer from '../components/spacer';
 import Button from '../components/button';
@@ -17,6 +18,7 @@ export default function Music() {
 
   return (
     <Layout>
+      <Helmet title="Music" description="All music released by Nightizm over the years." />
       <Container>
         <Title>DISCOGRAPHY</Title>
 

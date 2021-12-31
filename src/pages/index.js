@@ -12,7 +12,7 @@ import { Article, Content } from '../styles/styled-pages/styled-post';
 export default function Home() {
   return (
     <Layout>
-      <Helmet title="The Lair" />
+      <Helmet title="Home" description="Home of the eclectic music producer and DJ, Nightizm." />
 
       <Logo>
         <Image src="/logo-white.png" width="66" height="66" alt="" />

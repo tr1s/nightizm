@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Layout from '../components/layout';
+import Helmet from '../components/helmet';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
@@ -19,6 +20,11 @@ export default function Blog({ allPostsData }) {
 
   return (
     <Layout>
+      <Helmet
+        title="Writings"
+        description="A list of blog posts exploring the thoughts of Nightizm."
+      />
+
       <Wrapper>
         <div className="double-header">
           <h1 className="title">WRITINGS</h1>

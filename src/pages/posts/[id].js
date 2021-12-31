@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Layout from '../../components/layout';
 import { getAllPostIds, getPostData } from '../../lib/posts';
-import Head from 'next/head';
+import Helmet from '../../components/helmet';
 import Date from '../../components/date';
 
 import { Article, Title, Content, Back } from '../../styles/styled-pages/styled-post';
@@ -26,9 +26,11 @@ export async function getStaticProps({ params }) {
 export default function Post({ postData }) {
   return (
     <Layout>
-      <Head>
-        <title>{postData.title}</title>
-      </Head>
+      <Helmet
+        title={postData.title && postData.title}
+        description={postData.excerpt && postData.excerpt}
+      />
+
       <Article>
         <Title>{postData.title}</Title>
         <Date dateString={postData.date} />
