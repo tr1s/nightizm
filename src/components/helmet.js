@@ -29,7 +29,10 @@ const Helmet = ({ title, description, image, imageDescription }) => {
         content={image ? image : 'https://i.imgur.com/8U7TTkU.jpg'}
         key="ogimage"
       />
-      <meta property="og:image:alt" content="Portrait photo of Nightizm." />
+      <meta
+        property="og:image:alt"
+        content={imageDescription ? imageDescription : 'Portrait photo of Nightizm.'}
+      />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary" key="twcard" />
