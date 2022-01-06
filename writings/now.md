@@ -22,7 +22,7 @@ Music producer, DJ, mixing engineer, web developer, software engineer, and all a
 
 I live to create and inspire.
 
-> You never know the impact you could have... if you put something out there.
+> You never know the impact you could have... until you put something out there.
 
 ### Currently working on?
 
