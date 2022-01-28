@@ -24,7 +24,7 @@ export default function Home() {
           <p>
             ...I’m almost ready to return, finally. Meanwhile, welcome to my{' '}
             <a
-              href="https://www.google.com/search?q=digital+garden&oq=digital+garden&aqs=chrome..69i57j0i512l9.2023j0j7&sourceid=chrome&ie=UTF-8"
+              href="https://www.google.com/search?q=what+is+a+digital+garden"
               target="_blank"
               rel="noopener noreferrer"
             >
