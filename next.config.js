@@ -1,8 +1,10 @@
 const RemoveServiceWorkerPlugin = require('webpack-remove-serviceworker-plugin');
 
 module.exports = {
-  experimental: {
+  compiler: {
     styledComponents: true,
+  },
+  experimental: {
     urlImports: ['https://cdn.skypack.dev'],
   },
   i18n: {
