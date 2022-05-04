@@ -10,13 +10,8 @@ const TypographyStyles = createGlobalStyle`
     font-style: normal;
     font-weight: 100;
     font-display: swap;
-    src: url('/fonts/amarante-v8-latin-regular.eot');
-    src: local('Amarante'),
-      url('/fonts/amarante-v8-latin-regular.eot?#iefix') format('embedded-opentype'),
-      url('/fonts/amarante-v8-latin-regular.woff2') format('woff2'),
-      url('/fonts/amarante-v8-latin-regular.woff') format('woff'),
-      url('/fonts/amarante-v8-latin-regular.ttf') format('truetype'),
-      url('/fonts/amarante-v8-latin-regular.svg#Amarante') format('svg');
+    src: url('/fonts/amarante-v8-latin-regular.woff2') format('woff2'),
+      url('/fonts/amarante-v8-latin-regular.woff') format('woff');
   }
 
   /* magda-clean-mono - latin */
@@ -25,12 +20,7 @@ const TypographyStyles = createGlobalStyle`
     font-style: normal;
     font-weight: 100;
     font-display: swap;
-    src: url('/fonts/MagdaCleanMono-Regular.eot');
-    src: local('MagdaCleanMono'),
-      url('/fonts/MagdaCleanMono-Regular.eot#iefix') format('embedded-opentype'),
-      url('/fonts/MagdaCleanMono-Regular.woff') format('woff'),
-      url('/fonts/MagdaCleanMono-Regular.ttf') format('truetype'),
-      url('/fonts/MagdaCleanMono-Regular.svg#MagdaCleanMono') format('svg');
+    src: url('/fonts/MagdaCleanMono-Regular.woff') format('woff');
   }
 
   /* pt-serif-regular - latin */

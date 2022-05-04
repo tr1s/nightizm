@@ -9,8 +9,6 @@ const Helmet = ({ title, description, image, imageDescription }) => {
 
   return (
     <Head>
-      <link rel="icon" href="/favicon.ico" />
-
       <title>{title ? `${title} | ${siteName}` : siteName}</title>
       <meta name="description" content={description ? description : 'Seize the Night'} />
 
