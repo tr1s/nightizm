@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unknown-property */
+
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 
