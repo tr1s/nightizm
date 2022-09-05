@@ -1,5 +1,3 @@
-const RemoveServiceWorkerPlugin = require('webpack-remove-serviceworker-plugin');
-
 module.exports = {
   compiler: {
     styledComponents: true,
@@ -18,9 +16,5 @@ module.exports = {
   },
   images: {
     formats: ['image/avif', 'image/webp'],
-  },
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    plugins: [new RemoveServiceWorkerPlugin()];
-    return config;
   },
 };
