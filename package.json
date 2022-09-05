@@ -22,7 +22,6 @@
     "webpack-remove-serviceworker-plugin": "^1.0.0"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^2.0.7",
     "eslint": "^8.23.0",
     "eslint-config-next": "^12.2.5"
   }
