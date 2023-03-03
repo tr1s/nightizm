@@ -12,4 +12,13 @@ module.exports = {
   images: {
     formats: ['image/avif', 'image/webp'],
   },
+  async redirects() {
+    return [
+      {
+        source: '/jinx',
+        destination: 'https://nightizm.bandcamp.com/album/jinx',
+        permanent: false,
+      },
+    ];
+  },
 };
