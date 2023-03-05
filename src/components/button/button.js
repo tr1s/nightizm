@@ -6,7 +6,7 @@ const Button = ({ children, element, type, href, linkPath, className }) => {
   if (element === 'link') {
     return (
       <Wrapper>
-        <Link href={linkPath} passHref>
+        <Link href={linkPath} passHref legacyBehavior>
           <ButtonLink type={type} as="a" className={className}>
             {children}
           </ButtonLink>

@@ -14,27 +14,27 @@ export default function Header() {
   return (
     <Wrapper>
       <Nav>
-        <Link href="/" passHref>
+        <Link href="/" passHref legacyBehavior>
           <NavLink>Home</NavLink>
         </Link>
 
-        <Link href="/music" passHref>
+        <Link href="/music" passHref legacyBehavior>
           <NavLink>Music</NavLink>
         </Link>
 
-        <Link href="/writings" passHref>
+        <Link href="/writings" passHref legacyBehavior>
           <NavLink>Writings</NavLink>
         </Link>
 
-        <Link href="/posts/now" passHref>
+        <Link href="/posts/now" passHref legacyBehavior>
           <NavLink>Now</NavLink>
         </Link>
 
         <LogoWrapper>
           <Link href="/" passHref>
-            <a>
-              <Image src="/logo-white.png" width="66" height="66" alt="" />
-            </a>
+
+            <Image src="/logo-white.png" width="66" height="66" alt="" />
+
           </Link>
         </LogoWrapper>
 

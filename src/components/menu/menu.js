@@ -33,17 +33,17 @@ export default function Menu({ menu, setMenu, close }) {
       <WrapperContent aria-label="Main menu.">
         {/* Menu Links */}
         <MenuLinkWrapper>
-          <Link href="/" passHref>
+          <Link href="/" passHref legacyBehavior>
             <MenuLink>
               <h3>HOME BASE</h3>
             </MenuLink>
           </Link>
-          <Link href="/music" passHref>
+          <Link href="/music" passHref legacyBehavior>
             <MenuLink>
               <h3>MUSIC</h3>
             </MenuLink>
           </Link>
-          <Link href="/writings" passHref>
+          <Link href="/writings" passHref legacyBehavior>
             <MenuLink>
               <h3>WRITINGS</h3>
             </MenuLink>
@@ -71,19 +71,19 @@ export default function Menu({ menu, setMenu, close }) {
 
         {/* Social Links 🗣 */}
         <SocialWrapper>
-          <Link href="https://facebook.com/nightizm" passHref>
+          <Link href="https://facebook.com/nightizm" passHref legacyBehavior>
             <SocialLink>Facebook</SocialLink>
           </Link>
-          <Link href="https://instagram.com/nightizm" passHref>
+          <Link href="https://instagram.com/nightizm" passHref legacyBehavior>
             <SocialLink>Instagram</SocialLink>
           </Link>
-          <Link href="https://nightizm.bandcamp.com" passHref>
+          <Link href="https://nightizm.bandcamp.com" passHref legacyBehavior>
             <SocialLink>Bandcamp</SocialLink>
           </Link>
-          <Link href="https://soundcloud.com/nightizm" passHref>
+          <Link href="https://soundcloud.com/nightizm" passHref legacyBehavior>
             <SocialLink>SoundCloud</SocialLink>
           </Link>
-          <Link href="https://twitter.com/nightizm" passHref>
+          <Link href="https://twitter.com/nightizm" passHref legacyBehavior>
             <SocialLink>Twitter</SocialLink>
           </Link>
         </SocialWrapper>

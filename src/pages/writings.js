@@ -39,7 +39,7 @@ export default function Blog({ allPostsData }) {
           {publishedPosts.map(({ id, date, title, excerpt }) => {
             return (
               <Post key={id}>
-                <Link href="/posts/[id]" as={`/posts/${id}`} passHref>
+                <Link href="/posts/[id]" as={`/posts/${id}`} passHref legacyBehavior>
                   <PostLink>
                     <small>
                       <Date dateString={date} blogList />

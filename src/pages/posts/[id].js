@@ -41,7 +41,7 @@ export default function Post({ postData }) {
       </Article>
 
       <Content className="inner-wrapper">
-        <Link href="/writings" passHref>
+        <Link href="/writings" passHref legacyBehavior>
           <Back>
             <h3>
               🔙 Head back to the <span>list of writings</span>.
