@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { ThemeContext } from 'styled-components';
 import { Wrapper, InnerWrapper, Link, ImageContainer, Text } from './streamingSpotlight-styled';
 

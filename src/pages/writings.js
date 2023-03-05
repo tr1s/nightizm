@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Layout from '../components/layout';
 import Helmet from '../components/helmet';
 import { getSortedPostsData } from '../lib/posts';

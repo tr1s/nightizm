@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Spacer from '../spacer';
 import { albums } from '../../data/music';
 
