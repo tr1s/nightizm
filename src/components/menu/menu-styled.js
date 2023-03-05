@@ -1,7 +1,8 @@
 import styled from 'styled-components';
-import { DialogOverlay, DialogContent } from '@reach/dialog';
+import * as Dialog from '@radix-ui/react-dialog';
+// import { DialogOverlay, DialogContent } from '@reach/dialog';
 
-export const Wrapper = styled(DialogOverlay)`
+export const Wrapper = styled(Dialog.DialogOverlay)`
   color: var(--white);
   background: var(--black);
   border-bottom: 2px dashed var(--blue);
@@ -13,6 +14,7 @@ export const Wrapper = styled(DialogOverlay)`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border: 4px solid yellow;
   overflow: auto;
 
   /* @media screen and (max-height: 700px) {
@@ -43,7 +45,7 @@ export const Wrapper = styled(DialogOverlay)`
   }
 `;
 
-export const WrapperContent = styled(DialogContent)``;
+export const WrapperContent = styled(Dialog.DialogContent)``;
 
 export const MenuLinkWrapper = styled.div`
   display: flex;
