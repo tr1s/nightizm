@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.2",
-    "@reach/dialog": "^0.18.0",
     "date-fns": "^2.29.3",
     "gray-matter": "^4.0.3",
     "next": "^13.2.3",

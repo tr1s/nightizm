@@ -52,7 +52,7 @@ export const Artwork = styled.figure`
   &:focus img {
     filter: grayscale(100%);
     filter: brightness(100%);
-    border: 2px solid var(--red) !important;
+    border: 1px solid var(--white) !important;
 
     /* Test this out after animation module!!!!!!!!!!!!!!! */
     /* transition: border-radius 0.3s ease;
@@ -65,8 +65,8 @@ export const Artwork = styled.figure`
   img {
     filter: brightness(66%) grayscale(33%);
     background: var(--black-see-through);
-    border: 2px solid var(--grey-400) !important;
-    border-radius: 12px !important;
+    border: 1px solid var(--grey-300) !important;
+    border-radius: 6px !important;
     /* transition: border-radius 0.3s ease; */
     @media screen and (${(props) => props.theme.phone}) {
       width: 1500px !important;

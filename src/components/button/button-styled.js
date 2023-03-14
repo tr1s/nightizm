@@ -11,7 +11,7 @@ export const ButtonLink = styled.button`
   display: inline-block;
   color: var(--white-true);
   background: var(--black-200);
-  border: 2px dashed var(--grey-200);
+  border: 1px dashed var(--grey-200);
   padding: 14px 19px;
   border: 1px solid inherit;
   text-shadow: 0 1px 11px black;
@@ -27,12 +27,12 @@ export const ButtonLink = styled.button`
     props.type === 'secondary' &&
     css`
       background: var(--blue-100);
-      border: 2px dashed var(--grey-200);
+      border: 1px dashed var(--grey-400);
     `}
   &:hover,
   &:focus {
     background: var(--black-200);
-    border: 2px dashed var(--grey-300);
+    border: 1px dashed var(--grey-400);
     font-weight: bold;
     color: var(--white-true);
     text-shadow: var(--text-shadow);

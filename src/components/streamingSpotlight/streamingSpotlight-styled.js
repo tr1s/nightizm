@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
     border-bottom: 2px solid var(--black-soft);
   }
   img {
-    filter: saturate(69%);
+    filter: saturate(33%);
   }
 `;
 

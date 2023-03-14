@@ -1,7 +1,8 @@
 /* Header styles
 ========================================================================== */
-
+import Link from 'next/link';
 import styled from 'styled-components';
+import * as Dialog from '@radix-ui/react-dialog';
 
 export const Wrapper = styled.header`
   z-index: 1;
@@ -25,7 +26,7 @@ export const Nav = styled.nav`
   }
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled(Link)`
   color: var(--grey-300);
   font-family: var(--font-mono);
   font-size: 1.6rem;
@@ -42,7 +43,7 @@ export const NavLink = styled.a`
   }
 `;
 
-export const MenuButton = styled.button`
+export const MenuButton = styled(Dialog.Trigger)`
   width: 35px;
   padding: 0;
   margin: 0;
@@ -77,4 +78,11 @@ export const LogoWrapper = styled.div`
     padding-top: 14px;
     padding-bottom: 7px;
   }
+`;
+
+export const DialogOverlay = styled(Dialog.Overlay)`
+  background: rgba(0, 0, 0, 0.7);
+  position: 'fixed';
+  inset: 0;
+  animation: modal 150ms cubic-bezier(0.16, 1, 0.3, 1);
 `;

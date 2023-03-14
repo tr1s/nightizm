@@ -242,6 +242,10 @@ const GlobalStyles = createGlobalStyle`
     display: inline;
     text-decoration: none;
     color: var(--white);
+    transition: color 0.3s ease;
+    &:hover {
+      transition: color 0.3s ease;
+    }
   }
   a.selected {
     color: var(--accent) !important;

@@ -1,5 +1,15 @@
 export const albums = [
   {
+    title: 'Jinx',
+    artwork: '/images/artwork/jinx.jpg',
+    artworkAlt: 'Jinx album artwork.',
+    description: ``,
+    releaseDate: '2023-03-03',
+    link: 'https://nightizm.bandcamp.com/album/jinx',
+    order: '0',
+    latestRelease: true,
+  },
+  {
     title: 'Renaissance',
     artwork: '/images/artwork/renaissance.jpg',
     artworkAlt: 'Renaissance album artwork.',
@@ -10,7 +20,7 @@ export const albums = [
     `,
     releaseDate: '2020-08-04',
     link: 'https://night.fanlink.to/renaissance',
-    order: '0',
+    order: '1',
     latestRelease: false,
   },
   {
@@ -28,7 +38,7 @@ export const albums = [
     `,
     releaseDate: '2015-07-29',
     link: 'https://nightizm.bandcamp.com/album/remixes',
-    order: '1',
+    order: '2',
     latestRelease: false,
   },
   {
@@ -46,7 +56,7 @@ export const albums = [
     `,
     releaseDate: '2016-02-29',
     link: 'https://night.fanlink.to/dark-arts-i',
-    order: '2',
+    order: '3',
     latestRelease: false,
   },
   {
@@ -64,7 +74,7 @@ export const albums = [
     `,
     releaseDate: '2020-08-10',
     link: 'https://nightizm.bandcamp.com/album/future-screws-2013-2014',
-    order: '3',
+    order: '4',
     latestRelease: false,
   },
   {
@@ -83,7 +93,7 @@ export const albums = [
     `,
     releaseDate: '2020-08-10',
     link: 'https://nightizm.bandcamp.com/album/mixes-2013-2017',
-    order: '4',
+    order: '5',
     latestRelease: false,
   },
   {
@@ -103,7 +113,7 @@ export const albums = [
     `,
     releaseDate: '2020-08-10',
     link: 'https://nightizm.bandcamp.com/album/singles-2013-2020',
-    order: '5',
+    order: '6',
     latestRelease: false,
   },
 ];

@@ -2,9 +2,6 @@ module.exports = {
   compiler: {
     styledComponents: true,
   },
-  experimental: {
-    urlImports: ['https://cdn.skypack.dev'],
-  },
   i18n: {
     locales: ['en'],
     defaultLocale: 'en',
@@ -16,7 +13,7 @@ module.exports = {
     return [
       {
         source: '/jinx',
-        destination: 'https://nightizm.bandcamp.com/album/jinx',
+        destination: 'https://nightizm.fanlink.to/jinx',
         permanent: false,
       },
     ];

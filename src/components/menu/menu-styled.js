@@ -1,8 +1,22 @@
-import styled from 'styled-components';
+import Link from 'next/link';
+import styled, { keyframes } from 'styled-components';
 import * as Dialog from '@radix-ui/react-dialog';
-// import { DialogOverlay, DialogContent } from '@reach/dialog';
 
-export const Wrapper = styled(Dialog.DialogOverlay)`
+const overlayShow = keyframes`
+ 0% { opacity: 0; }
+ 100% { opacity: 1; }
+`;
+
+const contentShow = keyframes`
+  0% {
+    opacity: 0; transform: translate(-50%, -48%) scale(.96);
+  }
+  100% {
+    opacity: 1; transform: translate(-50%, -50%) scale(1);
+  }
+`;
+
+export const DialogOverlay = styled(Dialog.Overlay)`
   color: var(--white);
   background: var(--black);
   border-bottom: 2px dashed var(--blue);
@@ -14,8 +28,9 @@ export const Wrapper = styled(Dialog.DialogOverlay)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 4px solid yellow;
+  /* border: 10px solid yellow; */
   overflow: auto;
+  /* animation: ${overlayShow} 150ms cubic-bezier(0.16, 1, 0.3, 1); */
 
   /* @media screen and (max-height: 700px) {
     flex-direction: column;
@@ -45,7 +60,23 @@ export const Wrapper = styled(Dialog.DialogOverlay)`
   }
 `;
 
-export const WrapperContent = styled(Dialog.DialogContent)``;
+export const DialogContent = styled(Dialog.DialogContent)`
+  background-color: 'white';
+  border-radius: 6;
+  box-shadow: 'hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px';
+  position: 'fixed';
+  top: '50%';
+  left: '50%';
+  transform: 'translate(-50%, -50%)';
+  width: '90vw';
+  max-width: '450px';
+  max-height: '85vh';
+  padding: 25;
+  /* animation: ${contentShow} 150ms cubic-bezier(0.16, 1, 0.3, 1); */
+  /* & focus {
+    outline: 'none';
+  } */
+`;
 
 export const MenuLinkWrapper = styled.div`
   display: flex;
@@ -54,13 +85,19 @@ export const MenuLinkWrapper = styled.div`
   margin-bottom: 20px;
 `;
 
-export const MenuLink = styled.a`
+export const MenuLink = styled(Link)`
   align-self: center; /* allows focus state to only span the width of text. */
   color: var(--grey-400);
   &:hover,
   &:focus {
     color: var(--white-true);
     text-shadow: var(--text-shadow);
+  }
+  @media screen and (${(props) => props.theme.phone}) {
+    & > h3 {
+      font-size: 2.2rem;
+      margin-bottom: 0.4rem;
+    }
   }
 `;
 
@@ -80,8 +117,9 @@ export const Paragraph = styled.p`
     color: var(--grey-400);
   }
   a {
-    color: var(--accent);
+    color: var(--blue);
     font-weight: bold;
+    text-decoration: underline var(--grey-400);
     &:hover,
     &:focus {
       text-shadow: var(--text-shadow);
@@ -109,7 +147,7 @@ export const SocialWrapper = styled.div`
   }
 `;
 
-export const SocialLink = styled.a`
+export const SocialLink = styled(Link)`
   line-height: 1.9;
   display: inline-block;
   color: var(--grey-200);
